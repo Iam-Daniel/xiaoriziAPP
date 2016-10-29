@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:paddingTop="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--标题栏-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/arrow_left" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="双色土司"
+                    android:textColor="#313232"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/arrow_left"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/teach_cook_show01"/>
+            <TextView
+                android:textSize="18sp"
+                android:textColor="#313232"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="双色土司"/>
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/teach_cook_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:textSize="28px"
+                android:textColor="#313232"
+                android:layout_marginTop="13dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不是红豆"/>
+
+            <!--收藏人数-->
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:textSize="12sp"
+                    android:shadowColor="#CCCCCC"
+                    android:text="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="12sp"
+                    android:shadowColor="#CCCCCC"
+                    android:text="人收藏"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:textColor="#787878"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="因为减肥。。"
+                android:textSize="12sp"/>
+
+            <!--教程内容-->
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="17dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--食材与明细-->
+                <TextView
+                    android:textColor="#505050"
+                    android:textSize="11sp"
+                    android:drawablePadding="11dp"
+                    android:drawableLeft="@mipmap/teach_cook_icon"
+                    android:text="食材与明细"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_marginTop="15dp"
+                    android:background="#F0F0F0"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <!--材料-->
+                <LinearLayout
+                    android:layout_marginTop="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textSize="14sp"
+                        android:textColor="#505050"
+                        android:text="高筋面粉"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="200g"
+                        android:textSize="15sp"
+                        android:textColor="#cccccc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_marginTop="15dp"
+                    android:background="#F0F0F0"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <!--材料-->
+                <LinearLayout
+                    android:layout_marginTop="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textSize="14sp"
+                        android:textColor="#505050"
+                        android:text="高筋面粉"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="200g"
+                        android:textSize="15sp"
+                        android:textColor="#cccccc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_marginTop="15dp"
+                    android:background="#F0F0F0"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <!--步骤与贴士-->
+                <TextView
+                    android:layout_marginTop="17dp"
+                    android:textColor="#505050"
+                    android:textSize="11sp"
+                    android:drawablePadding="11dp"
+                    android:drawableLeft="@mipmap/teach_cook_icon"
+                    android:text="步骤与贴士"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:textSize="18sp"
+                        android:textColor="#787878"
+                        android:text="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_marginLeft="24dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/teach_cook_show02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="文字描述"
+                            android:layout_marginTop="12dp"
+                            android:textSize="12sp"
+                            android:textColor="#787878"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
