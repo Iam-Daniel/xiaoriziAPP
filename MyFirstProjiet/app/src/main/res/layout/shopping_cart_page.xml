@@ -116,7 +116,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:id="@+id/shopping_cart_show"
                     android:padding="2dp"
                     android:src="@mipmap/shopping_cart_show"
                     android:layout_width="wrap_content"

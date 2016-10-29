@@ -89,8 +89,7 @@
             android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:background="#cccccc"
-            />
+            android:background="#cccccc" />
         <Button
             android:text="@string/log_up_title"
             android:textSize="18sp"
