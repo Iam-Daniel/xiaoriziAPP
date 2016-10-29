@@ -6,7 +6,35 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
     <!--导航栏-->
-    <RelativeLayout
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/arrow_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:drawablePadding="10dp"
+            android:hint="菜谱 食材"
+            android:paddingLeft="80dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/search"/>
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:visibility="invisible"
+            android:src="@mipmap/arrow_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+<!--    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical">
@@ -38,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/arrow_left"/>
-    </RelativeLayout>
+    </RelativeLayout>-->
 
     <LinearLayout
         android:orientation="vertical"
@@ -153,56 +181,6 @@
                     android:layout_height="match_parent"
                     android:background="#C8C8C8"/>
 
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-    <!--底部导航栏-->
-    <LinearLayout
-        android:gravity="bottom"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#e0e0e0"/>
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="@string/menu_bottom_home"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableTop="@mipmap/home"/>
-                <TextView
-                    android:text="@string/menu_bottom_buy"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableTop="@mipmap/buy"/>
-                <TextView
-                    android:text="@string/menu_bottom_food"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableTop="@mipmap/food"/>
-                <TextView
-                    android:text="@string/menu_bottom_account"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableTop="@mipmap/account"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
