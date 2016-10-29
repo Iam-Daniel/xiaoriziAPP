@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">New Project</string>
+    <string name="search_edittext">菜谱 食材</string>
+    <string name="search_hot_search">热门搜索</string>
+    <string name="log_up_title">注册</string>
+    <string name="search_top_1">蛋糕</string>
+    <string name="search_top_2">面包</string>
+    <string name="search_top_3">蛋挞</string>
+    <string name="search_bottom_1">牛肉</string>
+    <string name="search_bottom_2">披萨</string>
+    <string name="search_bottom_3">鸭肉</string>
+    <string name="menu_bottom_home">首页</string>
+    <string name="menu_bottom_buy">商城</string>
+    <string name="menu_bottom_food">圈圈</string>
+    <string name="menu_bottom_account">我的</string>
+    <string name="vegetable_basket_page_title">菜篮子</string>
+    <string name="vegetable_basket_page_context_line1">再也不会忘记买葱了</string>
+    <string name="vegetable_basket_page_context_line2">将用料放进菜篮子，每次去超市就不会忘记需要的东西了</string>
+    <string name="agreement_1">注册即同意</string>
+    <string name="agreement_2">《小日子用户服务协议》</string>
+    <string name="play_title">播放</string>
+    <string name="video_zone_title">热门视频</string>
+</resources>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:paddingTop="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--标题栏-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/arrow_left" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="TA的动态"
+                    android:textColor="#313232"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/arrow_left"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <!--单个内容-->
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="22dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/following_page_head"/>
+                <!--右侧内容-->
+                <LinearLayout
+                    android:layout_marginLeft="24dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="阿瓜"
+                            android:textColor="#FBBF41"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="发布了新菜品"
+                            android:textColor="#323232"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_marginTop="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/following_page_show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="美式三文鱼"
+                        android:layout_marginTop="12dp"
+                        android:textSize="14sp"
+                        android:textColor="#212121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="原料：面包粉（中种面团），面包粉"
+                        android:layout_marginTop="12dp"
+                        android:textSize="11sp"
+                        android:textColor="#787878"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--分割线-->
+            <View
+                android:background="#F0F0F0"
+                android:layout_marginTop="11dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <!--单个内容-->
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/following_page_head"/>
+                <!--右侧内容-->
+                <LinearLayout
+                    android:layout_marginLeft="24dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="阿瓜"
+                            android:textColor="#FBBF41"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="发布了新菜品"
+                            android:textColor="#323232"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_marginTop="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/following_page_show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="美式三文鱼"
+                        android:layout_marginTop="12dp"
+                        android:textSize="14sp"
+                        android:textColor="#212121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="原料：面包粉（中种面团），面包粉"
+                        android:layout_marginTop="12dp"
+                        android:textSize="11sp"
+                        android:textColor="#787878"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--分割线-->
+            <View
+                android:background="#F0F0F0"
+                android:layout_marginTop="11dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
