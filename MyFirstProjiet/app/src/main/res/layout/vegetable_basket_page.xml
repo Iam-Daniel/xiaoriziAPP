@@ -11,21 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:layout_marginLeft="34px"
+            android:id="@+id/vegetable_back_img"
+            android:layout_marginLeft="17dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/arrow_left"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
             <TextView
                 android:textColor="@color/title"
                 android:text="@string/vegetable_basket_page_title"
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
     </RelativeLayout>
     <LinearLayout
         android:gravity="center"

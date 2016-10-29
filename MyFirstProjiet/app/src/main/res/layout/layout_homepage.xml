@@ -17,6 +17,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
+                    android:id="@+id/homepage_search_img"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:src="@mipmap/left_search"
@@ -30,6 +31,7 @@
                     android:textColor="#212121"
                     android:layout_centerInParent="true"/>
                 <ImageView
+                    android:id="@+id/homepage_basket_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/right_lanzi"
@@ -43,6 +45,7 @@
                 android:layout_height="240dp"
                 android:layout_marginTop="11dp">
                 <ImageView
+                    android:id="@+id/homepage_video_img"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@mipmap/icon_homepage_bg"
@@ -75,6 +78,7 @@
                     android:gravity="center"
                     android:textColor="#212121" />
                 <TextView
+                    android:id="@+id/homepage_kitchen_img"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -85,6 +89,7 @@
                     android:textSize="15sp"
                     android:textColor="#212121" />
                 <TextView
+                    android:id="@+id/homepage_ranking_img"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -95,6 +100,7 @@
                     android:textSize="15sp"
                     android:textColor="#212121" />
                 <TextView
+                    android:id="@+id/homepage_classification_img"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
