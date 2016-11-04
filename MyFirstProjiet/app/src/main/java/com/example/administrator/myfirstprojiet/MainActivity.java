@@ -1,7 +1,7 @@
 package com.example.administrator.myfirstprojiet;
 
 import android.os.Bundle;
-import acativity.BaseActivity;
+import activity.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 

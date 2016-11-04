@@ -30,8 +30,9 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="路过"
-                    android:textColor="#313232"
-                    android:textSize="36px" />
+                    android:textColor="#212121"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
 
                 <ImageView
                     android:layout_width="wrap_content"

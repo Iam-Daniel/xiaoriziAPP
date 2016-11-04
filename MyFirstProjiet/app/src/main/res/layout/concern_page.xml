@@ -355,7 +355,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <ImageView
-                        android:id="@+id/concern_show01"
+                        android:id="@+id/concern_show02"
                         android:scaleType="centerCrop"
                         android:src="@mipmap/concern_page_show"
                         android:layout_width="match_parent"
@@ -363,7 +363,7 @@
                     <LinearLayout
                         android:layout_marginBottom="10dp"
                         android:orientation="horizontal"
-                        android:layout_alignBottom="@id/concern_show01"
+                        android:layout_alignBottom="@id/concern_show02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <TextView

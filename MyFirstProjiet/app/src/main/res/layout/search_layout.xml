@@ -6,7 +6,7 @@
     android:background="#FFFFFF">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="15dp">
         <ImageView
             android:layout_width="wrap_content"
@@ -28,8 +28,11 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:layout_marginLeft="19dp"
-            android:layout_marginRight="19dp"/>
+            android:layout_marginRight="19dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"/>
         <ImageView
+            android:id="@+id/search_shoppingCart_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/iocn_gouwuche"
@@ -153,6 +156,7 @@
                 android:drawableTop="@mipmap/icon_food"
                 android:drawablePadding="11dp"/>
             <TextView
+                android:id="@+id/search_more_tv"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"

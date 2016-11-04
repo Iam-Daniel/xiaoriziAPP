@@ -48,7 +48,7 @@
         android:layout_marginTop="11dp"
         android:layout_marginLeft="12dp">
         <ImageView
-            android:id="@+id/qq_login_imageview"
+            android:id="@+id/qq_login_imageView"
             android:layout_width="61dp"
             android:layout_height="61dp"
             android:src="@mipmap/icon_touxiang_qq_two"/>
@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_toRightOf="@id/qq_login_imageview"
+            android:layout_toRightOf="@id/qq_login_imageView"
             android:layout_marginLeft="17dp">
             <TextView
                 android:id="@+id/login_yes_textview"
@@ -83,11 +83,11 @@
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="44dp"
+        android:layout_height="wrap_content"
         android:text="登陆"
         android:textSize="18sp"
         android:textColor="#FFF9ED"
-        android:background="@mipmap/icon_login_bg"
+        android:background="@drawable/head_bg"
         android:gravity="center"
         android:paddingTop="13dp"
         android:paddingBottom="13dp"

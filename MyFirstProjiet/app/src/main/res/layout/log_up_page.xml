@@ -49,7 +49,7 @@
             <TextView
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:textColor="#FBC042"
+                android:textColor="#FBBF41"
                 android:background="@drawable/line_orange"
                 android:text="发送验证码"
                 android:layout_width="wrap_content"
@@ -96,7 +96,7 @@
             android:textColor="#fff9ed"
             android:layout_marginTop="60dp"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/head_bg"/>
         <LinearLayout
             android:layout_marginBottom="45dp"

@@ -7,36 +7,33 @@
     android:background="#FFFFFF">
     <!--导航栏-->
     <LinearLayout
+        android:gravity="center_vertical"
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_marginTop="15dp">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <ImageView
-            android:layout_marginLeft="17dp"
+            android:id="@+id/search_back_img"
+            android:layout_marginLeft="15dp"
             android:src="@mipmap/arrow_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
+            android:drawablePadding="10dp"
             android:hint="菜谱 食材"
-            android:textSize="15sp"
             android:textColorHint="#212121"
-            android:background="@drawable/search_bg"
-            android:drawableLeft="@mipmap/search"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginLeft="19dp"
-            android:layout_marginRight="19dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
+            android:paddingLeft="80dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/iocn_gouwuche"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="12dp"
-            android:layout_gravity="center"
-            android:visibility="invisible"/>
+            android:drawableLeft="@mipmap/search"/>
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:visibility="invisible"
+            android:src="@mipmap/arrow_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 <!--    <RelativeLayout
@@ -67,7 +64,6 @@
                 android:layout_alignLeft="@+id/textView" />
         </RelativeLayout>
         <ImageView
-            android:id="@+id/search_back_img"
             android:layout_marginLeft="17dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -105,7 +101,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="1px"
                     android:layout_height="match_parent"
                     android:background="#C8C8C8"/>
                 <TextView
@@ -119,7 +115,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="1px"
                     android:layout_height="match_parent"
                     android:background="#C8C8C8"/>
                 <TextView
@@ -133,7 +129,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="1px"
                     android:layout_height="match_parent"
                     android:background="#C8C8C8"/>
 
@@ -154,7 +150,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="1px"
                     android:layout_height="match_parent"
                     android:background="#C8C8C8"/>
                 <TextView
@@ -169,7 +165,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="1px"
                     android:layout_height="match_parent"
                     android:background="#C8C8C8"/>
                 <TextView
@@ -178,13 +174,12 @@
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
                     android:textSize="14sp"
-                    android:text=
-                        "@string/search_bottom_3"
+                    android:text="@string/search_bottom_3"
                     android:textColor="#505050"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="1px"
                     android:layout_height="match_parent"
                     android:background="#C8C8C8"/>
 

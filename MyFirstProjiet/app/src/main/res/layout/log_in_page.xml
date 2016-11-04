@@ -65,14 +65,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-        <Button
+        <TextView
             android:layout_marginTop="10dp"
-            android:textSize="36px"
+            android:textSize="18sp"
             android:text="登陆"
-            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textColor="#FFF9ED"
             android:background="@drawable/head_bg"
             android:layout_width="match_parent"
-            android:layout_height="44dp" />
+            android:layout_height="wrap_content"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp" />
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="登陆"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="#FFF9ED"-->
+            <!--android:background="@drawable/head_bg"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingTop="13dp"-->
+            <!--android:paddingBottom="13dp"-->
+            <!--android:layout_marginTop="5dp"/>-->
     </LinearLayout>
 
     <LinearLayout
@@ -92,8 +106,7 @@
                 android:layout_marginTop="6sp"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#C8C8C8"
-                />
+                android:background="#C8C8C8" />
             <LinearLayout
                 android:gravity="center"
                 android:layout_width="match_parent"
@@ -112,7 +125,8 @@
                 android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center">
                 <ImageView
                     android:layout_weight="1"
                     android:layout_width="0dp"
