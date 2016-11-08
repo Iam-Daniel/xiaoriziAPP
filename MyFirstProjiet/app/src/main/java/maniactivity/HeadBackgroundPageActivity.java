@@ -25,7 +25,8 @@ public class HeadBackgroundPageActivity extends BaseActivity {
         headBackgroundBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(HeadBackgroundPageActivity.this,EditDataPageActivity.class);
+                //startActivity(HeadBackgroundPageActivity.this,EditDataPageActivity.class);
+                finish();
             }
         });
     }

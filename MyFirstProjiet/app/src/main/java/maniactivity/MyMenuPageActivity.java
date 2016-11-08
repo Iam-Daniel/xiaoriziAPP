@@ -27,7 +27,8 @@ public class MyMenuPageActivity extends BaseActivity {
         myMenuBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyMenuPageActivity.this,MyHomePageLayoutActivity.class);
+                //startActivity(MyMenuPageActivity.this,MyHomePageLayoutActivity.class);
+                finish();
             }
         });
 //        跳转到上传菜谱页面

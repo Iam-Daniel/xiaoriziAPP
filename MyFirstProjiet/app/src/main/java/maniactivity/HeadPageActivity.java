@@ -23,7 +23,8 @@ public class HeadPageActivity extends BaseActivity {
         head_back_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(HeadPageActivity.this,MyHomePageLayoutActivity.class);
+                //startActivity(HeadPageActivity.this,MyHomePageLayoutActivity.class);
+                finish();
             }
         });
     }

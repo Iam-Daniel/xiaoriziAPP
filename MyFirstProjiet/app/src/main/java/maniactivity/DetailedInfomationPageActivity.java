@@ -25,7 +25,8 @@ public class DetailedInfomationPageActivity extends BaseActivity {
         detailedInformationBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(DetailedInfomationPageActivity.this,EditDataPageActivity.class);
+                //startActivity(DetailedInfomationPageActivity.this,EditDataPageActivity.class);
+                finish();
             }
         });
     }

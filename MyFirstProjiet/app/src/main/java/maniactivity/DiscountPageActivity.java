@@ -24,7 +24,8 @@ public class DiscountPageActivity extends BaseActivity {
         discountBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(DiscountPageActivity.this,MyHomePageLayoutActivity.class);
+                //startActivity(DiscountPageActivity.this,MyHomePageLayoutActivity.class);
+                finish();
             }
         });
     }

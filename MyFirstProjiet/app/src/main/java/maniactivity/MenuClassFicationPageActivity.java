@@ -23,7 +23,8 @@ public class MenuClassFicationPageActivity extends BaseActivity {
         homePageMenuClassificationBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MenuClassFicationPageActivity.this,RankingListPageActivity.class);
+                //startActivity(MenuClassFicationPageActivity.this,RankingListPageActivity.class);
+                finish();
             }
         });
     }

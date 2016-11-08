@@ -25,7 +25,8 @@ public class UpLoadMenuPageActivity extends BaseActivity {
         uploadMenuBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(UpLoadMenuPageActivity.this,MyMenuPageActivity.class);
+                //startActivity(UpLoadMenuPageActivity.this,MyMenuPageActivity.class);
+                finish();
             }
         });
     }

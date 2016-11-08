@@ -23,7 +23,8 @@ public class RankingListPageActivity extends BaseActivity {
         rankingBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(RankingListPageActivity.this,HomepageActivity.class);
+                //startActivity(RankingListPageActivity.this,HomepageActivity.class);
+                finish();
             }
         });
     }

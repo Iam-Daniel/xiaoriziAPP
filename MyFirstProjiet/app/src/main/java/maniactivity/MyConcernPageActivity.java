@@ -24,7 +24,8 @@ public class MyConcernPageActivity extends BaseActivity {
         myConcern_back_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyConcernPageActivity.this,MyHomePageLayoutActivity.class);
+                //startActivity(MyConcernPageActivity.this,MyHomePageLayoutActivity.class);
+                finish();
             }
         });
     }

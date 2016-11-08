@@ -25,7 +25,8 @@ public class StatisticsPageActivity extends BaseActivity {
         statisticsBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(StatisticsPageActivity.this,MyHomePageLayoutActivity.class);
+                //startActivity(StatisticsPageActivity.this,MyHomePageLayoutActivity.class);
+                finish();
             }
         });
     }

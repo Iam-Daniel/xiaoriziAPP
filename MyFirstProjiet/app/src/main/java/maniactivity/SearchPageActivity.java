@@ -23,7 +23,8 @@ public class SearchPageActivity extends BaseActivity {
         searchBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(SearchPageActivity.this,HomepageActivity.class);
+                //startActivity(SearchPageActivity.this,HomepageActivity.class);
+                finish();
             }
         });
     }

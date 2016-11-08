@@ -32,7 +32,7 @@ public class SetPassWordPageActivity extends BaseActivity {
         setPasswordBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(SetPassWordPageActivity.this,MyHomePageLayoutActivity.class);
+                //startActivity(SetPassWordPageActivity.this,MyHomePageLayoutActivity.class);
                 finish();
             }
         });
@@ -41,7 +41,7 @@ public class SetPassWordPageActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(SetPassWordPageActivity.this,NumberPageActivity.class);
-                finish();
+               // finish();
             }
         });
 //        跳转到设置密码页面
@@ -49,7 +49,7 @@ public class SetPassWordPageActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(SetPassWordPageActivity.this,PassWorkPageActivity.class);
-                finish();
+                //finish();
             }
         });
 //        跳转到收货地址页面
@@ -57,7 +57,7 @@ public class SetPassWordPageActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(SetPassWordPageActivity.this,AddressPageActivity.class);
-                finish();
+               // finish();
             }
         });
     }

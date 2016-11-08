@@ -25,7 +25,8 @@ public class MyCollectionPageActivity extends BaseActivity {
         myCollectionBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyCollectionPageActivity.this,MyHomePageLayoutActivity.class);
+               // startActivity(MyCollectionPageActivity.this,MyHomePageLayoutActivity.class);
+                finish();
             }
         });
     }

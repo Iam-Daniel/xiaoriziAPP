@@ -26,7 +26,8 @@ public class UpLoadWorkPageActivity extends BaseActivity {
         uploadWorkBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(UpLoadWorkPageActivity.this,MyWorksPageActivity.class);
+                //startActivity(UpLoadWorkPageActivity.this,MyWorksPageActivity.class);
+                finish();
             }
         });
     }

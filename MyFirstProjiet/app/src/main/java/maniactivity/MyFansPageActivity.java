@@ -25,7 +25,8 @@ public class MyFansPageActivity extends BaseActivity {
         myFansBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyFansPageActivity.this,MyHomePageLayoutActivity.class);
+                //startActivity(MyFansPageActivity.this,MyHomePageLayoutActivity.class);
+                finish();
             }
         });
     }

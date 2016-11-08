@@ -28,7 +28,8 @@ public class EditDataPageActivity extends BaseActivity {
         editDataBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(EditDataPageActivity.this,MyHomePageLayoutActivity.class);
+                //startActivity(EditDataPageActivity.this,MyHomePageLayoutActivity.class);
+                finish();
             }
         });
 //        点击跳转到头像

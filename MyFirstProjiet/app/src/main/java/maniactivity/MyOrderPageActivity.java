@@ -25,7 +25,8 @@ public class MyOrderPageActivity extends BaseActivity {
         myOrder_back_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyOrderPageActivity.this,MyHomePageLayoutActivity.class);
+                //startActivity(MyOrderPageActivity.this,MyHomePageLayoutActivity.class);
+                finish();
             }
         });
     }

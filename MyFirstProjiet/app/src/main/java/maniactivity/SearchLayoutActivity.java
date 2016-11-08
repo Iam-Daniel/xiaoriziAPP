@@ -28,7 +28,7 @@ public class SearchLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(SearchLayoutActivity.this,MorePageActivity.class);
-                finish();
+                //finish();
             }
         });
 //        跳转到购物车页面
@@ -37,7 +37,7 @@ public class SearchLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(SearchLayoutActivity.this,ShoppingCartPageActivity.class);
-                finish();
+                //finish();
             }
         });
     }
