@@ -69,7 +69,7 @@
         <activity android:name="maniactivity.UpLoadMenuPageActivity"/>
         <activity android:name="maniactivity.UpLoadWorkPageActivity"/>
         <activity android:name="maniactivity.VegetableBasketPageActivity"/>
-
+        <activity android:name="maniactivity.ShoppingActivity"/>
 
 
     </application>

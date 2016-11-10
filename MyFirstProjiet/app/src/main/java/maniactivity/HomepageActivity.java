@@ -28,15 +28,24 @@ public class HomepageActivity extends BaseActivity {
         homepageSearchImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(HomepageActivity.this,SearchPageActivity.class);//
+                startActivity(HomepageActivity.this,SearchPageActivity.class);
             }
         });
+        // 买烘培
+        TextView homepage_buy = (TextView) findViewById(R.id.homepage_buy);
+        homepage_buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(HomepageActivity.this,SearchLayoutActivity.class);
+            }
+        });
+
 //        菜篮子
         homepageBasketImg = (ImageView) findViewById(R.id.homepage_basket_img);
         homepageBasketImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(HomepageActivity.this,VegetableBasketPageActivity.class);//
+                startActivity(HomepageActivity.this,VegetableBasketPageActivity.class);
             }
         });
 //        厨房问答
@@ -44,7 +53,7 @@ public class HomepageActivity extends BaseActivity {
         homepageKitchenTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(HomepageActivity.this,KitchenPageActivity.class);//
+                startActivity(HomepageActivity.this,KitchenPageActivity.class);
             }
         });
 //        排行榜
@@ -52,7 +61,7 @@ public class HomepageActivity extends BaseActivity {
         homepageRankingTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(HomepageActivity.this,RankingListPageActivity.class);//
+                startActivity(HomepageActivity.this,RankingListPageActivity.class);
             }
         });
 //        菜谱分类
@@ -60,7 +69,7 @@ public class HomepageActivity extends BaseActivity {
         homepageMenuClassificationTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(HomepageActivity.this,MenuClassFicationPageActivity.class);//
+                startActivity(HomepageActivity.this,MenuClassFicationPageActivity.class);
             }
         });
     }

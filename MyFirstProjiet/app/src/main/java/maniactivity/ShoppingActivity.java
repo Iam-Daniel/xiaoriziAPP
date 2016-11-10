@@ -1,5 +1,6 @@
 package maniactivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,24 +9,34 @@ import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
 
-import activity.BaseActivity;
-
 /**
- * Created by Administrator on 2016/10/30.
+ * Created by Administrator on 2016/11/10.
  */
-public class ShoppingCartPageActivity extends BaseActivity {
-    ImageView shoppingCartBackImg;
-
+public class ShoppingActivity extends Activity {
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.shopping_cart_page);
-        //返回到SearchLayoutActivity 页面
-        shoppingCartBackImg = (ImageView) findViewById(R.id.shopping_cart_back_img);
-        shoppingCartBackImg.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.shopping_layout);
+
+        //跳转到购物车页面
+        ImageView search_shoppingCart_img = (ImageView)findViewById(R.id.search_shoppingCart_img);
+        search_shoppingCart_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(ShoppingCartPageActivity.this, SearchLayoutActivity.class);
+                Intent intent = new Intent(ShoppingActivity.this, ShoppingCartPageActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        //返回到SearchLayoutActivity 页面
+        ImageView shoppingBackImg = (ImageView) findViewById(R.id.left_back);
+        shoppingBackImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ShoppingActivity.this,SearchLayoutActivity.class);
+                startActivity(intent);
                 finish();
             }
         });
@@ -34,7 +45,7 @@ public class ShoppingCartPageActivity extends BaseActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ShoppingCartPageActivity.this, HomepageActivity.class);
+                Intent intent = new Intent(ShoppingActivity.this, HomepageActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -44,7 +55,7 @@ public class ShoppingCartPageActivity extends BaseActivity {
         buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ShoppingCartPageActivity.this, SearchLayoutActivity.class);
+                Intent intent = new Intent(ShoppingActivity.this, SearchLayoutActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -54,7 +65,7 @@ public class ShoppingCartPageActivity extends BaseActivity {
         concern.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ShoppingCartPageActivity.this, ConcernPageActivity.class);
+                Intent intent = new Intent(ShoppingActivity.this, ConcernPageActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -64,7 +75,7 @@ public class ShoppingCartPageActivity extends BaseActivity {
         account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ShoppingCartPageActivity.this, MyHomePageLayoutActivity.class);
+                Intent intent = new Intent(ShoppingActivity.this, MyHomePageLayoutActivity.class);
                 startActivity(intent);
                 finish();
             }

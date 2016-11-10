@@ -42,6 +42,7 @@ public class VegetableBasketPageActivity extends BaseActivity{
                 Intent intent = new Intent(VegetableBasketPageActivity.this,SearchLayoutActivity.class);
                 startActivity(intent);
                 finish();
+
             }
         });
         //底部菜单-跳转到关注
@@ -52,6 +53,7 @@ public class VegetableBasketPageActivity extends BaseActivity{
                 Intent intent = new Intent(VegetableBasketPageActivity.this,ConcernPageActivity.class);
                 startActivity(intent);
                 finish();
+
             }
         });
         //底部菜单-跳转到我
@@ -62,6 +64,7 @@ public class VegetableBasketPageActivity extends BaseActivity{
                 Intent intent = new Intent(VegetableBasketPageActivity.this,MyHomePageLayoutActivity.class);
                 startActivity(intent);
                 finish();
+
             }
         });
         //返回
@@ -69,7 +72,7 @@ public class VegetableBasketPageActivity extends BaseActivity{
         vegetableBasketBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(VegetableBasketPageActivity.this,HomepageActivity.class);
+                startActivity(VegetableBasketPageActivity.this,HomepageActivity.class);
                 finish();
             }
         });
