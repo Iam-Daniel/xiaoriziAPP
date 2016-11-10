@@ -9,11 +9,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="maniactivity.HomepageActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <!--所有注册列表-->
@@ -38,11 +38,11 @@
         <activity android:name="maniactivity.LogUpPageActivity"/>
 
         <activity android:name="maniactivity.MenuBottomPageActivity">
-            <intent-filter>
+<!--            <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
 
         <activity android:name="maniactivity.MenuClassFicationPageActivity"/>
@@ -69,7 +69,7 @@
         <activity android:name="maniactivity.UpLoadMenuPageActivity"/>
         <activity android:name="maniactivity.UpLoadWorkPageActivity"/>
         <activity android:name="maniactivity.VegetableBasketPageActivity"/>
-
+        <activity android:name="maniactivity.ShoppingActivity"/>
 
 
     </application>

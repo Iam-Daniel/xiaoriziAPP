@@ -219,6 +219,7 @@
                 </LinearLayout>
 
             </LinearLayout>
+            <!--底部菜单栏-->
             <LinearLayout
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="4dp"
@@ -226,6 +227,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/home"
                     android:text="首页"
                     android:gravity="center"
                     android:layout_weight="1"
@@ -233,6 +235,7 @@
                     android:layout_height="wrap_content"
                     android:drawableTop="@mipmap/home"/>
                 <TextView
+                    android:id="@+id/buy"
                     android:text="商城"
                     android:gravity="center"
                     android:layout_weight="1"
@@ -240,6 +243,7 @@
                     android:layout_height="wrap_content"
                     android:drawableTop="@mipmap/buy"/>
                 <TextView
+                    android:id="@+id/concern"
                     android:text="圈圈"
                     android:gravity="center"
                     android:layout_weight="1"
@@ -247,6 +251,7 @@
                     android:layout_height="wrap_content"
                     android:drawableTop="@mipmap/food"/>
                 <TextView
+                    android:id="@+id/account"
                     android:text="我的"
                     android:gravity="center"
                     android:layout_weight="1"

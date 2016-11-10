@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
 
@@ -19,7 +20,7 @@ public class MyConcernPageActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.myconcern_layout);
-//点击返回到我的主页页面
+        //点击返回到我的主页页面
         myConcern_back_img = (ImageView) findViewById(R.id.myConcern_back_img);
         myConcern_back_img.setOnClickListener(new View.OnClickListener() {
             @Override
