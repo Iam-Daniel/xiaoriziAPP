@@ -1,6 +1,6 @@
 package maniactivity;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,6 +20,7 @@ public class MyHomePageLayoutActivity extends BaseActivity {
     LinearLayout myHomepageFansLinear;
     TextView informationTextView;
     ImageView myHomepageOrderImg;
+    ImageView leftBack;
     ImageView myHomepageCollectionImg;
     ImageView myHomepageDiscountImg;
     ImageView myHomepageStatisticsImg;
@@ -31,12 +32,21 @@ public class MyHomePageLayoutActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.myhomepage_layout);
+        leftBack = (ImageView) findViewById(R.id.left_back);
+        leftBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
 //        点击跳转到我的关注页面
         myHomepageConcernLinear = (LinearLayout) findViewById(R.id.myHomepage_concern_linear);
         myHomepageConcernLinear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyHomePageLayoutActivity.this,MyConcernPageActivity.class);
+                startActivity(MyHomePageLayoutActivity.this, MyConcernPageActivity.class);
+                finish();
             }
         });
 //        点击跳转到我的粉丝页面
@@ -44,7 +54,9 @@ public class MyHomePageLayoutActivity extends BaseActivity {
         myHomepageFansLinear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyHomePageLayoutActivity.this,MyFansPageActivity.class);
+                startActivity(MyHomePageLayoutActivity.this, MyFansPageActivity.class);
+                finish();
+
             }
         });
 //        点击跳转到编辑资料页面
@@ -52,7 +64,9 @@ public class MyHomePageLayoutActivity extends BaseActivity {
         informationTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyHomePageLayoutActivity.this,EditDataPageActivity.class);
+                startActivity(MyHomePageLayoutActivity.this, EditDataPageActivity.class);
+                finish();
+
             }
         });
 //        点击跳转到我的订单页面
@@ -60,7 +74,9 @@ public class MyHomePageLayoutActivity extends BaseActivity {
         myHomepageOrderImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyHomePageLayoutActivity.this,MyOrderPageActivity.class);
+                startActivity(MyHomePageLayoutActivity.this, MyOrderPageActivity.class);
+                finish();
+
             }
         });
 //        点击跳转到我的收藏页面
@@ -68,7 +84,9 @@ public class MyHomePageLayoutActivity extends BaseActivity {
         myHomepageCollectionImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyHomePageLayoutActivity.this,MyCollectionPageActivity.class);
+                startActivity(MyHomePageLayoutActivity.this, MyCollectionPageActivity.class);
+                finish();
+
             }
         });
 //        点击跳转到优惠页面
@@ -76,7 +94,9 @@ public class MyHomePageLayoutActivity extends BaseActivity {
         myHomepageDiscountImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyHomePageLayoutActivity.this,DiscountPageActivity.class);
+                startActivity(MyHomePageLayoutActivity.this, DiscountPageActivity.class);
+                finish();
+
             }
         });
 //        点击跳转到统计页面
@@ -84,7 +104,9 @@ public class MyHomePageLayoutActivity extends BaseActivity {
         myHomepageStatisticsImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyHomePageLayoutActivity.this,StatisticsPageActivity.class);
+                startActivity(MyHomePageLayoutActivity.this, StatisticsPageActivity.class);
+                finish();
+
             }
         });
 //        点击跳转到我的作品
@@ -92,7 +114,9 @@ public class MyHomePageLayoutActivity extends BaseActivity {
         myHomepageMyWorksRtl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyHomePageLayoutActivity.this,MyWorksPageActivity.class);
+                startActivity(MyHomePageLayoutActivity.this, MyWorksPageActivity.class);
+                finish();
+
             }
         });
 //        点击跳转到我的菜谱
@@ -100,7 +124,9 @@ public class MyHomePageLayoutActivity extends BaseActivity {
         myHomepageMyMenuRtl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyHomePageLayoutActivity.this,MyMenuPageActivity.class);
+                startActivity(MyHomePageLayoutActivity.this, MyMenuPageActivity.class);
+                finish();
+
             }
         });
 //        点击跳转到设置页面
@@ -108,7 +134,48 @@ public class MyHomePageLayoutActivity extends BaseActivity {
         myHomepageSetRtl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyHomePageLayoutActivity.this,SetPassWordPageActivity.class);
+                startActivity(MyHomePageLayoutActivity.this, SetPassWordPageActivity.class);
+                finish();
+            }
+        });
+        //底部菜单-跳转到首页
+        TextView home = (TextView) findViewById(R.id.home);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyHomePageLayoutActivity.this, HomepageActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        //底部菜单-跳转到商城
+        TextView buy = (TextView) findViewById(R.id.buy);
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyHomePageLayoutActivity.this, SearchLayoutActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        //底部菜单-跳转到关注
+        TextView concern = (TextView) findViewById(R.id.concern);
+        concern.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyHomePageLayoutActivity.this, ConcernPageActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        //底部菜单-跳转到我
+        TextView account = (TextView) findViewById(R.id.account);
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyHomePageLayoutActivity.this, MyHomePageLayoutActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

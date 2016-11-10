@@ -23,16 +23,16 @@ public class SetPassWordPageActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setpassword_layout);
-        setPasswordToNumber = (RelativeLayout)findViewById(R.id.setpassword_to_number);
-        setPasswordToPassWork = (RelativeLayout)findViewById(R.id.setpassword_to_passwork);
-        setPasswordToAddress = (RelativeLayout)findViewById(R.id.setpassword_to_address);
+        setPasswordToNumber = (RelativeLayout) findViewById(R.id.setpassword_to_number);
+        setPasswordToPassWork = (RelativeLayout) findViewById(R.id.setpassword_to_passwork);
+        setPasswordToAddress = (RelativeLayout) findViewById(R.id.setpassword_to_address);
 
 //        返回到我的主页
-        setPasswordBackImg = (ImageView)findViewById(R.id.setPassword_back_img);
+        setPasswordBackImg = (ImageView) findViewById(R.id.setPassword_back_img);
         setPasswordBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(SetPassWordPageActivity.this,MyHomePageLayoutActivity.class);
+                startActivity(SetPassWordPageActivity.this, MyHomePageLayoutActivity.class);
                 finish();
             }
         });
@@ -40,24 +40,24 @@ public class SetPassWordPageActivity extends BaseActivity {
         setPasswordToNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(SetPassWordPageActivity.this,NumberPageActivity.class);
-               // finish();
+                startActivity(SetPassWordPageActivity.this, NumberPageActivity.class);
+                finish();
             }
         });
 //        跳转到设置密码页面
         setPasswordToPassWork.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(SetPassWordPageActivity.this,PassWorkPageActivity.class);
-                //finish();
+                startActivity(SetPassWordPageActivity.this, PassWorkPageActivity.class);
+                finish();
             }
         });
 //        跳转到收货地址页面
         setPasswordToAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(SetPassWordPageActivity.this,AddressPageActivity.class);
-               // finish();
+                startActivity(SetPassWordPageActivity.this, AddressPageActivity.class);
+                finish();
             }
         });
     }
