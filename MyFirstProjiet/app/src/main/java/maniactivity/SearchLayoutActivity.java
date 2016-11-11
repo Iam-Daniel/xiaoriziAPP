@@ -35,7 +35,6 @@ public class SearchLayoutActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
         shengxian = (TextView)findViewById(R.id.shengxian);
@@ -44,7 +43,6 @@ public class SearchLayoutActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
         qiju = (TextView)findViewById(R.id.qiju);
@@ -53,7 +51,6 @@ public class SearchLayoutActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
         tiaowei = (TextView)findViewById(R.id.tiaowei);
@@ -62,7 +59,6 @@ public class SearchLayoutActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
         fangbian = (TextView)findViewById(R.id.fangbian);
@@ -71,7 +67,6 @@ public class SearchLayoutActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
         ganhuo = (TextView)findViewById(R.id.ganhuo);
@@ -80,7 +75,6 @@ public class SearchLayoutActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
         yinping = (TextView)findViewById(R.id.yinping);
@@ -89,7 +83,6 @@ public class SearchLayoutActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -100,7 +93,6 @@ public class SearchLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(SearchLayoutActivity.this,MorePageActivity.class);
-                finish();
             }
         });
 //        跳转到购物车页面
@@ -109,7 +101,6 @@ public class SearchLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(SearchLayoutActivity.this,ShoppingCartPageActivity.class);
-                finish();
             }
         });
     }

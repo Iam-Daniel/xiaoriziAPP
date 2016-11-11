@@ -46,7 +46,6 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(MyHomePageLayoutActivity.this, MyConcernPageActivity.class);
-                finish();
             }
         });
 //        点击跳转到我的粉丝页面
@@ -55,8 +54,6 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(MyHomePageLayoutActivity.this, MyFansPageActivity.class);
-                finish();
-
             }
         });
 //        点击跳转到编辑资料页面
@@ -65,8 +62,6 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(MyHomePageLayoutActivity.this, EditDataPageActivity.class);
-                finish();
-
             }
         });
 //        点击跳转到我的订单页面
@@ -75,8 +70,6 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(MyHomePageLayoutActivity.this, MyOrderPageActivity.class);
-                finish();
-
             }
         });
 //        点击跳转到我的收藏页面
@@ -85,8 +78,6 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(MyHomePageLayoutActivity.this, MyCollectionPageActivity.class);
-                finish();
-
             }
         });
 //        点击跳转到优惠页面
@@ -95,8 +86,6 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(MyHomePageLayoutActivity.this, DiscountPageActivity.class);
-                finish();
-
             }
         });
 //        点击跳转到统计页面
@@ -105,8 +94,6 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(MyHomePageLayoutActivity.this, StatisticsPageActivity.class);
-                finish();
-
             }
         });
 //        点击跳转到我的作品
@@ -115,8 +102,6 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(MyHomePageLayoutActivity.this, MyWorksPageActivity.class);
-                finish();
-
             }
         });
 //        点击跳转到我的菜谱
@@ -125,8 +110,6 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(MyHomePageLayoutActivity.this, MyMenuPageActivity.class);
-                finish();
-
             }
         });
 //        点击跳转到设置页面
@@ -135,7 +118,6 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(MyHomePageLayoutActivity.this, SetPassWordPageActivity.class);
-                finish();
             }
         });
         //底部菜单-跳转到首页
@@ -173,9 +155,6 @@ public class MyHomePageLayoutActivity extends BaseActivity {
         account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MyHomePageLayoutActivity.this, MyHomePageLayoutActivity.class);
-                startActivity(intent);
-                finish();
             }
         });
     }

@@ -26,7 +26,7 @@ public class MyWorksPageActivity extends BaseActivity {
         myWorksBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(MyWorksPageActivity.this,MyHomePageLayoutActivity.class);
+                //startActivity(MyWorksPageActivity.this,MyHomePageLayoutActivity.class);
                 finish();
             }
         });
@@ -35,7 +35,7 @@ public class MyWorksPageActivity extends BaseActivity {
         myWorksUploadWorkImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyWorksPageActivity.this, UpLoadWorkPageActivity.class);
+                startActivity(MyWorksPageActivity.this,UpLoadWorkPageActivity.class);
             }
         });
     }
