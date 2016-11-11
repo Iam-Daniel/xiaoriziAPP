@@ -2,185 +2,205 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/menu"
             android:layout_centerVertical="true"
             android:layout_gravity="center"
-            android:layout_marginLeft="12dp"/>
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/menu" />
+
         <EditText
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
-            android:hint="搜索商品"
-            android:textSize="15sp"
-            android:textColorHint="#212121"
-            android:background="@drawable/search_bg"
-            android:drawableLeft="@mipmap/sousuo"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:gravity="center"
             android:layout_marginLeft="19dp"
             android:layout_marginRight="19dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_bg"
+            android:drawableLeft="@mipmap/sousuo"
+            android:gravity="center"
+            android:hint="搜索商品"
+            android:paddingBottom="4dp"
             android:paddingTop="4dp"
-            android:paddingBottom="4dp"/>
+            android:textColorHint="#212121"
+            android:textSize="15sp" />
+
         <ImageView
             android:id="@+id/search_shoppingCart_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/iocn_gouwuche"
             android:layout_alignParentRight="true"
+            android:layout_gravity="center"
             android:layout_marginRight="12dp"
-            android:layout_gravity="center"/>
+            android:src="@mipmap/iocn_gouwuche" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
             android:text="所在地区"
-            android:textSize="11sp"
             android:textColor="#212121"
-            android:gravity="right" />
+            android:textSize="11sp" />
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="重庆市"
-            android:textSize="11sp"
-            android:textColor="#FFBBBE"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
             android:gravity="left"
-            android:layout_marginLeft="5dp"/>
+            android:text="重庆市"
+            android:textColor="#FFBBBE"
+            android:textSize="11sp" />
 
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#D2D2D2"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:background="#D2D2D2" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="12dp">
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/hongpei"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="烘焙"
-                android:textSize="15sp"
-                android:textColor="#212121"
-                android:gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="11dp"
                 android:drawableTop="@mipmap/icon_food"
-                android:drawablePadding="11dp"/>
+                android:gravity="center"
+                android:text="烘焙"
+                android:textColor="#212121"
+                android:textSize="15sp" />
+
             <TextView
                 android:id="@+id/shengxian"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="生鲜果蔬"
-                android:textSize="15sp"
-                android:textColor="#212121"
-                android:gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="11dp"
                 android:drawableTop="@mipmap/icon_food"
-                android:drawablePadding="11dp"/>
+                android:gravity="center"
+                android:text="生鲜果蔬"
+                android:textColor="#212121"
+                android:textSize="15sp" />
+
             <TextView
                 android:id="@+id/qiju"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="器具"
-                android:textSize="15sp"
-                android:textColor="#212121"
-                android:gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="11dp"
                 android:drawableTop="@mipmap/icon_food"
-                android:drawablePadding="11dp"/>
+                android:gravity="center"
+                android:text="器具"
+                android:textColor="#212121"
+                android:textSize="15sp" />
+
             <TextView
                 android:id="@+id/tiaowei"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="调味"
-                android:textSize="15sp"
-                android:textColor="#212121"
-                android:gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="11dp"
                 android:drawableTop="@mipmap/icon_food"
-                android:drawablePadding="11dp"/>
+                android:gravity="center"
+                android:text="调味"
+                android:textColor="#212121"
+                android:textSize="15sp" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="22dp">
+            android:layout_marginTop="22dp"
+            android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/fangbian"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="方便食品"
-                android:textSize="15sp"
-                android:textColor="#212121"
-                android:gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="11dp"
                 android:drawableTop="@mipmap/icon_food"
-                android:drawablePadding="11dp"/>
+                android:gravity="center"
+                android:text="方便食品"
+                android:textColor="#212121"
+                android:textSize="15sp" />
+
             <TextView
                 android:id="@+id/ganhuo"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="干货"
-                android:textSize="15sp"
-                android:textColor="#212121"
-                android:gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="11dp"
                 android:drawableTop="@mipmap/icon_food"
-                android:drawablePadding="11dp"/>
+                android:gravity="center"
+                android:text="干货"
+                android:textColor="#212121"
+                android:textSize="15sp" />
+
             <TextView
                 android:id="@+id/yinping"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="饮品茶酒"
-                android:textSize="15sp"
-                android:textColor="#212121"
-                android:gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="11dp"
                 android:drawableTop="@mipmap/icon_food"
-                android:drawablePadding="11dp"/>
+                android:gravity="center"
+                android:text="饮品茶酒"
+                android:textColor="#212121"
+                android:textSize="15sp" />
+
             <TextView
                 android:id="@+id/search_more_tv"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="更多"
-                android:textSize="15sp"
-                android:textColor="#212121"
-                android:gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="11dp"
                 android:drawableTop="@mipmap/icon_food"
-                android:drawablePadding="11dp"/>
+                android:gravity="center"
+                android:text="更多"
+                android:textColor="#212121"
+                android:textSize="15sp" />
 
         </LinearLayout>
 
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="#F0F0F0"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:background="#F0F0F0" />
 
 </LinearLayout>
