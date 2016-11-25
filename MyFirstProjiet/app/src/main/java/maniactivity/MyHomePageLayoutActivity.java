@@ -32,13 +32,13 @@ public class MyHomePageLayoutActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.myhomepage_layout);
-        leftBack = (ImageView) findViewById(R.id.left_back);
+        /*leftBack = (ImageView) findViewById(R.id.left_back);
         leftBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
-        });
+        });*/
 
 //        点击跳转到我的关注页面
         myHomepageConcernLinear = (LinearLayout) findViewById(R.id.myHomepage_concern_linear);
