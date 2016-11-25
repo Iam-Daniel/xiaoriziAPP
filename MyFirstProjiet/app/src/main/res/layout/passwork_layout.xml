@@ -2,127 +2,140 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:orientation="vertical">
     <!--设置密码布局-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp">
+
         <ImageView
             android:id="@+id/passwork_to_setpassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/left_back"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="17dp"
-            android:layout_centerVertical="true"/>
+            android:src="@mipmap/left_back" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="设置密码"
             android:layout_centerInParent="true"
-            android:textSize="18sp"
-            android:textColor="#212121"/>
+            android:text="设置密码"
+            android:textColor="#212121"
+            android:textSize="18sp" />
 
     </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="22dp"
-        android:paddingBottom="22dp"
-        android:orientation="vertical"
+        android:layout_marginTop="11dp"
         android:background="#F0F0F0"
-        android:layout_marginTop="11dp">
+        android:orientation="vertical"
+        android:paddingBottom="22dp"
+        android:paddingTop="22dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="短信验证码已发送，请填写验证码 "
-            android:textSize="15sp"
-            android:textColor="#212121"
-            android:layout_gravity="center"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+86 15612345656"
-            android:textSize="15sp"
-            android:textColor="#212121"
             android:layout_gravity="center"
-            android:layout_marginTop="3dp"/>
+            android:text="短信验证码已发送，请填写验证码 "
+            android:textColor="#212121"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:text="+86 15612345656"
+            android:textColor="#212121"
+            android:textSize="15sp" />
 
     </LinearLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
             android:hint="请输入短息验证码"
-            android:textSize="12sp"
             android:textColorHint="#C8C8C8"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:background="@null"/>
+            android:textSize="12sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="发送验证码"
-            android:textSize="12sp"
-            android:textColor="#FBBF41"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="12dp"
-            android:layout_alignParentRight="true" />
+            android:layout_marginTop="15dp"
+            android:text="发送验证码"
+            android:textColor="#FBBF41"
+            android:textSize="12sp" />
 
     </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#F0F0F0"/>
+        android:background="#F0F0F0" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="设置密码"
-            android:textSize="12sp"
-            android:textColorHint="#C8C8C8"
             android:layout_centerVertical="true"
             android:layout_marginLeft="12dp"
-            android:background="@null"/>
+            android:background="@null"
+            android:hint="设置密码"
+            android:textColorHint="#C8C8C8"
+            android:textSize="12sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="不少于6位"
-            android:textSize="12sp"
-            android:textColor="#FBBF41"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="12dp"
-            android:layout_alignParentRight="true" />
+            android:layout_marginTop="15dp"
+            android:text="不少于6位"
+            android:textColor="#FBBF41"
+            android:textSize="12sp" />
 
     </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#F0F0F0"/>
+        android:background="#F0F0F0" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="确定"
-        android:textSize="18sp"
-        android:textColor="#FFFFFF"
-        android:gravity="center"
         android:layout_gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/head_bg"
-        android:paddingTop="14dp"
+        android:gravity="center"
         android:paddingBottom="14dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"/>
-
+        android:paddingTop="14dp"
+        android:text="确定"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
 
 </LinearLayout>

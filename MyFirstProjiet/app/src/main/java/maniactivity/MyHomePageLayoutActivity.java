@@ -19,11 +19,11 @@ public class MyHomePageLayoutActivity extends BaseActivity {
     LinearLayout myHomepageConcernLinear;
     LinearLayout myHomepageFansLinear;
     TextView informationTextView;
-    ImageView myHomepageOrderImg;
+    LinearLayout myHomepageOrderImg;
     ImageView leftBack;
-    ImageView myHomepageCollectionImg;
-    ImageView myHomepageDiscountImg;
-    ImageView myHomepageStatisticsImg;
+    LinearLayout myHomepageCollectionImg;
+    LinearLayout myHomepageDiscountImg;
+    LinearLayout myHomepageStatisticsImg;
     RelativeLayout myHomepageMyWorksRtl;
     RelativeLayout myHomepageMyMenuRtl;
     RelativeLayout myHomepageSetRtl;
@@ -65,7 +65,7 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             }
         });
 //        点击跳转到我的订单页面
-        myHomepageOrderImg = (ImageView) findViewById(R.id.myHomepage_order_img);
+        myHomepageOrderImg = (LinearLayout) findViewById(R.id.myHomepage_order_img);
         myHomepageOrderImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,7 +73,7 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             }
         });
 //        点击跳转到我的收藏页面
-        myHomepageCollectionImg = (ImageView) findViewById(R.id.myHomepage_collection_img);
+        myHomepageCollectionImg = (LinearLayout) findViewById(R.id.myHomepage_collection_img);
         myHomepageCollectionImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,7 +81,7 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             }
         });
 //        点击跳转到优惠页面
-        myHomepageDiscountImg = (ImageView) findViewById(R.id.myHomepage_discount_img);
+        myHomepageDiscountImg = (LinearLayout) findViewById(R.id.myHomepage_discount_img);
         myHomepageDiscountImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,7 +89,7 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             }
         });
 //        点击跳转到统计页面
-        myHomepageStatisticsImg = (ImageView) findViewById(R.id.myHomepage_statistics_img);
+        myHomepageStatisticsImg = (LinearLayout) findViewById(R.id.myHomepage_statistics_img);
         myHomepageStatisticsImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -8,7 +8,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="maniactivity.HomepageActivity" android:launchMode="singleTask">
+
+        <activity
+            android:name="maniactivity.WelcomeActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask">      <!--  android:configChanges="orientation|screenSize"  ：防止切换屏幕方向时webview重新加载url
+                                                                                                2.在放webview的Activity.java中添加onConfigurationChanged事件：
+                                                                                                @Override
+                                                                                                public void onConfigurationChanged(Configuration newConfig) {
+                                                                                                        super.onConfigurationChanged(newConfig);
+                                                                                                              }      -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,51 +26,57 @@
         </activity>
 
         <!--所有注册列表-->
-        <activity android:name="maniactivity.AddressPageActivity"/>
-        <activity android:name="maniactivity.AroundPageActivity"/>
-        <activity android:name="maniactivity.ChatPageActivity"/>
-        <activity android:name="maniactivity.ConcernPageActivity"/>
-        <activity android:name="maniactivity.DetailedInfomationPageActivity"/>
-        <activity android:name="maniactivity.DiscountPageActivity"/>
-        <activity android:name="maniactivity.EditDataPageActivity"/>
-        <activity android:name="maniactivity.EvaluatePageActivity"/>
-        <activity android:name="maniactivity.FollowingPageActivity"/>
-        <activity android:name="maniactivity.ForgetPassWordPageActivity"/>
-        <activity android:name="maniactivity.HeadBackgroundPageActivity"/>
-        <activity android:name="maniactivity.HeadPageActivity"/>
+        <activity android:name="maniactivity.HomepageActivity"/>  <!--app启动页面是WelcomeActivity  3000毫秒后跳转到 HomepageActivity 页面-->
+        <activity android:name="maniactivity.AddressPageActivity" />
+        <activity android:name="maniactivity.AroundPageActivity" />
+        <activity android:name="maniactivity.ChatPageActivity" />
+        <activity android:name="maniactivity.ConcernPageActivity" />
+        <activity android:name="maniactivity.DetailedInfomationPageActivity" />
+        <activity android:name="maniactivity.DiscountPageActivity" />
+        <activity android:name="maniactivity.EditDataPageActivity" />
+        <activity android:name="maniactivity.EvaluatePageActivity" />
+        <activity android:name="maniactivity.FollowingPageActivity" />
+        <activity android:name="maniactivity.ForgetPassWordPageActivity" />
+        <activity android:name="maniactivity.HeadBackgroundPageActivity" />
+        <activity android:name="maniactivity.HeadPageActivity" />
         <!--<activity android:name="maniactivity.HomepageActivity"/>-->
-        <activity android:name="maniactivity.HotMenuPageActivity"/>
-        <activity android:name="maniactivity.InformationPageActivity"/>
-        <activity android:name="maniactivity.KitchenPageActivity"/>
-        <activity android:name="maniactivity.LogInPageActivity"/>
-        <activity android:name="maniactivity.LoginQQPageActivity"/>
-        <activity android:name="maniactivity.LogUpPageActivity"/>
-        <activity android:name="maniactivity.MenuBottomPageActivity"/>
-        <activity android:name="maniactivity.MenuClassFicationPageActivity"/>
-        <activity android:name="maniactivity.MorePageActivity"/>
-        <activity android:name="maniactivity.MycollectionOrderPageActivity"/>
-        <activity android:name="maniactivity.MyCollectionPageActivity"/>
-        <activity android:name="maniactivity.MyConcernPageActivity"/>
-        <activity android:name="maniactivity.MyFansPageActivity"/>
-        <activity android:name="maniactivity.MyHomePageLayoutActivity" android:launchMode="singleTask"/>
-        <activity android:name="maniactivity.MyMenuPageActivity"/>
-        <activity android:name="maniactivity.MyOrderPageActivity"/>
-        <activity android:name="maniactivity.MyWorksPageActivity"/>
-        <activity android:name="maniactivity.NumberPageActivity"/>
-        <activity android:name="maniactivity.NutritionMorningPageActivity"/>
-        <activity android:name="maniactivity.PassByPageActivity"/>
-        <activity android:name="maniactivity.PassWorkPageActivity"/>
-        <activity android:name="maniactivity.RankingListPageActivity"/>
-        <activity android:name="maniactivity.SearchLayoutActivity" android:launchMode="singleTask"/>
-        <activity android:name="maniactivity.SearchPageActivity"/>
-        <activity android:name="maniactivity.SetPassWordPageActivity"/>
-        <activity android:name="maniactivity.ShoppingCartPageActivity"/>
-        <activity android:name="maniactivity.StatisticsPageActivity"/>
-        <activity android:name="maniactivity.TeachCookPageActivity"/>
-        <activity android:name="maniactivity.UpLoadMenuPageActivity"/>
-        <activity android:name="maniactivity.UpLoadWorkPageActivity"/>
-        <activity android:name="maniactivity.VegetableBasketPageActivity"/>
-        <activity android:name="maniactivity.ShoppingActivity"/>
+        <activity android:name="maniactivity.HotMenuPageActivity" />
+        <activity android:name="maniactivity.InformationPageActivity" />
+        <activity android:name="maniactivity.KitchenPageActivity" />
+        <activity android:name="maniactivity.LogInPageActivity" />
+        <activity android:name="maniactivity.LoginQQPageActivity" />
+        <activity android:name="maniactivity.LogUpPageActivity" />
+        <activity android:name="maniactivity.MenuBottomPageActivity" />
+        <activity android:name="maniactivity.MenuClassFicationPageActivity" />
+        <activity android:name="maniactivity.MorePageActivity" />
+        <activity android:name="maniactivity.MycollectionOrderPageActivity" />
+        <activity android:name="maniactivity.MyCollectionPageActivity" />
+        <activity android:name="maniactivity.MyConcernPageActivity" />
+        <activity android:name="maniactivity.MyFansPageActivity" />
+        <activity
+            android:name="maniactivity.MyHomePageLayoutActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="maniactivity.MyMenuPageActivity" />
+        <activity android:name="maniactivity.MyOrderPageActivity" />
+        <activity android:name="maniactivity.MyWorksPageActivity" />
+        <activity android:name="maniactivity.NumberPageActivity" />
+        <activity android:name="maniactivity.NutritionMorningPageActivity" />
+        <activity android:name="maniactivity.PassByPageActivity" />
+        <activity android:name="maniactivity.PassWorkPageActivity" />
+        <activity android:name="maniactivity.RankingListPageActivity" />
+        <activity
+            android:name="maniactivity.SearchLayoutActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="maniactivity.SearchPageActivity" />
+        <activity android:name="maniactivity.SetPassWordPageActivity" />
+        <activity android:name="maniactivity.ShoppingCartPageActivity" />
+        <activity android:name="maniactivity.StatisticsPageActivity" />
+        <activity android:name="maniactivity.TeachCookPageActivity" />
+        <activity android:name="maniactivity.UpLoadMenuPageActivity" />
+        <activity android:name="maniactivity.UpLoadWorkPageActivity" />
+        <activity android:name="maniactivity.VegetableBasketPageActivity" />
+        <activity android:name="maniactivity.ShoppingActivity" />
+        <!--<activity android:name="maniactivity.WelcomeActivity" />-->
 
     </application>
 

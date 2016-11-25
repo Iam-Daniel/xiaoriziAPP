@@ -1,103 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:paddingTop="15dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:paddingTop="15dp">
     <!--导航栏-->
     <RelativeLayout
-        android:layout_marginBottom="15dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
         <ImageView
-            android:id="@+id/vegetable_basket__back_img"
-            android:layout_marginLeft="34px"
+            android:id="@+id/vegetable_basket_back_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/arrow_left"/>
-            <TextView
-                android:textColor="@color/title"
-                android:text="@string/vegetable_basket_page_title"
-                android:textSize="18sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"/>
+            android:layout_marginLeft="34px"
+            android:src="@mipmap/arrow_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/vegetable_basket_page_title"
+            android:textColor="@color/title"
+            android:textSize="18sp" />
 
     </RelativeLayout>
+
     <LinearLayout
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#f4f4f4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_marginTop="163dp"
-            android:textColor="@color/title"
-            android:textSize="12sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/vegetable_basket_page_context_line1"/>
-        <TextView
-            android:layout_marginTop="15dp"
-            android:textColor="#787878"
-            android:textSize="12sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/vegetable_basket_page_context_line2"/>
-    </LinearLayout>
-    <!--底部导航栏-->
-    <LinearLayout
-        android:gravity="bottom"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:background="#f4f4f4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="163dp"
+                android:text="@string/vegetable_basket_page_context_line1"
+                android:textColor="@color/title"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/vegetable_basket_page_context_line2"
+                android:textColor="#787878"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!--底部导航栏-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="invisible">
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#e0e0e0"/>
+                android:background="#e0e0e0" />
+
             <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="4dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/home"
-                    android:text="首页"
-                    android:gravity="center"
-                    android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableTop="@mipmap/home"/>
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/home"
+                    android:gravity="center"
+                    android:text="首页" />
+
                 <TextView
                     android:id="@+id/buy"
-                    android:text="商城"
-                    android:gravity="center"
-                    android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableTop="@mipmap/buy"/>
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/buy"
+                    android:gravity="center"
+                    android:text="商城" />
+
                 <TextView
                     android:id="@+id/concern"
-                    android:text="圈圈"
-                    android:gravity="center"
-                    android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableTop="@mipmap/food"/>
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/food"
+                    android:gravity="center"
+                    android:text="圈圈" />
+
                 <TextView
                     android:id="@+id/account"
-                    android:text="我的"
-                    android:gravity="center"
-                    android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableTop="@mipmap/account"/>
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/account"
+                    android:gravity="center"
+                    android:text="我的" />
+
             </LinearLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
     </LinearLayout>
+
 </LinearLayout>

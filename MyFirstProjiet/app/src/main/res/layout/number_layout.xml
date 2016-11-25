@@ -2,34 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:orientation="vertical">
     <!--账号管理布局-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp">
+
         <ImageView
             android:id="@+id/number_to_setpassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/left_back"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="17dp"
-            android:layout_centerVertical="true"/>
+            android:src="@mipmap/left_back" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="账号管理"
             android:layout_centerInParent="true"
-            android:textSize="18sp"
-            android:textColor="#212121"/>
+            android:text="账号管理"
+            android:textColor="#212121"
+            android:textSize="18sp" />
 
     </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"
-        android:background="#F0F0F0"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="12dp"
+        android:background="#F0F0F0" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="46dp">
@@ -37,25 +41,28 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
             android:text="手机号"
-            android:textSize="15sp"
             android:textColor="#212121"
-            android:layout_marginLeft="12dp"
-            android:layout_centerVertical="true"/>
+            android:textSize="15sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="未绑定"
-            android:textSize="12sp"
-            android:layout_marginLeft="12dp"
-            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="12dp"/>
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="未绑定"
+            android:textSize="12sp" />
     </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#E3E3E3"/>
+        android:background="#E3E3E3" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="46dp">
@@ -63,25 +70,28 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
             android:text="新浪微博"
-            android:textSize="15sp"
             android:textColor="#212121"
-            android:layout_marginLeft="12dp"
-            android:layout_centerVertical="true"/>
+            android:textSize="15sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="未绑定"
-            android:textSize="12sp"
-            android:layout_marginLeft="12dp"
-            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="12dp"/>
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="未绑定"
+            android:textSize="12sp" />
     </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#E3E3E3"/>
+        android:background="#E3E3E3" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="46dp">
@@ -89,25 +99,28 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
             android:text="QQ"
-            android:textSize="15sp"
             android:textColor="#212121"
-            android:layout_marginLeft="12dp"
-            android:layout_centerVertical="true"/>
+            android:textSize="15sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="未绑定"
-            android:textSize="12sp"
-            android:layout_marginLeft="12dp"
-            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="12dp"/>
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="未绑定"
+            android:textSize="12sp" />
     </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#E3E3E3"/>
+        android:background="#E3E3E3" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="46dp">
@@ -115,25 +128,27 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="微信"
-            android:textSize="15sp"
-            android:textColor="#212121"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="12dp"
-            android:layout_centerVertical="true"/>
+            android:text="微信"
+            android:textColor="#212121"
+            android:textSize="15sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="未绑定"
-            android:textSize="12sp"
-            android:layout_marginLeft="12dp"
-            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="12dp"/>
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="未绑定"
+            android:textSize="12sp" />
     </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#E3E3E3"/>
+        android:background="#E3E3E3" />
 
 
 </LinearLayout>

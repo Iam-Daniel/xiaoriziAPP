@@ -27,7 +27,7 @@ public class MenuBottomPageActivity extends BaseActivity {
         menuBottomHomepageTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MenuBottomPageActivity.this,HomepageActivity.class);
+                startActivity(MenuBottomPageActivity.this, HomepageActivity.class);
             }
         });
 //        跳转到搜索（市集）页面
@@ -35,7 +35,7 @@ public class MenuBottomPageActivity extends BaseActivity {
         menuBottomShoppingTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MenuBottomPageActivity.this,SearchLayoutActivity.class);
+                startActivity(MenuBottomPageActivity.this, SearchLayoutActivity.class);
             }
         });
 //        跳转到圈圈（关注我的圈子）页面
@@ -43,7 +43,7 @@ public class MenuBottomPageActivity extends BaseActivity {
         menuBottomCircleTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MenuBottomPageActivity.this,AroundPageActivity.class);
+                startActivity(MenuBottomPageActivity.this, AroundPageActivity.class);
             }
         });
 //        跳转到我的主页
@@ -51,7 +51,7 @@ public class MenuBottomPageActivity extends BaseActivity {
         menuBottomMyTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MenuBottomPageActivity.this,MyHomePageLayoutActivity.class);
+                startActivity(MenuBottomPageActivity.this, MyHomePageLayoutActivity.class);
             }
         });
     }
