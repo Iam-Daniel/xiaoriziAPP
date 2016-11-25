@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/homepage_linearLayout">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -127,159 +128,174 @@
 
             </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp">
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="77dp"
-                    android:layout_marginLeft="24dp"
-                    android:src="@mipmap/icon_homepage_1bg" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="一 其他 一"
-                        android:textColor="#212121"
-                        android:textSize="15sp" />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="77dp"
+                        android:layout_marginLeft="24dp"
+                        android:src="@mipmap/icon_homepage_1bg" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp">
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="886"
-                            android:textColor="#787878"
-                            android:textSize="11sp" />
+                            android:text="一 其他 一"
+                            android:textColor="#212121"
+                            android:textSize="15sp" />
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text="作品"
-                            android:textColor="#787878"
-                            android:textSize="11sp" />
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="886"
+                                android:textColor="#787878"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="作品"
+                                android:textColor="#787878"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
-                </LinearLayout>
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="77dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="46dp"
+                        android:src="@mipmap/icon_homepage_2bg" />
 
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="77dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="46dp"
-                    android:src="@mipmap/icon_homepage_2bg" />
-
-
-            </RelativeLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/icon_homepage_off" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:src="@mipmap/icon_homepage_on" />
-
-            </LinearLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="77dp"
-                    android:layout_marginLeft="24dp"
-                    android:src="@mipmap/icon_animal_cat" />
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
 
-                    <TextView
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="一 营养早点 一"
-                        android:textColor="#212121"
-                        android:textSize="15sp" />
+                        android:src="@mipmap/icon_homepage_off" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:src="@mipmap/icon_homepage_on" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="77dp"
+                        android:layout_marginLeft="24dp"
+                        android:src="@mipmap/icon_animal_cat" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp">
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="8486"
-                            android:textColor="#787878"
-                            android:textSize="11sp" />
+                            android:text="一 营养早点 一"
+                            android:textColor="#212121"
+                            android:textSize="15sp" />
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text="作品"
-                            android:textColor="#787878"
-                            android:textSize="11sp" />
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8486"
+                                android:textColor="#787878"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="作品"
+                                android:textColor="#787878"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="77dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="46dp"
+                        android:src="@mipmap/icon_food_back" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_homepage_off" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:src="@mipmap/icon_homepage_on" />
+
                 </LinearLayout>
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="77dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="46dp"
-                    android:src="@mipmap/icon_food_back" />
-
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/icon_homepage_off" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:src="@mipmap/icon_homepage_on" />
-
             </LinearLayout>
+
 
             <View
                 android:layout_width="match_parent"

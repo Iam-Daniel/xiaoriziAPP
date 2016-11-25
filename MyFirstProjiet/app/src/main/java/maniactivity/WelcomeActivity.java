@@ -51,7 +51,7 @@ public class WelcomeActivity extends BaseActivity {
     }
 
     private void skip() {
-        startActivity(WelcomeActivity.this, HomepageActivity.class);
+        startActivity(WelcomeActivity.this, MenuBottomPageActivity.class);
         finish();
     }
 }
