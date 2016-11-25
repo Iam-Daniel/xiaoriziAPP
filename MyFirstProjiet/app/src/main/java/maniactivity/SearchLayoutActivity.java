@@ -5,9 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import activity.BaseActivity;
 
@@ -17,68 +21,36 @@ import activity.BaseActivity;
 public class SearchLayoutActivity extends BaseActivity {
     TextView searchMoreTv;
     ImageView searchShoppingCartImg;
-    TextView hongpei;
-    TextView shengxian;
-    TextView qiju;
-    TextView tiaowei;
-    TextView fangbian;
-    TextView ganhuo;
-    TextView yinping;
+    TextView hongPei;
+    TextView shengXian;
+    TextView qiJu;
+    TextView tiaoWei;
+    TextView fangBian;
+    TextView ganHuo;
+    TextView yinPing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_layout);
-        hongpei = (TextView)findViewById(R.id.hongpei);
-        hongpei.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
-                startActivity(intent);
-            }
-        });
-        shengxian = (TextView)findViewById(R.id.shengxian);
-        shengxian.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
-                startActivity(intent);
-            }
-        });
-        qiju = (TextView)findViewById(R.id.qiju);
-        qiju.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
-                startActivity(intent);
-            }
-        });
-        tiaowei = (TextView)findViewById(R.id.tiaowei);
-        tiaowei.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
-                startActivity(intent);
-            }
-        });
-        fangbian = (TextView)findViewById(R.id.fangbian);
-        fangbian.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
-                startActivity(intent);
-            }
-        });
-        ganhuo = (TextView)findViewById(R.id.ganhuo);
-        ganhuo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
-                startActivity(intent);
-            }
-        });
-        yinping = (TextView)findViewById(R.id.yinping);
-        yinping.setOnClickListener(new View.OnClickListener() {
+        itemFindViewById();
+        itemSetOnClickListener();
+
+    }
+
+    private void itemFindViewById(){
+        hongPei = (TextView)findViewById(R.id.hongpei);
+        shengXian = (TextView)findViewById(R.id.shengxian);
+        qiJu = (TextView)findViewById(R.id.qiju);
+        tiaoWei = (TextView)findViewById(R.id.tiaowei);
+        fangBian = (TextView)findViewById(R.id.fangbian);
+        ganHuo = (TextView)findViewById(R.id.ganhuo);
+        yinPing = (TextView)findViewById(R.id.yinping);
+        searchMoreTv = (TextView) findViewById(R.id.search_more_tv);
+        searchShoppingCartImg = (ImageView) findViewById(R.id.search_shoppingCart_img);
+    }
+    private void itemSetOnClickListener(){
+        hongPei.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
@@ -86,9 +58,56 @@ public class SearchLayoutActivity extends BaseActivity {
             }
         });
 
+        shengXian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        qiJu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        tiaoWei.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        fangBian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ganHuo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        yinPing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchLayoutActivity.this,ShoppingActivity.class);
+                startActivity(intent);
+            }
+        });
 
 //        跳转到更多页面
-        searchMoreTv = (TextView) findViewById(R.id.search_more_tv);
+
         searchMoreTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,7 +115,7 @@ public class SearchLayoutActivity extends BaseActivity {
             }
         });
 //        跳转到购物车页面
-        searchShoppingCartImg = (ImageView) findViewById(R.id.search_shoppingCart_img);
+
         searchShoppingCartImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

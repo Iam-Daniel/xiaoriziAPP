@@ -3,14 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
         android:text="新品推荐"
-        android:textSize="16sp"
         android:textColor="#212121"
-        android:layout_marginLeft="12dp"/>
+        android:textSize="16sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="33dp"
@@ -18,115 +23,143 @@
         android:layout_marginRight="12dp"
         android:layout_marginTop="12dp"
         android:orientation="horizontal">
+
         <ImageView
+            android:id="@+id/icon_head"
             android:layout_width="33dp"
             android:layout_height="33dp"
-            android:src="@mipmap/icon_touxiang_qq_two"/>
+            android:src="@mipmap/icon_touxiang_qq_two" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginLeft="8dp">
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+
             <TextView
+                android:id="@+id/author"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="Canecre gril"
-                android:textSize="13sp"
-                android:textColor="#787878"/>
+                android:textColor="#787878"
+                android:textSize="13sp" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
+
                 <TextView
+                    android:id="@+id/time_y_m_d"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="2016-6-26"
-                    android:textSize="11sp"
-                    android:textColor="#787878"/>
+                    android:textColor="#787878"
+                    android:textSize="11sp" />
+
                 <TextView
+                    android:id="@+id/time_f_a"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
                     android:layout_weight="1"
                     android:text="pm"
-                    android:textSize="11sp"
                     android:textColor="#787878"
-                    android:layout_marginLeft="5dp"/>
+                    android:textSize="11sp" />
+
                 <TextView
+                    android:id="@+id/time_m_s"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
                     android:layout_weight="1"
                     android:text="5:20"
-                    android:textSize="11sp"
                     android:textColor="#787878"
-                    android:layout_marginLeft="1dp"/>
+                    android:textSize="11sp" />
 
             </LinearLayout>
 
         </LinearLayout>
+
         <View
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
         <TextView
+            android:id="@+id/concern"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="关注"
-            android:textSize="13sp"
-            android:textColor="#787878"
+            android:layout_gravity="right"
+            android:background="@drawable/follow_bg"
             android:drawableLeft="@mipmap/add"
             android:gravity="center"
-            android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:paddingLeft="4dp"
             android:paddingRight="7dp"
-            android:background="@drawable/follow_bg"
-            android:layout_gravity="right"/>
+            android:paddingTop="5dp"
+            android:text="关注"
+            android:textColor="#787878"
+            android:textSize="13sp" />
 
     </LinearLayout>
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="240dp"
         android:layout_marginTop="8dp"
-        android:background="@mipmap/icon_bg_kitchen">
+        >
+        <ImageView
+            android:id="@+id/img"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_bg_kitchen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
         <LinearLayout
+            android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:orientation="horizontal"
+            android:layout_marginBottom="9dp"
             android:layout_marginLeft="12dp"
-            android:layout_marginBottom="9dp">
+            android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/image_soucang"/>
+                android:src="@mipmap/image_soucang" />
+
             <TextView
+                android:id="@+id/numb_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
                 android:text="680"
-                android:textSize="11sp"
                 android:textColor="#787878"
-                android:layout_marginLeft="4dp"
-                android:layout_gravity="center"/>
+                android:textSize="11sp" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/image_pingjia"
-                android:layout_marginLeft="20dp"/>
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/image_pingjia" />
+
             <TextView
+                android:id="@+id/numb_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="340"
-                android:textSize="11sp"
-                android:textColor="#787878"
+                android:layout_gravity="center"
                 android:layout_marginLeft="4dp"
-                android:layout_gravity="center"/>
+                android:text="340"
+                android:textColor="#787878"
+                android:textSize="11sp" />
 
 
         </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
