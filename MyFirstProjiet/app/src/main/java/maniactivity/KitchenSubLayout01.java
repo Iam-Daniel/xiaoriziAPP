@@ -28,6 +28,7 @@ public class KitchenSubLayout01 extends Fragment {
         listView = (ListView)view.findViewById(R.id.kitchenLayoutListView) ;
         setData();
         ListViewAdapter listViewAdapter = new ListViewAdapter(getContext(),list,2);
+        listView.setAdapter(listViewAdapter);
         return view;
     }
 

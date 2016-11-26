@@ -86,7 +86,7 @@ public class ListViewAdapter extends BaseAdapter {
         ListInformation information = list.get(position);
         //根据要加载的listView格式不同，分别加载对应对应内容
         //此处是SearchLayoutListView界面调用
-        if (style==1 && !viewHolder.state){
+        if (style==1){
             viewHolder.icon_head.setImageResource(information.getIcon_head());
             viewHolder.img.setImageResource(information.getImg());
             viewHolder.author.setText(information.getAuthor());
@@ -97,7 +97,7 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.numb_m.setText(information.getNumb_m());
             viewHolder.state = true;
             //此处是KitchenPageActivity界面调用
-        }else if (style==2 && !viewHolder.state){
+        }else if (style==2){
             viewHolder.icon_head.setImageResource(information.getIcon_head());
             viewHolder.img.setImageResource(information.getImg());
             viewHolder.author.setText(information.getAuthor());
