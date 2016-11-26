@@ -31,12 +31,15 @@
             android:src="@mipmap/icon_touxiang_qq_two" />
 
         <LinearLayout
+            android:gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="8dp"
             android:orientation="vertical">
 
             <TextView
+                android:gravity="center"
+                android:text="阿瓜"
                 android:id="@+id/author"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
@@ -45,6 +48,7 @@
                 android:textSize="13sp" />
 
             <LinearLayout
+                android:id="@+id/changeLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -106,6 +110,14 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="新品推荐"
+        android:textSize="16sp" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="240dp"

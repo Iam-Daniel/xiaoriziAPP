@@ -1,11 +1,13 @@
 package maniactivity;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
@@ -15,27 +17,34 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/11/25.
  */
-public class SearchLayoutAdapter extends BaseAdapter {
+public class ListViewAdapter extends BaseAdapter {
     Context context;
-    List<SearchLayoutListInformation> list;
+    List<ListInformation> list;
+    int style;//由于多个页面复用该适配器，需要传入参数来决定加载哪些内容
 
-    public SearchLayoutAdapter(Context context, List<SearchLayoutListInformation> list) {
+    public ListViewAdapter(Context context, List<ListInformation> list, int style) {
         this.context = context;
         this.list = list;
+        //1 是SearchLayoutListView界面调用
+        //2 是KitchenPageActivity界面调用
+        this.style = style;
     }
 
     @Override
     public int getCount() {
+        Log.i("test001","getCount "+list.size());
         return list.size();
     }
 
     @Override
     public Object getItem(int position) {
+        Log.i("TAG","getItem "+list.get(position));
         return list.get(position);
     }
 
     @Override
     public long getItemId(int position) {
+        Log.i("TAG","getItem "+position);
         return position;
     }
 
@@ -48,7 +57,9 @@ public class SearchLayoutAdapter extends BaseAdapter {
         ImageView img;//示例背景图
         TextView numb_f;//喜欢人数
         TextView numb_m;//留言数
-        boolean set = false;
+        TextView details;//食谱做法
+        LinearLayout changeLayout;//有的List中不需要该布局
+        boolean state =false;
     }
 
     @Override
@@ -66,13 +77,16 @@ public class SearchLayoutAdapter extends BaseAdapter {
             viewHolder.time_m_s = (TextView)view.findViewById(R.id.time_m_s);
             viewHolder.numb_f = (TextView)view.findViewById(R.id.numb_f);
             viewHolder.numb_m = (TextView)view.findViewById(R.id.numb_m);
+            viewHolder.details = (TextView)view.findViewById(R.id.details);
+            viewHolder.changeLayout = (LinearLayout)view.findViewById(R.id.changeLayout);
             view.setTag(viewHolder);
         }else{
             viewHolder = (ViewHolder)view.getTag();
         }
-        SearchLayoutListInformation information = list.get(position);
-        //如果没有设置作者，则进入设置数据--解决
-        if (true){
+        ListInformation information = list.get(position);
+        //根据要加载的listView格式不同，分别加载对应对应内容
+        //此处是SearchLayoutListView界面调用
+        if (style==1 && !viewHolder.state){
             viewHolder.icon_head.setImageResource(information.getIcon_head());
             viewHolder.img.setImageResource(information.getImg());
             viewHolder.author.setText(information.getAuthor());
@@ -81,7 +95,17 @@ public class SearchLayoutAdapter extends BaseAdapter {
             viewHolder.time_m_s.setText(information.getTime_m_s());
             viewHolder.numb_f.setText(information.getNumb_f());
             viewHolder.numb_m.setText(information.getNumb_m());
-            viewHolder.set= true;
+            viewHolder.state = true;
+            //此处是KitchenPageActivity界面调用
+        }else if (style==2 && !viewHolder.state){
+            viewHolder.icon_head.setImageResource(information.getIcon_head());
+            viewHolder.img.setImageResource(information.getImg());
+            viewHolder.author.setText(information.getAuthor());
+            viewHolder.numb_f.setText(information.getNumb_f());
+            viewHolder.numb_m.setText(information.getNumb_m());
+            viewHolder.changeLayout.setVisibility(View.GONE);
+            viewHolder.details.setText(information.getDetails());
+            viewHolder.state = true;
         }
         return view;
     }

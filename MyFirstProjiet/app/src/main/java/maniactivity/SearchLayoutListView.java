@@ -7,7 +7,6 @@ import android.widget.ListView;
 
 import com.example.administrator.myfirstprojiet.R;
 
-import java.lang.reflect.AccessibleObject;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +15,7 @@ import java.util.List;
  */
 public class SearchLayoutListView extends Activity {
     ListView listView;
-    List<SearchLayoutListInformation> list;
+    List<ListInformation> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,14 +24,15 @@ public class SearchLayoutListView extends Activity {
         listView = (ListView)findViewById(R.id.search_layout_listView);
         View view = getLayoutInflater().inflate(R.layout.search_layout,null);
         listView.addHeaderView(view);
-        listView.setAdapter(new SearchLayoutAdapter(this,list));
+        int type = 1;//调用适配器，申明是SearchLayoutListView调用
+        listView.setAdapter(new ListViewAdapter(this,list,type));
     }
 
     private void setInfo(){
         list = new ArrayList<>();
-        SearchLayoutListInformation information;
+        ListInformation information;
         for (int t =0;t<10;t++){
-            information  = new SearchLayoutListInformation();
+            information  = new ListInformation();
             information.setAuthor("author"+t);
             information.setImg(R.mipmap.icon_bg_kitchen);
             information.setTime_y_m_d("2016-11-"+t);

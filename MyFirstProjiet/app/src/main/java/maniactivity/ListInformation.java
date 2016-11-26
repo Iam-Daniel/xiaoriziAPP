@@ -3,7 +3,7 @@ package maniactivity;
 /**
  * Created by Administrator on 2016/11/25.
  */
-public class SearchLayoutListInformation {
+public class ListInformation {
     //使用数据库后需要将icon_head和img类型修改为String，解析来自于数据库的地址
     private int icon_head;//头像图片
     private String author;//作者
@@ -13,6 +13,16 @@ public class SearchLayoutListInformation {
     private int img;//示例背景图
     private String numb_f;//喜欢人数
     private String numb_m;//留言数
+    private String details;
+
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String detail) {
+        this.details = detail;
+    }
 
     public int getIcon_head() {
         return icon_head;
