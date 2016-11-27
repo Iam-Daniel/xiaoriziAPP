@@ -1,6 +1,6 @@
 package fragment;
 
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -9,12 +9,19 @@ import android.view.ViewGroup;
 
 import com.example.administrator.myfirstprojiet.R;
 
+import maniactivity.BaseFragment;
+
 /**
  * Created by Administrator on 2016/11/25.
  */
-public class MyHomepageFragment extends Fragment {
+public class MyHomepageFragment extends BaseFragment {
     public MyHomepageFragment() {
 
+    }
+
+    @Override
+    protected int setLayoutResouceId() {
+        return 0;
     }
 
     @Nullable
@@ -22,5 +29,13 @@ public class MyHomepageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.myhomepage_layout, container, false);
         return view;
+    }
+
+
+    private void itemFindViewById(){
+
+    }
+    private void itemSetOnClickListener(){
+
     }
 }

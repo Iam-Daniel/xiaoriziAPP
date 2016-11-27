@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/fragment"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </LinearLayout>
+<!--    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </android.support.v4.view.ViewPager>-->
+
+    //底部菜单栏
+    <RadioGroup
+        android:id="@+id/radioGroup_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/menuBottom_homepage_tv"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_homepage"
+            android:text="@string/menu_bottom_home" />
+
+        <RadioButton
+            android:id="@+id/menuBottom_shopping_tv"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_search"
+            android:text="@string/menu_bottom_buy" />
+
+        <RadioButton
+            android:id="@+id/menuBottom_circle_tv"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_concern"
+            android:text="@string/menu_bottom_food" />
+
+        <RadioButton
+            android:id="@+id/menuBottom_my_tv"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_my"
+            android:text="@string/menu_bottom_account" />
+
+    </RadioGroup>
+</LinearLayout>

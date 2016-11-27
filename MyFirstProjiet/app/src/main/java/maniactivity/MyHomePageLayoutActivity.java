@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.administrator.myfirstprojiet.R;
 
 import activity.BaseActivity;
+import fragment.WorldPageFragment;
 
 /**
  * Created by Administrator on 2016/10/29.
@@ -145,7 +146,7 @@ public class MyHomePageLayoutActivity extends BaseActivity {
         concern.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MyHomePageLayoutActivity.this, ConcernPageActivity.class);
+                Intent intent = new Intent(MyHomePageLayoutActivity.this, WorldPageFragment.class);
                 startActivity(intent);
                 finish();
             }

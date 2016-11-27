@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.administrator.myfirstprojiet.R;
 
 import activity.BaseActivity;
+import fragment.WorldPageFragment;
 
 /**
  * Created by Administrator on 2016/10/19.
@@ -48,7 +49,7 @@ public class VegetableBasketPageActivity extends BaseActivity {
         concern.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(VegetableBasketPageActivity.this, ConcernPageActivity.class);
+                Intent intent = new Intent(VegetableBasketPageActivity.this, WorldPageFragment.class);
                 startActivity(intent);
                 finish();
 

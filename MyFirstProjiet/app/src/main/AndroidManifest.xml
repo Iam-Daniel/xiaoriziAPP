@@ -10,7 +10,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity
-            android:name="maniactivity.WelcomeActivity"
+            android:name="maniactivity.HomepageActivity"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTask">      <!--  android:configChanges="orientation|screenSize"  ：防止切换屏幕方向时webview重新加载url
                                                                                                 2.在放webview的Activity.java中添加onConfigurationChanged事件：
@@ -26,7 +26,7 @@
         </activity>
 
         <!--所有注册列表-->
-        <activity android:name="maniactivity.HomepageActivity" />  <!--app启动页面是WelcomeActivity  3000毫秒后跳转到 HomepageActivity 页面-->
+      <!--  <activity android:name="maniactivity.HomepageActivity" />-->  <!--app启动页面是WelcomeActivity  3000毫秒后跳转到 HomepageActivity 页面-->
         <activity android:name="maniactivity.AddressPageActivity" />
         <activity android:name="maniactivity.AroundPageActivity" />
         <activity android:name="maniactivity.ChatPageActivity" />

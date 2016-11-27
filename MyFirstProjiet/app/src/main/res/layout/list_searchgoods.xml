@@ -168,9 +168,21 @@
                 android:textColor="#787878"
                 android:textSize="11sp" />
 
-
         </LinearLayout>
-
+        <ImageView
+            android:id="@+id/media"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
-
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:textColor="#505050"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- 扬州什锦 -"/>
 </LinearLayout>

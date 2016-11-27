@@ -1,75 +1,98 @@
 package maniactivity;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-
+import android.widget.RadioButton;
 import com.example.administrator.myfirstprojiet.R;
-
-import activity.BaseActivity;
+import fragment.HomepageFragment;
+import fragment.MyHomepageFragment;
+import fragment.SearchFragment;
+import fragment.WorldPageFragment;
 
 /**
  * Created by Administrator on 2016/10/29.
  */
-public class HomepageActivity extends BaseActivity {
-    ImageView homepageSearchImg;
-    ImageView homepageBasketImg;
-    TextView homepageKitchenTv;
-    TextView homepageRankingTv;
-    TextView homepageMenuClassificationTv;
+public class HomepageActivity extends FragmentActivity {
+    RadioButton menuBottom_homepage_tv;
+    RadioButton menuBottom_shopping_tv;
+    RadioButton menuBottom_circle_tv;
+    RadioButton menuBottom_my_tv;
+    HomepageFragment homepageFragment;
+    WorldPageFragment worldPageFragment;
+    MyHomepageFragment myHomepageFragment;
+    SearchFragment searchFragment;
+    FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_homepage);
-//        搜索商品
-        homepageSearchImg = (ImageView) findViewById(R.id.homepage_search_img);
-        homepageSearchImg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(HomepageActivity.this,SearchPageActivity.class);
-            }
-        });
-        // 买烘培
-        TextView homepage_buy = (TextView) findViewById(R.id.homepage_buy);
-        homepage_buy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(HomepageActivity.this,SearchLayoutActivity.class);
-            }
-        });
+        setContentView(R.layout.main_page);
+        //关联控件
+        itemFindViewById();
+        //设置监听事件
+        itemSetOnClickListener();
+        setDefaultFragment();
+    }
 
-//        菜篮子
-        homepageBasketImg = (ImageView) findViewById(R.id.homepage_basket_img);
-        homepageBasketImg.setOnClickListener(new View.OnClickListener() {
+    private void setDefaultFragment() {
+        fragmentManager = getSupportFragmentManager();
+        homepageFragment = new HomepageFragment();
+        worldPageFragment = new WorldPageFragment();
+        myHomepageFragment = new MyHomepageFragment();
+        searchFragment = new SearchFragment();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.fragment, homepageFragment);
+        fragmentTransaction.commit();
+        menuBottom_homepage_tv.setChecked(true);
+    }
+
+    private void itemFindViewById() {
+        menuBottom_homepage_tv = (RadioButton) findViewById(R.id.menuBottom_homepage_tv);
+        menuBottom_shopping_tv = (RadioButton) findViewById(R.id.menuBottom_shopping_tv);
+        menuBottom_circle_tv = (RadioButton) findViewById(R.id.menuBottom_circle_tv);
+        menuBottom_my_tv = (RadioButton) findViewById(R.id.menuBottom_my_tv);
+    }
+
+    private void itemSetOnClickListener() {
+        //首页
+        menuBottom_homepage_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(HomepageActivity.this,VegetableBasketPageActivity.class);
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment, homepageFragment);
+                fragmentTransaction.commit();
             }
         });
-//        厨房问答
-        homepageKitchenTv = (TextView) findViewById(R.id.homepage_kitchen_tv);
-        homepageKitchenTv.setOnClickListener(new View.OnClickListener() {
+        //商城
+        menuBottom_shopping_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(HomepageActivity.this,KitchenPageActivity.class);
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment, searchFragment);
+                fragmentTransaction.commit();
             }
         });
-//        排行榜
-        homepageRankingTv = (TextView) findViewById(R.id.homepage_ranking_tv);
-        homepageRankingTv.setOnClickListener(new View.OnClickListener() {
+        //圈子
+        menuBottom_circle_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(HomepageActivity.this,RankingListPageActivity.class);
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment,worldPageFragment);
+                fragmentTransaction.commit();
             }
         });
-//        菜谱分类
-        homepageMenuClassificationTv = (TextView) findViewById(R.id.homepage_menuclassification_tv);
-        homepageMenuClassificationTv.setOnClickListener(new View.OnClickListener() {
+        //我的
+        menuBottom_my_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(HomepageActivity.this,MenuClassFicationPageActivity.class);
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment, myHomepageFragment);
+                fragmentTransaction.commit();
             }
         });
     }
