@@ -18,7 +18,7 @@ import activity.BaseActivity;
 public class MyHomePageLayoutActivity extends BaseActivity {
     LinearLayout myHomepageConcernLinear;
     LinearLayout myHomepageFansLinear;
-    TextView informationTextView;
+    LinearLayout informationTextView;
     LinearLayout myHomepageOrderImg;
     ImageView leftBack;
     LinearLayout myHomepageCollectionImg;
@@ -57,7 +57,7 @@ public class MyHomePageLayoutActivity extends BaseActivity {
             }
         });
 //        点击跳转到编辑资料页面
-        informationTextView = (TextView) findViewById(R.id.myHomepage_information_textView);
+        informationTextView = (LinearLayout) findViewById(R.id.myHomepage_information_textView);
         informationTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

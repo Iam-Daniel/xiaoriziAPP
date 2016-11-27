@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myHomepage_linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:orientation="vertical"
-    android:id="@+id/myHomepage_linearLayout">
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -173,25 +173,34 @@
 
                         </LinearLayout>
 
-                        <TextView
+                        <LinearLayout
                             android:id="@+id/myHomepage_information_textView"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginRight="13dp"
-                            android:text="编辑资料"
-                            android:textColor="#FFFFFF"
-                            android:textSize="15sp" />
+                            android:gravity="center"
+                            android:paddingLeft="6dp">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="7dp"
-                            android:layout_toLeftOf="@id/myHomepage_information_textView"
-                            android:src="@mipmap/icon_work" />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="7dp"
+                                android:src="@mipmap/icon_work" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="13dp"
+                                android:text="编辑资料"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
                     </RelativeLayout>
+
                 </LinearLayout>
 
                 <View
@@ -444,7 +453,7 @@
                 </LinearLayout>
             </LinearLayout>
             <!--底部菜单栏-->
-            <LinearLayout
+            <!--<LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -486,7 +495,10 @@
                     android:drawableTop="@mipmap/account"
                     android:gravity="center"
                     android:text="我的" />
-            </LinearLayout>
+            </LinearLayout>-->
+
         </LinearLayout>
+
     </ScrollView>
+
 </LinearLayout>
