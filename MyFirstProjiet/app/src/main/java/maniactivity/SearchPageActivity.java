@@ -1,8 +1,8 @@
 package maniactivity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.administrator.myfirstprojiet.R;
@@ -14,6 +14,8 @@ import activity.BaseActivity;
  */
 public class SearchPageActivity extends BaseActivity {
     ImageView searchBackImg;
+    EditText searchToLinkPage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,13 @@ public class SearchPageActivity extends BaseActivity {
             public void onClick(View view) {
                 //startActivity(SearchPageActivity.this,HomepageActivity.class);
                 finish();
+            }
+        });
+        searchToLinkPage = (EditText) findViewById(R.id.search_to_linkPage);
+        searchToLinkPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(SearchPageActivity.this, LinkSearchPageActivity.class);
             }
         });
     }
