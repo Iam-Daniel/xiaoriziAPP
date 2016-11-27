@@ -178,6 +178,7 @@
             android:layout_height="wrap_content" />
     </RelativeLayout>
     <TextView
+        android:id="@+id/title_bottom"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
         android:textColor="#505050"

@@ -14,8 +14,17 @@ public class ListInformation {
     private String numb_f;//喜欢人数
     private String numb_m;//留言数
     private String details;//详细做法
-    private int concern;//是否被关注
-    private int media;//是否有视频
+    private int concern=0;//是否被关注
+    private int media=0;//是否有视频
+    private String title_bottom;//底部菜谱名字
+
+    public String getTitle_bottom() {
+        return title_bottom;
+    }
+
+    public void setTitle_bottom(String title_bottom) {
+        this.title_bottom = title_bottom;
+    }
 
     public int getMedia() {
         return media;

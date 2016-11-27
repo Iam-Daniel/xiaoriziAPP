@@ -3,6 +3,7 @@ package maniactivity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,22 @@ public class KitchenSubLayout02 extends Fragment {
         setData();
         ListViewAdapter listViewAdapter = new ListViewAdapter(getContext(),list,2);
         listView.setAdapter(listViewAdapter);
+        {
+            View listViewItem = listViewAdapter.getView(0, null, listView);
+            listViewItem.measure(0, 0);
+            int MeasuredHeight = listViewItem.getMeasuredHeight();
+            Log.i("getMeasuredHeight", "" + MeasuredHeight);
+
+            int DividerHeight = listView.getDividerHeight();
+            Log.i("getMeasuredHeight", "" + DividerHeight);
+            ViewGroup.LayoutParams params = listView.getLayoutParams();
+            params.height = (MeasuredHeight + DividerHeight) * list.size();
+            listView.setLayoutParams(params);
+
+            //封装的方法，用来刷新ListView
+            new ListViewInScrowView().setListViewHeightBasedOnChildren(listView);
+            Log.i("getMeasuredHeight", "" + view.getMeasuredHeight());
+        }
         return view;
     }
 

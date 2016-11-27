@@ -29,24 +29,22 @@ public class ListViewAdapter extends BaseAdapter {
         this.list = list;
         //1 是SearchLayoutListView界面调用
         //2 是KitchenPageActivity界面调用
+        //3 是WorldPageFragment界面调用
         this.style = style;
     }
 
     @Override
     public int getCount() {
-        Log.i("test001","getCount "+list.size());
         return list.size();
     }
 
     @Override
     public Object getItem(int position) {
-        Log.i("TAG","getItem "+list.get(position));
         return list.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        Log.i("TAG","getItem "+position);
         return position;
     }
 
@@ -61,6 +59,9 @@ public class ListViewAdapter extends BaseAdapter {
         TextView numb_m;//留言数
         TextView details;//食谱做法
         LinearLayout changeLayout;//有的List中不需要该布局
+        TextView concern;//是否被关注
+        ImageView media;//是否有视频
+        TextView title_bottom;//是否被关注
         boolean state =false;
     }
 
@@ -70,7 +71,7 @@ public class ListViewAdapter extends BaseAdapter {
         ViewHolder viewHolder;
         if (view == null){
             viewHolder = new ViewHolder();
-            view = layoutInflater.inflate(R.layout.list_searchgoods,null);
+            view = layoutInflater.inflate(R.layout.general_list_item,null);
             viewHolder.icon_head = (ImageView)view.findViewById(R.id.icon_head);
             viewHolder.img = (ImageView)view.findViewById(R.id.img);
             viewHolder.author = (TextView)view.findViewById(R.id.author);
@@ -81,6 +82,9 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.numb_m = (TextView)view.findViewById(R.id.numb_m);
             viewHolder.details = (TextView)view.findViewById(R.id.details);
             viewHolder.changeLayout = (LinearLayout)view.findViewById(R.id.changeLayout);
+            viewHolder.concern = (TextView)view.findViewById(R.id.concern);
+            viewHolder.title_bottom = (TextView)view.findViewById(R.id.title_bottom);
+            viewHolder.media = (ImageView)view.findViewById(R.id.media);
             view.setTag(viewHolder);
         }else{
             viewHolder = (ViewHolder)view.getTag();
@@ -108,6 +112,21 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.changeLayout.setVisibility(View.GONE);
             viewHolder.details.setText(information.getDetails());
             viewHolder.state = true;
+        }else if (style==3){
+            viewHolder.icon_head.setImageResource(information.getIcon_head());
+            viewHolder.img.setImageResource(information.getImg());
+            viewHolder.author.setText(information.getAuthor());
+            viewHolder.time_y_m_d.setText(information.getTime_y_m_d());
+            viewHolder.time_f_a.setText(information.getTime_f_a());
+            viewHolder.time_m_s.setText(information.getTime_m_s());
+            viewHolder.numb_f.setText(information.getNumb_f());
+            viewHolder.numb_m.setText(information.getNumb_m());
+            if (information.getMedia()==1){
+                viewHolder.media.setVisibility(View.VISIBLE);
+            }else{
+                viewHolder.media.setVisibility(View.GONE);
+            }
+            viewHolder.title_bottom.setText(information.getTitle_bottom());
         }
         return view;
     }
