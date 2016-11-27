@@ -26,7 +26,7 @@
         </activity>
 
         <!--所有注册列表-->
-      <!--  <activity android:name="maniactivity.HomepageActivity" />-->  <!--app启动页面是WelcomeActivity  3000毫秒后跳转到 HomepageActivity 页面-->
+        <!--  <activity android:name="maniactivity.HomepageActivity" />-->  <!--app启动页面是WelcomeActivity  3000毫秒后跳转到 HomepageActivity 页面-->
         <activity android:name="maniactivity.AddressPageActivity" />
         <activity android:name="maniactivity.AroundPageActivity" />
         <activity android:name="maniactivity.ChatPageActivity" />
@@ -75,7 +75,8 @@
         <activity android:name="maniactivity.VegetableBasketPageActivity" />
         <activity android:name="maniactivity.ShoppingActivity" />
         <!--<activity android:name="maniactivity.WelcomeActivity" />-->
-        <activity android:name="maniactivity.SearchLayoutListView"/>
+        <activity android:name="maniactivity.SearchLayoutListView" />
+        <activity android:name="maniactivity.LinkSearchPageActivity" />
 
     </application>
 
