@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
 
-import org.w3c.dom.Text;
+import fragment.WorldPageFragment;
 
 /**
  * Created by Admin on 2016/10/23.
@@ -18,12 +18,12 @@ public class AroundPageActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.around_page);
+        setContentView(R.layout.world_around);
         textView = (TextView)findViewById(R.id.around_title_left);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AroundPageActivity.this,ConcernPageActivity.class);
+                Intent intent = new Intent(AroundPageActivity.this, WorldPageFragment.class);
                 startActivity(intent);
                 finish();
             }

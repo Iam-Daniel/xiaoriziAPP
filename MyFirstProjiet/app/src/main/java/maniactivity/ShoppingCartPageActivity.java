@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.example.administrator.myfirstprojiet.R;
 
 import activity.BaseActivity;
+import fragment.WorldPageFragment;
 
 /**
  * Created by Administrator on 2016/10/30.
@@ -54,7 +55,7 @@ public class ShoppingCartPageActivity extends BaseActivity {
         concern.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ShoppingCartPageActivity.this, ConcernPageActivity.class);
+                Intent intent = new Intent(ShoppingCartPageActivity.this, WorldPageFragment.class);
                 startActivity(intent);
                 finish();
             }

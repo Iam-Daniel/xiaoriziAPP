@@ -4,12 +4,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+
 import java.util.List;
 
 /**
  * Created by admin on 2016/11/26.
  */
-public class KitchenPageAdapter extends FragmentPagerAdapter {
+public class MyViewPagerAdapter extends FragmentPagerAdapter {
     List<Fragment> list;
     @Override
     public Fragment getItem(int position) {
@@ -21,7 +22,7 @@ public class KitchenPageAdapter extends FragmentPagerAdapter {
         return list.size();
     }
 
-    public KitchenPageAdapter(FragmentManager fm ,List<Fragment> list ) {
+    public MyViewPagerAdapter(FragmentManager fm , List<Fragment> list ) {
         super(fm);
         this.list = list;
     }

@@ -1,10 +1,8 @@
 package maniactivity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
@@ -16,7 +14,7 @@ import com.example.administrator.myfirstprojiet.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import adapter.KitchenPageAdapter;
+import adapter.MyViewPagerAdapter;
 
 /**
  * Created by Administrator on 2016/10/29.
@@ -27,7 +25,7 @@ public class KitchenPageActivity extends FragmentActivity {
     View gone_one_view;
     View gone_two_view;
     View gone_three_view;
-    KitchenPageAdapter  kitchenPageAdapter;
+    MyViewPagerAdapter myViewPagerAdapter;
     ViewPager viewPager;
     TextView remen;
     TextView tuijian;
@@ -43,9 +41,8 @@ public class KitchenPageActivity extends FragmentActivity {
         itemSetOnClickListener();
         //设置viewPager页面
         setViewPager();
-        kitchenPageAdapter = new KitchenPageAdapter(getSupportFragmentManager(),list);
-        viewPager.setAdapter(kitchenPageAdapter);
-        Log.i("viewPager",""+viewPager.getCurrentItem());
+        myViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(),list);
+        viewPager.setAdapter(myViewPagerAdapter);
     }
 
     private void itemFindViewById(){

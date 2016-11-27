@@ -13,8 +13,35 @@ public class ListInformation {
     private int img;//示例背景图
     private String numb_f;//喜欢人数
     private String numb_m;//留言数
-    private String details;
+    private String details;//详细做法
+    private int concern;//是否被关注
+    private int media;//是否有视频
 
+    public int getMedia() {
+        return media;
+    }
+
+    public void setMedia(int media) {
+        this.media = media;
+    }
+
+    public String getTitle_buttom() {
+        return title_buttom;
+    }
+
+    public void setTitle_buttom(String title_buttom) {
+        this.title_buttom = title_buttom;
+    }
+
+    private String title_buttom;//底部标题
+
+    public int getConcern() {
+        return concern;
+    }
+
+    public void setConcern(int concern) {
+        this.concern = concern;
+    }
 
     public String getDetails() {
         return details;

@@ -34,6 +34,7 @@
     <item type="color" name="red_normal">@color/common_red</item>
     <color name="red_pressed">#fffe6969</color>
     <color name="header_background">#ffdedede</color>
-    
+    <color name="set_orange">#ffFBBF41</color>
+    <color name="set_black">#ff212121</color>
     <color name="abg">#E9E7E5</color>
 </resources>
