@@ -6,6 +6,7 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.view.animation.Animation.AnimationListener;
 
+import com.example.administrator.myfirstprojiet.MainActivity;
 import com.example.administrator.myfirstprojiet.R;
 
 import activity.BaseActivity;
@@ -51,7 +52,7 @@ public class WelcomeActivity extends BaseActivity {
     }
 
     private void skip() {
-        startActivity(WelcomeActivity.this, MenuBottomPageActivity.class);
+        startActivity(WelcomeActivity.this, MainActivity.class);
         finish();
     }
 }

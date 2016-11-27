@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
@@ -11,83 +13,43 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <LinearLayout
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#C8C8C8" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_total"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="#FFFFFF"
-        android:orientation="vertical">
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#C8C8C8" />
+        <RadioButton
+            android:id="@+id/menuBottom_homepage_tv"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_homepage"
+            android:text="@string/menu_bottom_home" />
 
-        <RadioGroup
-            android:id="@+id/radioGroup_total"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/menuBottom_shopping_tv"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_search"
+            android:text="@string/menu_bottom_buy" />
 
-            <RadioButton
-                android:id="@+id/menuBottom_homepage_tv"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:button="@null"
-                android:drawablePadding="3dp"
-                android:drawableTop="@mipmap/home"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:text="@string/menu_bottom_home"
-                android:textColor="#787878"
-                android:textSize="11sp" />
+        <RadioButton
+            android:id="@+id/menuBottom_circle_tv"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_concern"
+            android:text="@string/menu_bottom_food" />
 
-            <RadioButton
-                android:id="@+id/menuBottom_shopping_tv"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:button="@null"
-                android:drawablePadding="3dp"
-                android:drawableTop="@mipmap/buy"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:text="@string/menu_bottom_buy"
-                android:textColor="#787878"
-                android:textSize="11sp" />
+        <RadioButton
+            android:id="@+id/menuBottom_my_tv"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_my"
+            android:text="@string/menu_bottom_account" />
 
-            <RadioButton
-                android:id="@+id/menuBottom_circle_tv"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:button="@null"
-                android:drawablePadding="3dp"
-                android:drawableTop="@mipmap/food"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:text="@string/menu_bottom_food"
-                android:textColor="#787878"
-                android:textSize="11sp" />
-
-            <RadioButton
-                android:id="@+id/menuBottom_my_tv"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:button="@null"
-                android:drawablePadding="3dp"
-                android:drawableTop="@mipmap/account"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:text="@string/menu_bottom_account"
-                android:textColor="#787878"
-                android:textSize="11sp" />
-
-        </RadioGroup>
-
-    </LinearLayout>
+    </RadioGroup>
 
 </LinearLayout>

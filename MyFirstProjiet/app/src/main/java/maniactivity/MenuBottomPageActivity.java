@@ -22,7 +22,7 @@ public class MenuBottomPageActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_bottom);
 
-//        跳转到首页
+/*//        跳转到首页
         menuBottomHomepageTv = (TextView) findViewById(R.id.menuBottom_homepage_tv);
         menuBottomHomepageTv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +53,6 @@ public class MenuBottomPageActivity extends BaseActivity {
             public void onClick(View view) {
                 startActivity(MenuBottomPageActivity.this, MyHomePageLayoutActivity.class);
             }
-        });
+        });*/
     }
 }

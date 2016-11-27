@@ -1,4 +1,4 @@
-package maniactivity;
+package adapter;
 
 import android.content.Context;
 import android.util.Log;
@@ -13,6 +13,8 @@ import android.widget.TextView;
 import com.example.administrator.myfirstprojiet.R;
 
 import java.util.List;
+
+import maniactivity.ListInformation;
 
 /**
  * Created by Administrator on 2016/11/25.
