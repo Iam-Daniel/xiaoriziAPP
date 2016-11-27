@@ -4,13 +4,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/sun"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity
-            android:name="maniactivity.WelcomeActivity"
+            android:name="maniactivity.LinkSearchPageActivity"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTask">      <!--  android:configChanges="orientation|screenSize"  ：防止切换屏幕方向时webview重新加载url
                                                                                                 2.在放webview的Activity.java中添加onConfigurationChanged事件：
