@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapter.ListViewAdapter;
-import maniactivity.ListInformation;
+import listclass.ListInformation;
 import maniactivity.ListViewInScrowView;
 
 /**

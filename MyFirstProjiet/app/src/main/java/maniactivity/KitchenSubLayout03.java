@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapter.ListViewAdapter;
+import listclass.ListInformation;
 
 /**
  * Created by admin on 2016/11/26.

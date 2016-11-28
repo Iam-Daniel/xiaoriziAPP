@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.example.administrator.myfirstprojiet.R;
@@ -16,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapter.ListViewAdapter;
-import maniactivity.ListInformation;
+import listclass.ListInformation;
 import maniactivity.ListViewInScrowView;
 
 /**

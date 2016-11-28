@@ -2,79 +2,87 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#fff">
+    android:background="#fff"
+    android:orientation="vertical">
     <!--更多布局-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp">
+
         <ImageView
             android:id="@+id/more_back_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/left_back"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="18dp"
-            android:layout_centerVertical="true"/>
+            android:src="@mipmap/left_back" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="更多"
             android:layout_centerInParent="true"
-            android:textSize="18sp"
-            android:textColor="#212121"/>
+            android:text="更多"
+            android:textColor="#212121"
+            android:textSize="18sp" />
     </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#e6e6e6"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="12dp"
+        android:background="#e6e6e6" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
         android:layout_marginTop="12dp">
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@mipmap/icon_ketchen"
+            android:gravity="center"
             android:text="厨房电器"
-            android:textSize="15sp"
-            android:drawableTop="@mipmap/icon_liwu"
-            android:drawablePadding="5dp"
-            android:gravity="center"
-            android:textColor="#212121" />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="腌制食品"
-            android:drawableTop="@mipmap/icon_mimian"
-            android:drawablePadding="5dp"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:textColor="#212121" />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="米面粮油"
-            android:gravity="center"
-            android:drawableTop="@mipmap/icon_mimian"
-            android:drawablePadding="5dp"
-            android:textSize="15sp"
-            android:textColor="#212121" />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="礼盒"
-            android:textSize="15sp"
-            android:drawableTop="@mipmap/icon_liwu"
-            android:drawablePadding="5dp"
             android:textColor="#212121"
-            android:gravity="center" />
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@mipmap/icon_bread"
+            android:gravity="center"
+            android:text="腌制食品"
+            android:textColor="#212121"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@mipmap/icon_mimian"
+            android:gravity="center"
+            android:text="米面粮油"
+            android:textColor="#212121"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@mipmap/icon_liwu"
+            android:gravity="center"
+            android:text="礼盒"
+            android:textColor="#212121"
+            android:textSize="15sp" />
 
     </LinearLayout>
 
