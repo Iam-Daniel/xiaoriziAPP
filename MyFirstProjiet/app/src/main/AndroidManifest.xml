@@ -40,7 +40,7 @@
         <activity android:name="maniactivity.HeadPageActivity" />
         <activity android:name="maniactivity.HotMenuPageActivity" />
         <activity android:name="maniactivity.InformationPageActivity" />
-        <activity android:name="maniactivity.KitchenPageActivity" />
+        <activity android:name="fragment.KitchenPageFragment" />
         <activity android:name="maniactivity.LogInPageActivity" />
         <activity android:name="maniactivity.LoginQQPageActivity" />
         <activity android:name="maniactivity.LogUpPageActivity" />

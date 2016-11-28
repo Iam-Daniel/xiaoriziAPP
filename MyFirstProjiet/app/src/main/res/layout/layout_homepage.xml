@@ -7,12 +7,13 @@
     android:orientation="vertical">
 
     <ScrollView
+        android:fillViewport="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginTop="15dp"
             android:background="#FFFFFF"
             android:orientation="vertical">
@@ -129,6 +130,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
@@ -216,7 +218,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -237,7 +239,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="一 营养早点 一"
+                            android:text="一 营养餐点 一"
                             android:textColor="#212121"
                             android:textSize="15sp" />
 
@@ -248,6 +250,7 @@
                             android:layout_marginTop="5dp">
 
                             <TextView
+                                android:id="@+id/numb"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="8486"
@@ -275,25 +278,6 @@
 
 
                 </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/icon_homepage_off" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:src="@mipmap/icon_homepage_on" />
-
-                </LinearLayout>
             </LinearLayout>
 
 
@@ -303,23 +287,11 @@
                 android:layout_marginTop="10dp"
                 android:background="#F0F0F0" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="12dp"
-                android:text="10月10日 星期一"
-                android:textColor="#212121"
-                android:textSize="11sp" />
-
-            <ImageView
+            <ListView
+                android:id="@+id/listView"
                 android:layout_width="match_parent"
-                android:layout_height="240dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="20dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/icon_homepage_bg_two" />
+                android:layout_height="match_parent">
+            </ListView>
 
         </LinearLayout>
 
