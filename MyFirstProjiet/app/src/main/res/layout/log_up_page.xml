@@ -22,6 +22,7 @@
     </LinearLayout>
     <!--标题左边的箭头-->
     <ImageView
+        android:id="@+id/logUp_back_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/arrow_left" />
@@ -127,9 +128,10 @@
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@id/log_up_text_bottom_left"
                 android:text="@string/agreement_2"
-                android:textColor="@color/common_blue" />
-        </LinearLayout>
-    </LinearLayout>
+                android:textColor="#00CCFF" />
 
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

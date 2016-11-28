@@ -1,13 +1,19 @@
 package maniactivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.widget.ImageView;
 import android.widget.RadioButton;
+
 import com.example.administrator.myfirstprojiet.R;
+
 import fragment.HomepageFragment;
 import fragment.MyHomepageFragment;
 import fragment.SearchFragment;
@@ -17,6 +23,8 @@ import fragment.WorldPageFragment;
  * Created by Administrator on 2016/10/29.
  */
 public class HomepageActivity extends FragmentActivity {
+    ImageView welcomeImg = null;
+
     RadioButton menuBottom_homepage_tv;
     RadioButton menuBottom_shopping_tv;
     RadioButton menuBottom_circle_tv;
@@ -82,7 +90,7 @@ public class HomepageActivity extends FragmentActivity {
             @Override
             public void onClick(View view) {
                 fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment,worldPageFragment);
+                fragmentTransaction.replace(R.id.fragment, worldPageFragment);
                 fragmentTransaction.commit();
             }
         });

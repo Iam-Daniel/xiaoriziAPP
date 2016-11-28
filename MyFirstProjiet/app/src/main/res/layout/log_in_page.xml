@@ -58,6 +58,7 @@
             android:layout_marginTop="8dp">
 
             <TextView
+                android:id="@+id/login_to_logup"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -66,6 +67,7 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/login_forgetPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="忘记密码？"
