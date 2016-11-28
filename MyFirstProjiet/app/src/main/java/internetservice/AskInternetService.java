@@ -14,7 +14,7 @@ import java.net.URL;
  * Created by Administrator on 2016/11/28.
  */
 public class AskInternetService {
-    
+
 
     public static void getInternet(final String method, final String keyAndValue){
         new Thread(){
