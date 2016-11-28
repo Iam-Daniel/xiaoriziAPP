@@ -6,6 +6,7 @@
     android:background="#FFFFFF">
     <!--背景图布局-->
     <LinearLayout
+        android:id="@+id/myHead_img"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -58,6 +59,7 @@
         android:layout_weight="1"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/head_upload_textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="上传图片"

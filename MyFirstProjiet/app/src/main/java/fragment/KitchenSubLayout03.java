@@ -3,7 +3,6 @@ package fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,7 @@ import java.util.List;
 
 import adapter.ListViewAdapter;
 import maniactivity.ListInformation;
-import maniactivity.ListViewInScrowView;
+
 
 /**
  * Created by admin on 2016/11/26.

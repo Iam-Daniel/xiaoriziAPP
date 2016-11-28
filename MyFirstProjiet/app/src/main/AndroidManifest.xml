@@ -75,7 +75,8 @@
         <activity android:name="maniactivity.VegetableBasketPageActivity" />
         <activity android:name="maniactivity.ShoppingActivity" />
         <!--<activity android:name="maniactivity.WelcomeActivity" />-->
-        <activity android:name="maniactivity.SearchLayoutListView"/>
+        <activity android:name="maniactivity.SearchLayoutListView" />
+        <activity android:name="maniactivity.LinkSearchPageActivity" />
 
     </application>
 
