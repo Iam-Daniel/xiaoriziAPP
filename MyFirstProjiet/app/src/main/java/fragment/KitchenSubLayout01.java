@@ -7,15 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
 import com.example.administrator.myfirstprojiet.R;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import adapter.ListViewAdapter;
-<<<<<<< HEAD:MyFirstProjiet/app/src/main/java/maniactivity/KitchenSubLayout01.java
-import listclass.ListInformation;
-=======
 import maniactivity.ListInformation;
->>>>>>> 7d6e5e90da03ce2393de4bacf35799d4e08391d0:MyFirstProjiet/app/src/main/java/fragment/KitchenSubLayout01.java
 
 /**
  * Created by admin on 2016/11/26.

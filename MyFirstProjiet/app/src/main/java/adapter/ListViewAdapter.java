@@ -13,7 +13,7 @@ import com.example.administrator.myfirstprojiet.R;
 
 import java.util.List;
 
-import listclass.ListInformation;
+import maniactivity.ListInformation;
 
 /**
  * Created by Administrator on 2016/11/25.

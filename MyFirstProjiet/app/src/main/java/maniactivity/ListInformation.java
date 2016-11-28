@@ -1,4 +1,4 @@
-package listclass;
+package maniactivity;
 
 /**
  * Created by Administrator on 2016/11/25.

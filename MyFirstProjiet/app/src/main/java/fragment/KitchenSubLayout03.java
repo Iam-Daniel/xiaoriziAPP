@@ -3,7 +3,6 @@ package fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,10 +15,8 @@ import java.util.List;
 
 import adapter.ListViewAdapter;
 <<<<<<< HEAD:MyFirstProjiet/app/src/main/java/maniactivity/KitchenSubLayout03.java
-import listclass.ListInformation;
-=======
 import maniactivity.ListInformation;
-import maniactivity.ListViewInScrowView;
+=======
 >>>>>>> 7d6e5e90da03ce2393de4bacf35799d4e08391d0:MyFirstProjiet/app/src/main/java/fragment/KitchenSubLayout03.java
 
 /**
