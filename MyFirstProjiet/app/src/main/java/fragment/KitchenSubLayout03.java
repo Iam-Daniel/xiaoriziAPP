@@ -14,10 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapter.ListViewAdapter;
-<<<<<<< HEAD:MyFirstProjiet/app/src/main/java/maniactivity/KitchenSubLayout03.java
 import maniactivity.ListInformation;
-=======
->>>>>>> 7d6e5e90da03ce2393de4bacf35799d4e08391d0:MyFirstProjiet/app/src/main/java/fragment/KitchenSubLayout03.java
+
 
 /**
  * Created by admin on 2016/11/26.

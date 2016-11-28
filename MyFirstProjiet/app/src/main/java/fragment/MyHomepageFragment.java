@@ -16,15 +16,12 @@ import com.example.administrator.myfirstprojiet.R;
 import maniactivity.BaseFragment;
 import maniactivity.DiscountPageActivity;
 import maniactivity.EditDataPageActivity;
-import maniactivity.HomepageActivity;
 import maniactivity.MyCollectionPageActivity;
 import maniactivity.MyConcernPageActivity;
 import maniactivity.MyFansPageActivity;
-import maniactivity.MyHomePageLayoutActivity;
 import maniactivity.MyMenuPageActivity;
 import maniactivity.MyOrderPageActivity;
 import maniactivity.MyWorksPageActivity;
-import maniactivity.SearchLayoutActivity;
 import maniactivity.SetPassWordPageActivity;
 import maniactivity.StatisticsPageActivity;
 
