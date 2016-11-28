@@ -20,7 +20,9 @@ import maniactivity.ListInformation;
  * Created by Administrator on 2016/11/25.
  */
 public class ListViewAdapter extends BaseAdapter {
+    ViewHolder viewHolder;
     Context context;
+    ListInformation information;
     List<ListInformation> list;
     int style;//由于多个页面复用该适配器，需要传入参数来决定加载哪些内容
 
@@ -62,15 +64,18 @@ public class ListViewAdapter extends BaseAdapter {
         TextView concern;//是否被关注
         ImageView media;//是否有视频
         TextView title_bottom;//是否被关注
-        boolean state =false;
+        ImageView like;
+        ImageView message;
+        TextView title;
+
     }
 
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        ViewHolder viewHolder;
         if (view == null){
             viewHolder = new ViewHolder();
+            //布局为通用listView布局
             view = layoutInflater.inflate(R.layout.general_list_item,null);
             viewHolder.icon_head = (ImageView)view.findViewById(R.id.icon_head);
             viewHolder.img = (ImageView)view.findViewById(R.id.img);
@@ -84,12 +89,15 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.changeLayout = (LinearLayout)view.findViewById(R.id.changeLayout);
             viewHolder.concern = (TextView)view.findViewById(R.id.concern);
             viewHolder.title_bottom = (TextView)view.findViewById(R.id.title_bottom);
+            viewHolder.title = (TextView)view.findViewById(R.id.title);
             viewHolder.media = (ImageView)view.findViewById(R.id.media);
+            viewHolder.like = (ImageView)view.findViewById(R.id.like);
+            viewHolder.message = (ImageView)view.findViewById(R.id.message);
             view.setTag(viewHolder);
         }else{
             viewHolder = (ViewHolder)view.getTag();
         }
-        ListInformation information = list.get(position);
+        information = list.get(position);
         //根据要加载的listView格式不同，分别加载对应对应内容
         //此处是SearchLayoutListView界面调用
         if (style==1){
@@ -101,7 +109,7 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.time_m_s.setText(information.getTime_m_s());
             viewHolder.numb_f.setText(information.getNumb_f());
             viewHolder.numb_m.setText(information.getNumb_m());
-            viewHolder.state = true;
+            setIcon();
             //此处是KitchenPageActivity界面调用
         }else if (style==2){
             viewHolder.icon_head.setImageResource(information.getIcon_head());
@@ -111,7 +119,7 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.numb_m.setText(information.getNumb_m());
             viewHolder.changeLayout.setVisibility(View.GONE);
             viewHolder.details.setText(information.getDetails());
-            viewHolder.state = true;
+            setIcon();
         }else if (style==3){
             viewHolder.icon_head.setImageResource(information.getIcon_head());
             viewHolder.img.setImageResource(information.getImg());
@@ -121,13 +129,72 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.time_m_s.setText(information.getTime_m_s());
             viewHolder.numb_f.setText(information.getNumb_f());
             viewHolder.numb_m.setText(information.getNumb_m());
-            if (information.getMedia()==1){
-                viewHolder.media.setVisibility(View.VISIBLE);
-            }else{
-                viewHolder.media.setVisibility(View.GONE);
-            }
+            setIcon();
             viewHolder.title_bottom.setText(information.getTitle_bottom());
+        }else if (style==4){
+            setIcon();
+            viewHolder.title.setText(information.getTitle());
+            viewHolder.img.setImageResource(information.getImg());
         }
         return view;
+    }
+
+    //控制各个图标是否显示
+    private void setIcon(){
+        if (information.getMedia()==1){
+            viewHolder.media.setVisibility(View.VISIBLE);
+        }else{
+            viewHolder.media.setVisibility(View.GONE);
+        }
+        if (information.getLike()==1){
+            viewHolder.like.setVisibility(View.VISIBLE);
+        }else{
+            viewHolder.like.setVisibility(View.GONE);
+        }
+        if (information.getMessage()==1){
+            viewHolder.message.setVisibility(View.VISIBLE);
+        }else{
+            viewHolder.message.setVisibility(View.GONE);
+        }
+
+        //设置不用的控件隐藏
+        {
+            if (information.getIcon_head()==0){
+                viewHolder.icon_head.setVisibility(View.GONE);
+            }
+            if (information.getAuthor()==null){
+                viewHolder.author.setVisibility(View.GONE);
+            }
+            if (information.getTime_y_m_d()==null){
+                viewHolder.time_y_m_d.setVisibility(View.GONE);
+            }
+            if (information.getTime_f_a()==null){
+                viewHolder.time_f_a.setVisibility(View.GONE);
+            }
+            if (information.getTime_m_s()==null){
+                viewHolder.time_m_s.setVisibility(View.GONE);
+            }
+            if (information.getImg()==0){
+                viewHolder.img.setVisibility(View.GONE);
+            }
+            if (information.getNumb_f()==null){
+                viewHolder.numb_f.setVisibility(View.GONE);
+            }
+            if (information.getNumb_m()==null){
+                viewHolder.numb_m.setVisibility(View.GONE);
+            }
+            if (information.getDetails()==null){
+                viewHolder.details.setVisibility(View.GONE);
+            }
+            if (information.getConcern()==0){
+                viewHolder.concern.setVisibility(View.GONE);
+            }
+            if (information.getTitle_bottom()==null){
+                viewHolder.title_bottom.setVisibility(View.GONE);
+            }
+            if (information.getTitle()==null){
+                viewHolder.title.setVisibility(View.GONE);
+            }
+        }
     }
 }

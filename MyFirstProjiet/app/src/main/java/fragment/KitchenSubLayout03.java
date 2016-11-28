@@ -1,4 +1,4 @@
-package maniactivity;
+package fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -15,53 +15,62 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapter.ListViewAdapter;
+import maniactivity.ListInformation;
+import maniactivity.ListViewInScrowView;
 
 /**
  * Created by admin on 2016/11/26.
  */
-public class KitchenSubLayout02 extends Fragment {
-    //推荐
+public class KitchenSubLayout03 extends Fragment {  View view;
     ListView listView;
     List<ListInformation> list;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.kitchen_sub_layout,null);
-        listView = (ListView)view.findViewById(R.id.kitchenLayoutListView) ;
+        view = inflater.inflate(R.layout.kitchen_sub_layout, null);
+        itemFindViewById();
         setData();
-        ListViewAdapter listViewAdapter = new ListViewAdapter(getContext(),list,2);
+        ListViewAdapter listViewAdapter = new ListViewAdapter(getActivity(), list, 2);
         listView.setAdapter(listViewAdapter);
+        //限制ListView的高度
         {
-            View listViewItem = listViewAdapter.getView(0, null, listView);
-            listViewItem.measure(0, 0);
-            int MeasuredHeight = listViewItem.getMeasuredHeight();
-            Log.i("getMeasuredHeight", "" + MeasuredHeight);
-
+            View view = listViewAdapter.getView(0, null, listView);
+            view.measure(0, 0);
+            int MeasuredHeight = view.getMeasuredHeight();
             int DividerHeight = listView.getDividerHeight();
-            Log.i("getMeasuredHeight", "" + DividerHeight);
             ViewGroup.LayoutParams params = listView.getLayoutParams();
             params.height = (MeasuredHeight + DividerHeight) * list.size();
             listView.setLayoutParams(params);
-
-            //封装的方法，用来刷新ListView
-            new ListViewInScrowView().setListViewHeightBasedOnChildren(listView);
-            Log.i("getMeasuredHeight", "" + view.getMeasuredHeight());
         }
         return view;
     }
 
-    private void setData(){
+
+    private void itemFindViewById() {
+        listView = (ListView) view.findViewById(R.id.listView);
+
+    }
+
+    private void itemSetOnClickListener() {
+
+    }
+
+    private void setData() {
         list = new ArrayList<>();
         ListInformation information;
-        for (int t =0;t<10;t++){
-            information  = new ListInformation();
-            information.setAuthor("author"+t);
+        for (int t = 0; t < 10; t++) {
+            information = new ListInformation();
+            information.setAuthor("author" + t);
             information.setImg(R.mipmap.icon_bg_kitchen);
+            information.setMedia(1);
             information.setIcon_head(R.mipmap.icon_head);
-            information.setNumb_f(""+t*20);
-            information.setNumb_m(""+t*2);
-            information.setDetails("我是做法我是做法我是做法我是做法我是做法我是做法我是做法我是做法我是做法");
+            information.setTime_y_m_d("2016-11-11");
+            information.setTime_f_a("PM");
+            information.setTime_m_s("" + t + ":" + t * 20);
+            information.setNumb_f("" + t * 10);
+            information.setNumb_m("" + t);
+            information.setTitle_bottom("-扬州什锦-");
             list.add(information);
         }
     }

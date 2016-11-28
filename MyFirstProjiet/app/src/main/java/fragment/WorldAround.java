@@ -35,22 +35,15 @@ public class WorldAround extends Fragment {
         setData();
         ListViewAdapter listViewAdapter = new ListViewAdapter(getActivity(), list, 3);
         listView.setAdapter(listViewAdapter);
-        //限制ListView的高度，调用封装的方法刷新ListView
+        //限制ListView的高度
         {
             View view = listViewAdapter.getView(0, null, listView);
             view.measure(0, 0);
             int MeasuredHeight = view.getMeasuredHeight();
-            Log.i("getMeasuredHeight", "" + MeasuredHeight);
-
             int DividerHeight = listView.getDividerHeight();
-            Log.i("getMeasuredHeight", "" + DividerHeight);
             ViewGroup.LayoutParams params = listView.getLayoutParams();
             params.height = (MeasuredHeight + DividerHeight) * list.size();
             listView.setLayoutParams(params);
-
-            //封装的方法，用来刷新ListView
-            new ListViewInScrowView().setListViewHeightBasedOnChildren(listView);
-            Log.i("listView.height", "" + listView.getHeight());
         }
         return view;
     }

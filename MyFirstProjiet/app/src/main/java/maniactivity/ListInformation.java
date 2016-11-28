@@ -15,8 +15,35 @@ public class ListInformation {
     private String numb_m;//留言数
     private String details;//详细做法
     private int concern=0;//是否被关注
-    private int media=0;//是否有视频
+    private int media=0;//是否有视频(默认不显示)
     private String title_bottom;//底部菜谱名字
+    private int like=1;//是否显示喜欢图标(默认显示)
+    private int message=1;//是否显示留言图标(默认显示)
+    private String title;//标题
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getLike() {
+        return like;
+    }
+
+    public void setLike(int like) {
+        this.like = like;
+    }
+
+    public int getMessage() {
+        return message;
+    }
+
+    public void setMessage(int message) {
+        this.message = message;
+    }
 
     public String getTitle_bottom() {
         return title_bottom;

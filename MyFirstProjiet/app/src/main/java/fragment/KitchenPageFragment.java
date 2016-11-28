@@ -1,4 +1,4 @@
-package maniactivity;
+package fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,9 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.administrator.myfirstprojiet.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +17,7 @@ import adapter.MyViewPagerAdapter;
 /**
  * Created by Administrator on 2016/10/29.
  */
-public class KitchenPageActivity extends FragmentActivity {
+public class KitchenPageFragment extends FragmentActivity {
     ImageView leftBack;
     List<Fragment>list;
     View gone_one_view;
