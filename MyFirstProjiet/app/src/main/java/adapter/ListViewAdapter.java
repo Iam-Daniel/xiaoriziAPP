@@ -62,10 +62,10 @@ public class ListViewAdapter extends BaseAdapter {
         LinearLayout changeLayout;//有的List中不需要该布局
         TextView concern;//是否被关注
         ImageView media;//是否有视频
-        TextView title_bottom;//是否被关注
-        ImageView like;
-        ImageView message;
-        TextView title;
+        TextView title_bottom;//底部标题栏
+        ImageView like;//喜欢图标
+        ImageView message;//留言图标
+        TextView title;//标题
 
     }
 
