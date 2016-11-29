@@ -2,8 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#fff">
+    android:background="#fff"
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -21,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="8dp"
+            android:layout_marginRight="12dp"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -32,7 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="丹麦开放式三明治"
+                    android:text="但生态刀架"
                     android:textColor="#212121"
                     android:textSize="15sp" />
 
@@ -41,7 +43,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="12dp"
                     android:layout_marginTop="10dp"
                     android:text="2016-06-07"
                     android:textColor="#C8C8C8"
@@ -53,53 +54,61 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="丹麦三明治一般使用切片的黑面包，抹上黄..."
+                android:text="原生态 刀架 刀座 厨房用品 菜刀架 实木..."
                 android:textColor="#505050"
                 android:textSize="12sp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp">
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥"
+                    android:textColor="#FBBF41"
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/doing_counts"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4"
-                    android:textColor="#505050"
+                    android:text="119.9"
+                    android:textColor="#FBBF41"
                     android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:text="人做过"
-                    android:textColor="#505050"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp">
 
                 <TextView
                     android:id="@+id/collect_counts"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="30"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/numb_bg"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="19dp"
+                    android:paddingRight="19dp"
+                    android:paddingTop="7dp"
+                    android:text="1"
                     android:textColor="#505050"
                     android:textSize="12sp" />
 
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
                 <TextView
-                    android:id="@+id/text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:text="人收藏"
-                    android:textColor="#505050"
+                    android:layout_gravity="right"
+                    android:background="@drawable/head_bg"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingTop="6dp"
+                    android:text="评价"
+                    android:textColor="#FFFFFF"
                     android:textSize="12sp" />
 
             </LinearLayout>
@@ -107,9 +116,10 @@
         </LinearLayout>
 
     </LinearLayout>
-    <!--View-->
+
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="10dp"
         android:background="#F0F0F0" />
+
 </LinearLayout>

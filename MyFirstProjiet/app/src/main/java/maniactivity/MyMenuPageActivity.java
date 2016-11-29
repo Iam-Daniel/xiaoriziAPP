@@ -42,19 +42,20 @@ public class MyMenuPageActivity extends BaseActivity {
         myMenuUploadMenuImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MyMenuPageActivity.this,UpLoadMenuPageActivity.class);
+                startActivity(MyMenuPageActivity.this, UpLoadMenuPageActivity.class);
             }
         });
 
-        myMenu_listview= (ListView) findViewById(R.id.myMenu_listview);
+        myMenu_listview = (ListView) findViewById(R.id.myMenu_listview);
         ArrayList<MyMenuData> list = new ArrayList<MyMenuData>();
         getMymenuData(list);
-        myMenu_listview.setAdapter(new MyMenuAdapter(this,list));
+        myMenu_listview.setAdapter(new MyMenuAdapter(this, list));
 
     }
-    public void getMymenuData(ArrayList<MyMenuData> list){
+
+    public void getMymenuData(ArrayList<MyMenuData> list) {
         MyMenuData myMenuData = new MyMenuData();
-        for (int i=0;i<20;i++){
+        for (int i = 0; i < 20; i++) {
             list.add(myMenuData);
         }
     }
