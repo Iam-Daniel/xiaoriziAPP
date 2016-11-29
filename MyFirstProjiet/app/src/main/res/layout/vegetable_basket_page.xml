@@ -3,19 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:orientation="vertical"
-    android:paddingTop="15dp">
+    android:orientation="vertical">
     <!--导航栏-->   <!--本页面相当于记事本，记录有哪些需要买的food-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/vegetable_basket_back_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="34px"
+            android:layout_marginLeft="2dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp"
             android:src="@mipmap/arrow_left" />
 
         <TextView

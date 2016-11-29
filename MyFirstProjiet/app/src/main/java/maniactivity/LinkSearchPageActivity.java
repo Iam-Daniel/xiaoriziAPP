@@ -16,6 +16,7 @@ import com.example.administrator.myfirstprojiet.R;
  */
 public class LinkSearchPageActivity extends Activity {
     private RelativeLayout dismissEelative;
+    private View dismissCiew;
     private ImageView searchBackImg;
 
     private ImageView checkVisibleImg;
@@ -58,6 +59,19 @@ public class LinkSearchPageActivity extends Activity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+        dismissCiew = findViewById(R.id.dismiss_view);
+        dismissCiew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (linkLinearLayout.getVisibility() == View.VISIBLE) {
+                    linkLinearLayout.setVisibility(View.INVISIBLE);
+                } else if (linkLinearLayout.getVisibility() == View.INVISIBLE) {
+                    linkLinearLayout.setVisibility(View.VISIBLE);
+                } else {
+                    linkLinearLayout.setVisibility(View.INVISIBLE);
+                }
             }
         });
 

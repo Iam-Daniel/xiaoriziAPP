@@ -67,6 +67,9 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="12dp"
+            android:drawableLeft="@mipmap/icon_phone_numb"
+            android:drawablePadding="8dp"
+            android:gravity="center"
             android:text="手机号"
             android:textColor="#212121"
             android:textSize="15sp" />
@@ -96,6 +99,9 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="12dp"
+            android:drawableLeft="@mipmap/icon_sina"
+            android:drawablePadding="8dp"
+            android:gravity="center"
             android:text="新浪微博"
             android:textColor="#212121"
             android:textSize="15sp" />
@@ -125,6 +131,9 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="12dp"
+            android:drawableLeft="@mipmap/icon_qq"
+            android:drawablePadding="8dp"
+            android:gravity="center"
             android:text="QQ"
             android:textColor="#212121"
             android:textSize="15sp" />
@@ -154,6 +163,9 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="12dp"
+            android:drawableLeft="@mipmap/icon_wechat"
+            android:drawablePadding="8dp"
+            android:gravity="center"
             android:text="微信"
             android:textColor="#212121"
             android:textSize="15sp" />

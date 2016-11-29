@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#FFFFFF"
     android:focusable="true"
+<<<<<<< HEAD
     android:focusableInTouchMode="true">
     <LinearLayout
         android:gravity="center_vertical"
@@ -44,6 +44,51 @@
                 android:layout_marginRight="12dp"
                 android:layout_marginTop="12dp">
                 <EditText
+=======
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--标题栏-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/left_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:src="@mipmap/left_back" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="厨房问答"
+                        android:textColor="#212121"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+                <!--搜索栏-->
+                <RelativeLayout
+>>>>>>> 962de394a276438220f51c9f52443e6224dfce80
                     android:layout_width="match_parent"
                     android:layout_height="29dp"
                     android:background="@drawable/edittext_bg_kitchen"
@@ -56,6 +101,7 @@
                     android:id="@+id/search_imageview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:src="@mipmap/left_search"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="17dp"/>
@@ -84,6 +130,38 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp">
+=======
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="29dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/edittext_bg_kitchen"
+                        android:gravity="center"
+                        android:hint="搜索问答"
+                        android:textColorHint="#212121"
+                        android:textSize="11sp" />
+
+                    <ImageView
+                        android:id="@+id/search_imageview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:src="@mipmap/left_search" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@mipmap/icon_bg_kitchen" />
+
+>>>>>>> 962de394a276438220f51c9f52443e6224dfce80
                 <TextView
                     android:id="@+id/remen"
                     android:paddingTop="10dp"
@@ -91,6 +169,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:text="热门"
                     android:textSize="15dp"
                     android:textColor="#212121"
@@ -157,6 +236,113 @@
 
                 </LinearLayout>
             </RelativeLayout>
+=======
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:drawableLeft="@mipmap/icon_kitchen_image"
+                    android:drawablePadding="12dp"
+                    android:gravity="center"
+                    android:text="提问题"
+                    android:textColor="#212121"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/remen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="10dp"
+                        android:text="热门"
+                        android:textColor="@drawable/btn_color"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tuijian"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="10dp"
+                        android:text="推荐"
+                        android:textColor="@drawable/btn_color"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/zuixin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="10dp"
+                        android:text="最新"
+                        android:textColor="@drawable/btn_color"
+                        android:textSize="15dp" />
+                </LinearLayout>
+                <!--View-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EEEEEE" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F0F0F0">
+
+                        <View
+                            android:id="@+id/gone_one_view"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#fbbf41"
+                            android:visibility="visible" />
+
+                        <View
+                            android:id="@+id/gone_two_view"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#fbbf41"
+                            android:visibility="invisible" />
+
+                        <View
+                            android:id="@+id/gone_three_view"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#fbbf41"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"></android.support.v4.view.ViewPager>
+>>>>>>> 962de394a276438220f51c9f52443e6224dfce80
         </LinearLayout>
         <android.support.v4.view.ViewPager
             android:layout_weight="1"

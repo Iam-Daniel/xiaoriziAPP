@@ -71,7 +71,7 @@ public class VegetableBasketPageActivity extends BaseActivity {
         vegetableBasketBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(VegetableBasketPageActivity.this, HomepageActivity.class);
+                //startActivity(VegetableBasketPageActivity.this, HomepageActivity.class);
                 finish();
             }
         });

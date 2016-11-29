@@ -23,8 +23,6 @@ import fragment.WorldPageFragment;
  * Created by Administrator on 2016/10/29.
  */
 public class HomepageActivity extends FragmentActivity {
-    ImageView welcomeImg = null;
-
     RadioButton menuBottom_homepage_tv;
     RadioButton menuBottom_shopping_tv;
     RadioButton menuBottom_circle_tv;
@@ -71,6 +69,7 @@ public class HomepageActivity extends FragmentActivity {
         menuBottom_homepage_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //menuBottom_homepage_tv.setTextColor(getResources().getColor(R.color.yellow));
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment, homepageFragment);
                 fragmentTransaction.commit();
@@ -80,6 +79,7 @@ public class HomepageActivity extends FragmentActivity {
         menuBottom_shopping_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //menuBottom_shopping_tv.setTextColor(getResources().getColor(R.color.yellow));
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment, searchFragment);
                 fragmentTransaction.commit();
@@ -89,6 +89,7 @@ public class HomepageActivity extends FragmentActivity {
         menuBottom_circle_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //menuBottom_circle_tv.setTextColor(getResources().getColor(R.color.yellow));
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment, worldPageFragment);
                 fragmentTransaction.commit();
@@ -98,6 +99,7 @@ public class HomepageActivity extends FragmentActivity {
         menuBottom_my_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //menuBottom_my_tv.setTextColor(getResources().getColor(R.color.yellow));
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment, myHomepageFragment);
                 fragmentTransaction.commit();

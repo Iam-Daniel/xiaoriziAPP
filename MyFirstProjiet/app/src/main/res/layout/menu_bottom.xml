@@ -5,27 +5,22 @@
     android:background="#FFFFFF"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/fragment"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_weight="1" />
 
-    </LinearLayout>
-    <!--    <android.support.v4.view.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp">
-        </android.support.v4.view.ViewPager>-->
 
-    <!--底部菜单栏-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#C8C8C8" />
+
     <RadioGroup
         android:id="@+id/radioGroup_total"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
         android:orientation="horizontal">
 
         <RadioButton
@@ -53,4 +48,5 @@
             android:text="@string/menu_bottom_account" />
 
     </RadioGroup>
+
 </LinearLayout>

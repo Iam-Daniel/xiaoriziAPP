@@ -19,22 +19,28 @@
     <color name="divider_color">#ffdddddd</color>
     <color name="warning_background">#ffffffcc</color>
     <color name="disable_color">#ffcccccc</color>
-    <item type="color" name="border_color">@color/divider_color</item>
-    <item type="color" name="white_text_normal">@color/common_white</item>
-    <item type="color" name="white_text_pressed">@color/disable_color</item>
+    <item name="border_color" type="color">@color/divider_color</item>
+    <item name="white_text_normal" type="color">@color/common_white</item>
+    <item name="white_text_pressed" type="color">@color/disable_color</item>
     <color name="white_text_disable">#ffaaaaaa</color>
-    <item type="color" name="black_text_normal">@color/common_black_word</item>
+    <item name="black_text_normal" type="color">@color/common_black_word</item>
     <color name="black_text_pressed">#ff444444</color>
     <color name="black_text_disable">#ff555555</color>
     <color name="balck_text_subtitle">#ff777777</color>
-    <item type="color" name="blue_normal">@color/common_border</item>
-    <item type="color" name="blue_pressed">@color/common_blue_word</item>
-    <item type="color" name="white_normal">@color/common_white</item>
+    <item name="blue_normal" type="color">@color/common_border</item>
+    <item name="blue_pressed" type="color">@color/common_blue_word</item>
+    <item name="white_normal" type="color">@color/common_white</item>
     <color name="white_pressed">#ffeeeeee</color>
-    <item type="color" name="red_normal">@color/common_red</item>
+    <item name="red_normal" type="color">@color/common_red</item>
     <color name="red_pressed">#fffe6969</color>
     <color name="header_background">#ffdedede</color>
     <color name="set_orange">#ffFBBF41</color>
     <color name="set_black">#ff212121</color>
     <color name="abg">#E9E7E5</color>
+    <color name="yellow">#FBBF41</color>
+
+    <!--这是底部button点击后改变的颜色-->
+
+    <drawable name="yellow">#FBBF41</drawable>
+
 </resources>

@@ -32,7 +32,7 @@ public class SetPassWordPageActivity extends BaseActivity {
         setPasswordBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(SetPassWordPageActivity.this, MyHomePageLayoutActivity.class);
+//                startActivity(SetPassWordPageActivity.this, MyHomePageLayoutActivity.class);
                 finish();
             }
         });
