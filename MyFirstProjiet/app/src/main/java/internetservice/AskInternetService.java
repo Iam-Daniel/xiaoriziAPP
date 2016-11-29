@@ -15,8 +15,8 @@ import java.net.URL;
  */
 public class AskInternetService {
 
-                                            //表名                //请求的方法         //传递参数
-    public static void getInternet(final String table,final String method, final String keyAndValue){
+                                            //请求的方法         //传递参数
+    public static void getInternet(final String method, final String keyAndValue){
         new Thread(){
             @Override
             public void run() {
