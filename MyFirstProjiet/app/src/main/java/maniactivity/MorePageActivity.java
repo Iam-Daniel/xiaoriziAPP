@@ -25,7 +25,7 @@ public class MorePageActivity extends BaseActivity {
         more_back_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(MorePageActivity.this,SearchLayoutActivity.class);
+                finish();
             }
         });
     }

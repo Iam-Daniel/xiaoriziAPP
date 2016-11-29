@@ -11,7 +11,7 @@ import com.example.administrator.myfirstprojiet.R;
 import activity.BaseActivity;
 
 /**
- * Created by Administrator on 2016/11/28.    app启动页面，持续时间为4000毫秒
+ * Created by Administrator on 2016/11/28.
  */
 public class WelcomeActivity extends BaseActivity {
     ImageView welcomeImg = null;
@@ -25,10 +25,10 @@ public class WelcomeActivity extends BaseActivity {
     }
 
     private void bindView() {
-        welcomeImg = (ImageView) findViewById(R.id.welcome_img);
+        welcomeImg = (ImageView) this.findViewById(R.id.welcome_img);
         AlphaAnimation animation = new AlphaAnimation(0.3f, 1.0f);
-        animation.setDuration(4000);// 设置动画显示时间
-        welcomeImg.setAnimation(animation);
+        animation.setDuration(5000);// 设置动画显示时间
+        welcomeImg.startAnimation(animation);
         animation.setAnimationListener(new AnimationImpl());
     }
 
