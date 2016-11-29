@@ -14,7 +14,7 @@ public class ListInformation {
     private String numb_f;//喜欢人数
     private String numb_m;//留言数
     private String details;//详细做法
-    private int concern=0;//是否被关注
+    private int concern=1;//关注图标(默认显示)
     private int media=0;//是否有视频(默认不显示)
     private String title_bottom;//底部菜谱名字
     private int like=1;//是否显示喜欢图标(默认显示)

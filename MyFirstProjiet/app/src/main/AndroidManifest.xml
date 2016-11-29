@@ -7,7 +7,7 @@
         android:icon="@mipmap/sun"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        android:theme="@style/ThemeActivity">
 
         <activity
             android:name="maniactivity.WelcomeActivity"
@@ -44,7 +44,6 @@
         <activity android:name="maniactivity.LogInPageActivity" />
         <activity android:name="maniactivity.LoginQQPageActivity" />
         <activity android:name="maniactivity.LogUpPageActivity" />
-        <activity android:name="maniactivity.MenuBottomPageActivity" />
         <activity android:name="maniactivity.MenuClassFicationPageActivity" />
         <activity android:name="maniactivity.MorePageActivity" />
         <activity android:name="maniactivity.MycollectionOrderPageActivity" />
@@ -74,7 +73,6 @@
         <activity android:name="maniactivity.UpLoadWorkPageActivity" />
         <activity android:name="maniactivity.VegetableBasketPageActivity" />
         <activity android:name="maniactivity.ShoppingActivity" />
-        <!--<activity android:name="maniactivity.WelcomeActivity" />-->
         <activity android:name="maniactivity.SearchLayoutListView" />
         <activity android:name="maniactivity.LinkSearchPageActivity" />
         <activity android:name="maniactivity.UserAgreementActivity" />
