@@ -51,6 +51,7 @@ public class MyCollectionPage01 extends Fragment {
     public void setData() {
         list = new ArrayList<>();
         MyCollectionData myCollectionData;
+<<<<<<< HEAD
         for (int i = 0; i < 20; i++) {
             myCollectionData = new MyCollectionData();
             myCollectionData.setImg(R.mipmap.icon_homepage_1bg);
@@ -61,6 +62,23 @@ public class MyCollectionPage01 extends Fragment {
             myCollectionData.setWho("我是神仙" + i);
             list.add(myCollectionData);
 
+=======
+
+
+        MyCollectionOrderData myCollectionData;
+        for (int i = 0; i < 20; i++) {
+            myCollectionData = new MyCollectionData();
+            myCollectionData = new MyCollectionOrderData();
+            myCollectionData = new MyCollectionOrderData();
+            myCollectionData = new MyCollectionOrderData();
+            myCollectionData.setImg(R.mipmap.icon_add_img);
+            myCollectionData.setDate("2016-11-30");
+            myCollectionData.setMethod("日本动漫");
+            myCollectionData.setPeople("金木研");
+            myCollectionData.setTitle("东京食尸鬼");
+            myCollectionData.setWho("我是神仙");
+            myCollectionData.setPeople("我是神仙");
+>>>>>>> f527e32dab58f0b3054fbd8cbcc6f7850eb8b0f4
         }
     }
 }
