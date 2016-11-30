@@ -15,6 +15,7 @@ import java.util.List;
 
 import adapter.ListViewAdapter;
 import listclass.MyCollectionData;
+
 import listclass.MyCollectionOrderData;
 import maniactivity.ListInformation;
 
@@ -62,9 +63,11 @@ public class MyCollectionPage01 extends Fragment {
     public void setData() {
         list = new ArrayList<>();
         MyCollectionData myCollectionData;
+
         MyCollectionOrderData myCollectionData;
         for (int i = 0; i < 20; i++) {
             myCollectionData = new MyCollectionData();
+            myCollectionData = new MyCollectionOrderData();
             myCollectionData = new MyCollectionOrderData();
             myCollectionData.setImg(R.mipmap.icon_add_img);
             myCollectionData.setDate("2016-11-30");
