@@ -15,6 +15,12 @@ import java.util.List;
 
 import adapter.MyCollectionAdapter;
 import listclass.MyCollectionData;
+<<<<<<< HEAD
+=======
+
+import listclass.MyCollectionOrderData;
+import maniactivity.ListInformation;
+>>>>>>> acd1e8d5e9f096bda78c280c0fe8ade8536a69d1
 
 /**
  * Created by Administrator on 2016/11/30.
@@ -48,16 +54,24 @@ public class MyCollectionPage01 extends Fragment {
     public void setData() {
         list = new ArrayList<>();
         MyCollectionData myCollectionData;
+
+        MyCollectionOrderData myCollectionData;
         for (int i = 0; i < 20; i++) {
             myCollectionData = new MyCollectionData();
+            myCollectionData = new MyCollectionOrderData();
+            myCollectionData = new MyCollectionOrderData();
             myCollectionData.setImg(R.mipmap.icon_add_img);
             myCollectionData.setDate("2016-11-30");
             myCollectionData.setMethod("日本动漫");
             myCollectionData.setPeople("金木研");
             myCollectionData.setTitle("东京食尸鬼");
             myCollectionData.setWho("我是神仙");
+<<<<<<< HEAD
 
             list.add(myCollectionData);
+=======
+            myCollectionData.setPeople("我是神仙");
+>>>>>>> acd1e8d5e9f096bda78c280c0fe8ade8536a69d1
         }
     }
 }
