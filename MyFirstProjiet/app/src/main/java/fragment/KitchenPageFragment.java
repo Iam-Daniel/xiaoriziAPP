@@ -45,9 +45,9 @@ public class KitchenPageFragment extends FragmentActivity {
 
     private void itemFindViewById(){
         leftBack = (ImageView)findViewById(R.id.left_back);
-        gone_one_view = (View)findViewById(R.id.gone_one_view);
-        gone_two_view = (View)findViewById(R.id.gone_two_view);
-        gone_three_view = (View)findViewById(R.id.gone_three_view);
+        gone_one_view = findViewById(R.id.gone_one_view);
+        gone_two_view = findViewById(R.id.gone_two_view);
+        gone_three_view = findViewById(R.id.gone_three_view);
         viewPager = (ViewPager)findViewById(R.id.viewPager);
         remen = (TextView)findViewById(R.id.remen);
         tuijian = (TextView)findViewById(R.id.tuijian);

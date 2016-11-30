@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.example.administrator.myfirstprojiet.R;
@@ -32,16 +33,6 @@ public class KitchenSubLayout02 extends Fragment {  View view;
         setData();
         ListViewAdapter listViewAdapter = new ListViewAdapter(getActivity(), list,2);
         listView.setAdapter(listViewAdapter);
-        //限制ListView的高度
-        {
-            View view = listViewAdapter.getView(0, null, listView);
-            view.measure(0, 0);
-            int MeasuredHeight = view.getMeasuredHeight();
-            int DividerHeight = listView.getDividerHeight();
-            ViewGroup.LayoutParams params = listView.getLayoutParams();
-            params.height = (MeasuredHeight + DividerHeight) * list.size();
-            listView.setLayoutParams(params);
-        }
         return view;
     }
 
