@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,61 +18,63 @@ import adapter.MyViewPagerAdapter;
 import maniactivity.BaseFragment;
 
 /**
- * Created by Administrator on 2016/11/25.
+ * Created by Administrator on 2016/11/29.
  */
-
-
-//自定义的BaseAdapter类
-public class WorldPageFragment extends BaseFragment {
-    View view;
+public class MyOrderPageFragment extends BaseFragment {
+    private View view;
+    private ViewPager viewPager;
     List<Fragment> list;
-    TextView around_title_left;
-    TextView around_title_right;
-    View show_right;
-    View show_left;
-    ViewPager viewPager;
+    private TextView daifahuo;
+    private TextView daishouhuo;
+    private TextView daipingjia;
+    private View show_left;
+    private View show_center;
+    private View show_right;
 
-    public WorldPageFragment() {
+    public MyOrderPageFragment() {
+
     }
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.world, container, false);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.myorder_layout, container, false);
         setViewPager();
         itemFindViewById();
+
         {
             MyViewPagerAdapter myViewPagerAdapter = new MyViewPagerAdapter(getChildFragmentManager(), list);
             viewPager.setAdapter(myViewPagerAdapter);
         }
         itemSetOnClickListener();
         return view;
-
     }
 
     private void itemFindViewById() {
-        around_title_left = (TextView) view.findViewById(R.id.around_title_left);
-        around_title_right = (TextView) view.findViewById(R.id.around_title_right);
-        show_right = view.findViewById(R.id.show_right);
+        daifahuo = (TextView) view.findViewById(R.id.daifahuo);
+        daishouhuo = (TextView) view.findViewById(R.id.daishouhuo);
+        daipingjia = (TextView) view.findViewById(R.id.daipingjia);
         show_left = view.findViewById(R.id.show_left);
+        show_right = view.findViewById(R.id.show_right);
+        show_center = view.findViewById(R.id.show_center);
         viewPager = (ViewPager) view.findViewById(R.id.viewPager);
     }
 
     private void itemSetOnClickListener() {
-        around_title_left.setOnClickListener(new View.OnClickListener() {
+        daifahuo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setDefaultColor();
-                around_title_left.setTextColor(getResources().getColor(R.color.set_orange));
+                daifahuo.setTextColor(getResources().getColor(R.color.set_orange));
                 show_left.setVisibility(View.VISIBLE);
                 viewPager.setCurrentItem(0, true);
             }
         });
-        around_title_right.setOnClickListener(new View.OnClickListener() {
+        daipingjia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setDefaultColor();
-                around_title_right.setTextColor(getResources().getColor(R.color.set_orange));
+                daipingjia.setTextColor(getResources().getColor(R.color.set_orange));
                 show_right.setVisibility(View.VISIBLE);
                 viewPager.setCurrentItem(1, true);
             }
@@ -89,12 +90,17 @@ public class WorldPageFragment extends BaseFragment {
                 switch (position) {
                     case 0:
                         setDefaultColor();
-                        around_title_left.setTextColor(getResources().getColor(R.color.set_orange));
+                        daishouhuo.setTextColor(getResources().getColor(R.color.set_orange));
                         show_left.setVisibility(View.VISIBLE);
                         break;
                     case 1:
                         setDefaultColor();
-                        around_title_right.setTextColor(getResources().getColor(R.color.set_orange));
+                        daifahuo.setTextColor(getResources().getColor(R.color.set_orange));
+                        show_right.setVisibility(View.VISIBLE);
+                        break;
+                    case 2:
+                        setDefaultColor();
+                        daipingjia.setTextColor(getResources().getColor(R.color.set_orange));
                         show_right.setVisibility(View.VISIBLE);
                         break;
                 }
@@ -107,12 +113,13 @@ public class WorldPageFragment extends BaseFragment {
         });
     }
 
-    //重置字体颜色为黑色，颜色标签为不可见
     private void setDefaultColor() {
-        around_title_left.setTextColor(getResources().getColor(R.color.set_black));
-        around_title_right.setTextColor(getResources().getColor(R.color.set_black));
+        daifahuo.setTextColor(getResources().getColor(R.color.set_black));
+        daishouhuo.setTextColor(getResources().getColor(R.color.set_black));
+        daipingjia.setTextColor(getResources().getColor(R.color.set_black));
         show_right.setVisibility(View.INVISIBLE);
         show_left.setVisibility(View.INVISIBLE);
+        show_center.setVisibility(View.INVISIBLE);
     }
 
     private void setViewPager() {

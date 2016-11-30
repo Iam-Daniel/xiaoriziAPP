@@ -29,9 +29,11 @@
             android:layout_weight="1"
             android:drawableLeft="@mipmap/search"
             android:drawablePadding="10dp"
+            android:gravity="center_vertical"
             android:hint="菜谱 食材"
             android:paddingLeft="80dp"
-            android:textColorHint="#212121" />
+            android:textColorHint="#212121"
+            android:textSize="18sp" />
 
         <ImageView
             android:layout_width="wrap_content"

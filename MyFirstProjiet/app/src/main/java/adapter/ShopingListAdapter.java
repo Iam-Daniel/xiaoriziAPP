@@ -10,30 +10,28 @@ import com.example.administrator.myfirstprojiet.R;
 
 import java.util.ArrayList;
 
-import listclass.MyworksData;
+import listclass.ShopListData;
 
 /**
  * Created by Administrator on 2016/11/29.
  */
-public class MyworksPageAdapter extends BaseAdapter {
+public class ShopingListAdapter extends BaseAdapter{
     Context context;
-    ArrayList<MyworksData> dataList = new ArrayList<MyworksData>();
+    ArrayList<ShopListData> list = new ArrayList<ShopListData>();
     LayoutInflater layoutInflater;
-
-    public MyworksPageAdapter(ArrayList<MyworksData> dataList, Context context) {
+    public ShopingListAdapter(Context context,ArrayList<ShopListData> list){
         this.context = context;
-        this.dataList = dataList;
+        this.list=list;
         layoutInflater = LayoutInflater.from(context);
     }
-
     @Override
     public int getCount() {
-        return dataList.size();
+        return list.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return dataList.get(position);
+        return list.get(position);
     }
 
     @Override
@@ -43,10 +41,9 @@ public class MyworksPageAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if (convertView == null) {
-            convertView = layoutInflater.inflate(R.layout.myworks_list_item, null);
+        if (convertView == null){
+            convertView=layoutInflater.inflate(R.layout.shop_listeview_item,null);
         }
-
         return convertView;
     }
 }

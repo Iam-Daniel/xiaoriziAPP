@@ -82,6 +82,7 @@
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:text="未绑定"
+            android:textColor="#212121"
             android:textSize="12sp" />
     </RelativeLayout>
 
@@ -114,6 +115,7 @@
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:text="未绑定"
+            android:textColor="#212121"
             android:textSize="12sp" />
     </RelativeLayout>
 
@@ -146,6 +148,7 @@
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:text="未绑定"
+            android:textColor="#212121"
             android:textSize="12sp" />
     </RelativeLayout>
 
@@ -178,6 +181,7 @@
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:text="未绑定"
+            android:textColor="#212121"
             android:textSize="12sp" />
     </RelativeLayout>
 

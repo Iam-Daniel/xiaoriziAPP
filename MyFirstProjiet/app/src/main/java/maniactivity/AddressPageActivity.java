@@ -21,7 +21,7 @@ public class AddressPageActivity extends BaseActivity{
         addressToSetpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(AddressPageActivity.this,SetPassWordPageActivity.class);
+                //startActivity(AddressPageActivity.this,SetPassWordPageActivity.class);
                 finish();
             }
         });
