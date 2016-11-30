@@ -13,11 +13,11 @@ import com.example.administrator.myfirstprojiet.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import adapter.ListViewAdapter;
-import listclass.MyCollectionData;
 
+import adapter.MyCollectionAdapter;
+import listclass.MyCollectionData;
 import listclass.MyCollectionOrderData;
-import maniactivity.ListInformation;
+
 
 /**
  * Created by Administrator on 2016/11/30.
@@ -25,7 +25,7 @@ import maniactivity.ListInformation;
 public class MyCollectionPage01 extends Fragment {
     View view;
     ListView listView;
-    List<ListInformation> list;
+    List<MyCollectionData> list;
 
     @Nullable
     @Override
@@ -34,26 +34,14 @@ public class MyCollectionPage01 extends Fragment {
         itemFindViewById();
         setData();
 
-        ListViewAdapter listViewAdapter = new ListViewAdapter(getActivity(), list, 2);
-        listView.setAdapter(listViewAdapter);
+        MyCollectionAdapter myCollectionAdapter = new MyCollectionAdapter(getActivity(), list, 2);
+        listView.setAdapter(myCollectionAdapter);
 
-        //限制ListView的高度
-        /*{
-            View view = listViewAdapter.getView(0, null, listView);
-            view.measure(0, 0);
-            int MeasuredHeight = view.getMeasuredHeight();
-            int DividerHeight = listView.getDividerHeight();
-            ViewGroup.LayoutParams params = listView.g
-            etLayoutParams();
-            params.height = (MeasuredHeight + DividerHeight) * list.size();
-            listView.setLayoutParams(params);
-        }*/
         return view;
     }
 
     private void itemFindViewById() {
         listView = (ListView) view.findViewById(R.id.listView);
-
     }
 
     private void itemSetOnClickListener() {
@@ -63,6 +51,18 @@ public class MyCollectionPage01 extends Fragment {
     public void setData() {
         list = new ArrayList<>();
         MyCollectionData myCollectionData;
+<<<<<<< HEAD
+        for (int i = 0; i < 20; i++) {
+            myCollectionData = new MyCollectionData();
+            myCollectionData.setImg(R.mipmap.icon_homepage_1bg);
+            myCollectionData.setDate("2016-12-1");
+            myCollectionData.setMethod("丹麦三明治一般使用切片的黑面包，抹上黄...");
+            myCollectionData.setPeople("" + (i + 100));
+            myCollectionData.setTitle("凹凸世界第" + i + "集");
+            myCollectionData.setWho("我是神仙" + i);
+            list.add(myCollectionData);
+
+=======
 
 
         MyCollectionOrderData myCollectionData;
@@ -78,6 +78,7 @@ public class MyCollectionPage01 extends Fragment {
             myCollectionData.setTitle("东京食尸鬼");
             myCollectionData.setWho("我是神仙");
             myCollectionData.setPeople("我是神仙");
+>>>>>>> f527e32dab58f0b3054fbd8cbcc6f7850eb8b0f4
         }
     }
 }

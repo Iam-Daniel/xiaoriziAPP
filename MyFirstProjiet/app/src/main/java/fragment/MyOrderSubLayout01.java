@@ -14,10 +14,9 @@ import com.example.administrator.myfirstprojiet.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import adapter.ListViewAdapter;
 
+import adapter.MyOrderAdapter;
 import listclass.MyOrderData;
-import maniactivity.ListInformation;
 
 /**
  * Created by Administrator on 2016/11/30.
@@ -25,7 +24,7 @@ import maniactivity.ListInformation;
 public class MyOrderSubLayout01 extends Fragment {
     View view;
     ListView listView;
-    List<ListInformation> list;
+    List<MyOrderData> list;
 
     @Nullable
     @Override
@@ -33,8 +32,8 @@ public class MyOrderSubLayout01 extends Fragment {
         view = inflater.inflate(R.layout.kitchen_sub_layout, container, false);
         itemFindViewById();
         setData();
-        ListViewAdapter listViewAdapter = new ListViewAdapter(getActivity(), list, 2);
-        listView.setAdapter(listViewAdapter);
+        MyOrderAdapter myOrderAdapter = new MyOrderAdapter(getActivity(), list, 2);
+        listView.setAdapter(myOrderAdapter);
         /*{
             View view = listViewAdapter.getView(0, null, listView);
             view.measure(0, 0);
@@ -57,14 +56,14 @@ public class MyOrderSubLayout01 extends Fragment {
         MyOrderData myOrderData;
         for (int t = 0; t < 10; t++) {
             myOrderData = new MyOrderData();
-            myOrderData.setCooking_img(R.mipmap.icon_bg_kitchen);
-            myOrderData.setCooking_name("000");
-            myOrderData.setDate("0000000");
+            myOrderData.setCooking_img(R.mipmap.icon_luan);
+            myOrderData.setCooking_name("谭王见" + t+"号小号");
+            myOrderData.setDate("2016-11-30");
             myOrderData.setCooking_method("" + t);
-            myOrderData.setText("0.0");
-            myOrderData.setDoing_counts("0.0");
+            myOrderData.setDoing_counts("1000" + t * 10);
+            myOrderData.setCollect_counts("5");
 
-            //list.add(myOrderData);
+            list.add(myOrderData);
         }
     }
 }

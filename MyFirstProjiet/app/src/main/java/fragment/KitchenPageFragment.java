@@ -8,7 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.example.administrator.myfirstprojiet.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +21,7 @@ import adapter.MyViewPagerAdapter;
  */
 public class KitchenPageFragment extends FragmentActivity {
     ImageView leftBack;
-    List<Fragment>list;
+    List<Fragment> list;
     View gone_one_view;
     View gone_two_view;
     View gone_three_view;
@@ -39,22 +41,22 @@ public class KitchenPageFragment extends FragmentActivity {
         itemSetOnClickListener();
         //设置viewPager页面
         setViewPager();
-        myViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(),list);
+        myViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(), list);
         viewPager.setAdapter(myViewPagerAdapter);
     }
 
-    private void itemFindViewById(){
-        leftBack = (ImageView)findViewById(R.id.left_back);
+    private void itemFindViewById() {
+        leftBack = (ImageView) findViewById(R.id.left_back);
         gone_one_view = findViewById(R.id.gone_one_view);
         gone_two_view = findViewById(R.id.gone_two_view);
         gone_three_view = findViewById(R.id.gone_three_view);
-        viewPager = (ViewPager)findViewById(R.id.viewPager);
-        remen = (TextView)findViewById(R.id.remen);
-        tuijian = (TextView)findViewById(R.id.tuijian);
-        zuixin = (TextView)findViewById(R.id.zuixin);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        remen = (TextView) findViewById(R.id.remen);
+        tuijian = (TextView) findViewById(R.id.tuijian);
+        zuixin = (TextView) findViewById(R.id.zuixin);
     }
 
-    private void itemSetOnClickListener(){
+    private void itemSetOnClickListener() {
         leftBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,8 +69,8 @@ public class KitchenPageFragment extends FragmentActivity {
                 gone_two_view.setVisibility(View.INVISIBLE);
                 gone_three_view.setVisibility(View.INVISIBLE);
                 gone_one_view.setVisibility(View.VISIBLE);
-                viewPager.setCurrentItem(0,true);
-                Log.i("viewPager",""+viewPager.getCurrentItem());
+                viewPager.setCurrentItem(0, true);
+                Log.i("viewPager", "" + viewPager.getCurrentItem());
             }
         });
         tuijian.setOnClickListener(new View.OnClickListener() {
@@ -77,8 +79,8 @@ public class KitchenPageFragment extends FragmentActivity {
                 gone_one_view.setVisibility(View.INVISIBLE);
                 gone_three_view.setVisibility(View.INVISIBLE);
                 gone_two_view.setVisibility(View.VISIBLE);
-                viewPager.setCurrentItem(1,true);
-                Log.i("viewPager",""+viewPager.getCurrentItem());
+                viewPager.setCurrentItem(1, true);
+                Log.i("viewPager", "" + viewPager.getCurrentItem());
             }
         });
         zuixin.setOnClickListener(new View.OnClickListener() {
@@ -87,8 +89,8 @@ public class KitchenPageFragment extends FragmentActivity {
                 gone_two_view.setVisibility(View.INVISIBLE);
                 gone_one_view.setVisibility(View.INVISIBLE);
                 gone_three_view.setVisibility(View.VISIBLE);
-                viewPager.setCurrentItem(2,true);
-                Log.i("viewPager",""+viewPager.getCurrentItem());
+                viewPager.setCurrentItem(2, true);
+                Log.i("viewPager", "" + viewPager.getCurrentItem());
             }
         });
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -99,7 +101,7 @@ public class KitchenPageFragment extends FragmentActivity {
 
             @Override
             public void onPageSelected(int position) {
-                switch(position){
+                switch (position) {
                     case 0:
                         gone_two_view.setVisibility(View.INVISIBLE);
                         gone_three_view.setVisibility(View.INVISIBLE);
@@ -125,7 +127,8 @@ public class KitchenPageFragment extends FragmentActivity {
             }
         });
     }
-    private void setViewPager(){
+
+    private void setViewPager() {
         list = new ArrayList<>();
         list.add(new KitchenSubLayout01());
         list.add(new KitchenSubLayout02());

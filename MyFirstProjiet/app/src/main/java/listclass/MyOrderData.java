@@ -10,7 +10,7 @@ public class MyOrderData {
     String cooking_method;
     String doing_counts;
     String collect_counts;
-    String text;
+    String pingjia;
 
     public int getCooking_img() {
         return cooking_img;
@@ -60,11 +60,11 @@ public class MyOrderData {
         this.collect_counts = collect_counts;
     }
 
-    public String getText() {
-        return text;
+    public String getPingjia() {
+        return pingjia;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setPingjia(String pingjia) {
+        this.pingjia = pingjia;
     }
 }

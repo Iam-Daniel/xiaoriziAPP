@@ -1,20 +1,15 @@
 package listclass;
 
-import android.support.v4.app.FragmentActivity;
-
-import java.util.List;
-
 /**
  * Created by Administrator on 2016/11/30.
  */
-public class MyCollectionOrderData {
+public class MyCollectionData {
     int img;
     String title;
     String method;
-    String total;
     String people;
+    String who;
     String date;
-
 
     public int getImg() {
         return img;
@@ -40,20 +35,20 @@ public class MyCollectionOrderData {
         this.method = method;
     }
 
-    public String getTotal() {
-        return total;
-    }
-
-    public void setTotal(String total) {
-        this.total = total;
-    }
-
     public String getPeople() {
         return people;
     }
 
     public void setPeople(String people) {
         this.people = people;
+    }
+
+    public String getWho() {
+        return who;
+    }
+
+    public void setWho(String who) {
+        this.who = who;
     }
 
     public String getDate() {

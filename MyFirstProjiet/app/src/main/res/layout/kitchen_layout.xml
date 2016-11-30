@@ -45,6 +45,7 @@
                 android:background="@drawable/edittext_bg_kitchen"
                 android:hint="搜索问答"
                 android:textSize="11sp"
+                android:textColor="#000"
                 android:gravity="center"
                 android:layout_centerInParent="true"
                 android:textColorHint="#212121"/>
