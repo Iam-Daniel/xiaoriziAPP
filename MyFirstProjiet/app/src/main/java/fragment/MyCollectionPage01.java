@@ -14,13 +14,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapter.ListViewAdapter;
+import listclass.MyCollectionData;
 import maniactivity.ListInformation;
 
-
 /**
- * Created by admin on 2016/11/26.
+ * Created by Administrator on 2016/11/30.
  */
-public class KitchenSubLayout02 extends Fragment {
+public class MyCollectionPage01 extends Fragment {
     View view;
     ListView listView;
     List<ListInformation> list;
@@ -28,24 +28,26 @@ public class KitchenSubLayout02 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.kitchen_sub_layout, null);
+        view = inflater.inflate(R.layout.kitchen_sub_layout, container, false);
         itemFindViewById();
         setData();
+
         ListViewAdapter listViewAdapter = new ListViewAdapter(getActivity(), list, 2);
         listView.setAdapter(listViewAdapter);
+
         //限制ListView的高度
-        {
+        /*{
             View view = listViewAdapter.getView(0, null, listView);
             view.measure(0, 0);
             int MeasuredHeight = view.getMeasuredHeight();
             int DividerHeight = listView.getDividerHeight();
-            ViewGroup.LayoutParams params = listView.getLayoutParams();
+            ViewGroup.LayoutParams params = listView.g
+            etLayoutParams();
             params.height = (MeasuredHeight + DividerHeight) * list.size();
             listView.setLayoutParams(params);
-        }
+        }*/
         return view;
     }
-
 
     private void itemFindViewById() {
         listView = (ListView) view.findViewById(R.id.listView);
@@ -56,22 +58,17 @@ public class KitchenSubLayout02 extends Fragment {
 
     }
 
-    private void setData() {
+    public void setData() {
         list = new ArrayList<>();
-        ListInformation information;
-        for (int t = 0; t < 10; t++) {
-            information = new ListInformation();
-            information.setAuthor("author" + t);
-            information.setImg(R.mipmap.icon_bg_kitchen);
-            information.setMedia(1);
-            information.setIcon_head(R.mipmap.icon_head);
-            information.setTime_y_m_d("2016-11-11");
-            information.setTime_f_a("PM");
-            information.setTime_m_s("" + t + ":" + t * 20);
-            information.setNumb_f("" + t * 10);
-            information.setNumb_m("" + t);
-            information.setTitle_bottom("-扬州什锦-");
-            list.add(information);
+        MyCollectionData myCollectionData;
+        for (int i = 0; i < 20; i++) {
+            myCollectionData = new MyCollectionData();
+            myCollectionData.setImg(R.mipmap.icon_add_img);
+            myCollectionData.setDate("2016-11-30");
+            myCollectionData.setMethod("日本动漫");
+            myCollectionData.setPeople("金木研");
+            myCollectionData.setTitle("东京食尸鬼");
+            myCollectionData.setWho("我是神仙");
         }
     }
 }

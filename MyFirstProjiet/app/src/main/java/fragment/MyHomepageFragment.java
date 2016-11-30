@@ -117,14 +117,14 @@ public class MyHomepageFragment extends BaseFragment {
         myHomepageOrderImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MyOrderPageActivity.class);
+                Intent intent = new Intent(getActivity(), MyOrderPageFragment.class);
                 startActivity(intent);
             }
         });
         myHomepageCollectionImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MyCollectionPageActivity.class);
+                Intent intent = new Intent(getActivity(), MyCollectionFragment.class);
                 startActivity(intent);
             }
         });

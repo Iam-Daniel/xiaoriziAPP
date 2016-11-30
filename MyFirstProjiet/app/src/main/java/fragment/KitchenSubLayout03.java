@@ -20,7 +20,8 @@ import maniactivity.ListInformation;
 /**
  * Created by admin on 2016/11/26.
  */
-public class KitchenSubLayout03 extends Fragment {  View view;
+public class KitchenSubLayout03 extends Fragment {
+    View view;
     ListView listView;
     List<ListInformation> list;
 
