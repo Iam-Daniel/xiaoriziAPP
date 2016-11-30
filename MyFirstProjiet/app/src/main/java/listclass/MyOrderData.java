@@ -4,7 +4,7 @@ package listclass;
  * Created by Administrator on 2016/11/29.
  */
 public class MyOrderData {
-    String cooking_img;
+    int cooking_img;
     String cooking_name;
     String date;
     String cooking_method;
@@ -12,11 +12,11 @@ public class MyOrderData {
     String collect_counts;
     String text;
 
-    public String getCooking_img() {
+    public int getCooking_img() {
         return cooking_img;
     }
 
-    public void setCooking_img(String cooking_img) {
+    public void setCooking_img(int cooking_img) {
         this.cooking_img = cooking_img;
     }
 

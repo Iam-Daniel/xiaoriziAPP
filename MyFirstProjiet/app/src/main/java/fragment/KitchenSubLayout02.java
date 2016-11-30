@@ -21,7 +21,8 @@ import maniactivity.ListInformation;
 /**
  * Created by admin on 2016/11/26.
  */
-public class KitchenSubLayout02 extends Fragment {  View view;
+public class KitchenSubLayout02 extends Fragment {
+    View view;
     ListView listView;
     List<ListInformation> list;
 
@@ -31,7 +32,7 @@ public class KitchenSubLayout02 extends Fragment {  View view;
         view = inflater.inflate(R.layout.kitchen_sub_layout, null);
         itemFindViewById();
         setData();
-        ListViewAdapter listViewAdapter = new ListViewAdapter(getActivity(), list,2);
+        ListViewAdapter listViewAdapter = new ListViewAdapter(getActivity(), list, 2);
         listView.setAdapter(listViewAdapter);
         return view;
     }

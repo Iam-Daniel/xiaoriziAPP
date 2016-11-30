@@ -41,20 +41,22 @@
         <activity android:name="maniactivity.HotMenuPageActivity" />
         <activity android:name="maniactivity.InformationPageActivity" />
         <activity android:name="fragment.KitchenPageFragment" />
+        <activity android:name="fragment.MyOrderPageFragment" />
+        <activity android:name="fragment.MyCollectionFragment" />
         <activity android:name="maniactivity.LogInPageActivity" />
         <activity android:name="maniactivity.LoginQQPageActivity" />
         <activity android:name="maniactivity.LogUpPageActivity" />
         <activity android:name="maniactivity.MenuClassFicationPageActivity" />
         <activity android:name="maniactivity.MorePageActivity" />
         <activity android:name="maniactivity.MycollectionOrderPageActivity" />
-        <activity android:name="maniactivity.MyCollectionPageActivity" />
+        <!--<activity android:name="maniactivity.MyCollectionPageActivity" />-->
         <activity android:name="maniactivity.MyConcernPageActivity" />
         <activity android:name="maniactivity.MyFansPageActivity" />
         <activity
             android:name="maniactivity.MyHomePageLayoutActivity"
             android:launchMode="singleTask" />
         <activity android:name="maniactivity.MyMenuPageActivity" />
-        <activity android:name="maniactivity.MyOrderPageActivity" />
+        <!--<activity android:name="maniactivity.MyOrderPageActivity" />-->
         <activity android:name="maniactivity.MyWorksPageActivity" />
         <activity android:name="maniactivity.NumberPageActivity" />
         <activity android:name="maniactivity.NutritionMorningPageActivity" />

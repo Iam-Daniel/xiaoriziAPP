@@ -1,6 +1,7 @@
 package adapter;
 
 import android.content.Context;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import com.example.administrator.myfirstprojiet.R;
 
 import java.util.List;
 
+import listclass.MyOrderData;
 import maniactivity.ListInformation;
 
 /**
@@ -32,6 +34,9 @@ public class ListViewAdapter extends BaseAdapter {
         //2 是KitchenPageActivity界面调用
         //3 是WorldPageFragment界面调用
         this.style = style;
+    }
+
+    public ListViewAdapter(FragmentActivity activity, List<MyOrderData> list, int style) {
     }
 
     @Override
@@ -72,34 +77,34 @@ public class ListViewAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        if (view == null){
+        if (view == null) {
             viewHolder = new ViewHolder();
             //布局为通用listView布局
-            view = layoutInflater.inflate(R.layout.general_list_item,null);
-            viewHolder.icon_head = (ImageView)view.findViewById(R.id.icon_head);
-            viewHolder.img = (ImageView)view.findViewById(R.id.img);
-            viewHolder.author = (TextView)view.findViewById(R.id.author);
-            viewHolder.time_y_m_d = (TextView)view.findViewById(R.id.time_y_m_d);
-            viewHolder.time_f_a = (TextView)view.findViewById(R.id.time_f_a);
-            viewHolder.time_m_s = (TextView)view.findViewById(R.id.time_m_s);
-            viewHolder.numb_f = (TextView)view.findViewById(R.id.numb_f);
-            viewHolder.numb_m = (TextView)view.findViewById(R.id.numb_m);
-            viewHolder.details = (TextView)view.findViewById(R.id.details);
-            viewHolder.changeLayout = (LinearLayout)view.findViewById(R.id.changeLayout);
-            viewHolder.concern = (TextView)view.findViewById(R.id.concern);
-            viewHolder.title_bottom = (TextView)view.findViewById(R.id.title_bottom);
-            viewHolder.title = (TextView)view.findViewById(R.id.title);
-            viewHolder.media = (ImageView)view.findViewById(R.id.media);
-            viewHolder.like = (ImageView)view.findViewById(R.id.like);
-            viewHolder.message = (ImageView)view.findViewById(R.id.message);
+            view = layoutInflater.inflate(R.layout.general_list_item, null);
+            viewHolder.icon_head = (ImageView) view.findViewById(R.id.icon_head);
+            viewHolder.img = (ImageView) view.findViewById(R.id.img);
+            viewHolder.author = (TextView) view.findViewById(R.id.author);
+            viewHolder.time_y_m_d = (TextView) view.findViewById(R.id.time_y_m_d);
+            viewHolder.time_f_a = (TextView) view.findViewById(R.id.time_f_a);
+            viewHolder.time_m_s = (TextView) view.findViewById(R.id.time_m_s);
+            viewHolder.numb_f = (TextView) view.findViewById(R.id.numb_f);
+            viewHolder.numb_m = (TextView) view.findViewById(R.id.numb_m);
+            viewHolder.details = (TextView) view.findViewById(R.id.details);
+            viewHolder.changeLayout = (LinearLayout) view.findViewById(R.id.changeLayout);
+            viewHolder.concern = (TextView) view.findViewById(R.id.concern);
+            viewHolder.title_bottom = (TextView) view.findViewById(R.id.title_bottom);
+            viewHolder.title = (TextView) view.findViewById(R.id.title);
+            viewHolder.media = (ImageView) view.findViewById(R.id.media);
+            viewHolder.like = (ImageView) view.findViewById(R.id.like);
+            viewHolder.message = (ImageView) view.findViewById(R.id.message);
             view.setTag(viewHolder);
-        }else{
-            viewHolder = (ViewHolder)view.getTag();
+        } else {
+            viewHolder = (ViewHolder) view.getTag();
         }
         information = list.get(position);
         //根据要加载的listView格式不同，分别加载对应对应内容
         //此处是SearchLayoutListView界面调用
-        if (style==1){
+        if (style == 1) {
             viewHolder.icon_head.setImageResource(information.getIcon_head());
             viewHolder.img.setImageResource(information.getImg());
             viewHolder.author.setText(information.getAuthor());
@@ -110,7 +115,7 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.numb_m.setText(information.getNumb_m());
             setIcon();
             //此处是KitchenPageActivity界面调用
-        }else if (style==2){
+        } else if (style == 2) {
             viewHolder.icon_head.setImageResource(information.getIcon_head());
             viewHolder.img.setImageResource(information.getImg());
             viewHolder.author.setText(information.getAuthor());
@@ -119,7 +124,7 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.changeLayout.setVisibility(View.GONE);
             viewHolder.details.setText(information.getDetails());
             setIcon();
-        }else if (style==3){
+        } else if (style == 3) {
             viewHolder.icon_head.setImageResource(information.getIcon_head());
             viewHolder.img.setImageResource(information.getImg());
             viewHolder.author.setText(information.getAuthor());
@@ -130,7 +135,7 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.numb_m.setText(information.getNumb_m());
             setIcon();
             viewHolder.title_bottom.setText(information.getTitle_bottom());
-        }else if (style==4){
+        } else if (style == 4) {
             setIcon();
             viewHolder.title.setText(information.getTitle());
             viewHolder.img.setImageResource(information.getImg());
@@ -139,59 +144,59 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     //控制各个图标是否显示
-    private void setIcon(){
-        if (information.getMedia()==1){
+    private void setIcon() {
+        if (information.getMedia() == 1) {
             viewHolder.media.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             viewHolder.media.setVisibility(View.GONE);
         }
-        if (information.getLike()==1){
+        if (information.getLike() == 1) {
             viewHolder.like.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             viewHolder.like.setVisibility(View.GONE);
         }
-        if (information.getMessage()==1){
+        if (information.getMessage() == 1) {
             viewHolder.message.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             viewHolder.message.setVisibility(View.GONE);
         }
 
         //设置不用的控件隐藏
         {
-            if (information.getIcon_head()==0){
+            if (information.getIcon_head() == 0) {
                 viewHolder.icon_head.setVisibility(View.GONE);
             }
-            if (information.getAuthor()==null){
+            if (information.getAuthor() == null) {
                 viewHolder.author.setVisibility(View.GONE);
             }
-            if (information.getTime_y_m_d()==null){
+            if (information.getTime_y_m_d() == null) {
                 viewHolder.time_y_m_d.setVisibility(View.GONE);
             }
-            if (information.getTime_f_a()==null){
+            if (information.getTime_f_a() == null) {
                 viewHolder.time_f_a.setVisibility(View.GONE);
             }
-            if (information.getTime_m_s()==null){
+            if (information.getTime_m_s() == null) {
                 viewHolder.time_m_s.setVisibility(View.GONE);
             }
-            if (information.getImg()==0){
+            if (information.getImg() == 0) {
                 viewHolder.img.setVisibility(View.GONE);
             }
-            if (information.getNumb_f()==null){
+            if (information.getNumb_f() == null) {
                 viewHolder.numb_f.setVisibility(View.GONE);
             }
-            if (information.getNumb_m()==null){
+            if (information.getNumb_m() == null) {
                 viewHolder.numb_m.setVisibility(View.GONE);
             }
-            if (information.getDetails()==null){
+            if (information.getDetails() == null) {
                 viewHolder.details.setVisibility(View.GONE);
             }
-            if (information.getConcern()==0){
+            if (information.getConcern() == 0) {
                 viewHolder.concern.setVisibility(View.GONE);
             }
-            if (information.getTitle_bottom()==null){
+            if (information.getTitle_bottom() == null) {
                 viewHolder.title_bottom.setVisibility(View.GONE);
             }
-            if (information.getTitle()==null){
+            if (information.getTitle() == null) {
                 viewHolder.title.setVisibility(View.GONE);
             }
         }
