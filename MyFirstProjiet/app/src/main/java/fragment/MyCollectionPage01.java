@@ -64,9 +64,11 @@ public class MyCollectionPage01 extends Fragment {
         list = new ArrayList<>();
         MyCollectionData myCollectionData;
 
+
         MyCollectionOrderData myCollectionData;
         for (int i = 0; i < 20; i++) {
             myCollectionData = new MyCollectionData();
+            myCollectionData = new MyCollectionOrderData();
             myCollectionData = new MyCollectionOrderData();
             myCollectionData = new MyCollectionOrderData();
             myCollectionData.setImg(R.mipmap.icon_add_img);
