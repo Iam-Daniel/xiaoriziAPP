@@ -97,8 +97,9 @@
             android:visibility="invisible" />
 
     </LinearLayout>
-<<<<<<< HEAD
+
     <LinearLayout
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="horizontal">
@@ -177,22 +178,17 @@
         </LinearLayout>
 
     </LinearLayout>
-    <View
-        android:visibility="gone"
-=======
+
+
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
->>>>>>> 0aeaa8a49094eee634b9187d8097dd8777b97c7f
+
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
     </android.support.v4.view.ViewPager>
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/myCollection_list"></ListView>
 
 </LinearLayout>
