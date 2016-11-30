@@ -14,9 +14,8 @@ import com.example.administrator.myfirstprojiet.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import adapter.ListViewAdapter;
+import adapter.MyCollectionOrderAdapter;
 import listclass.MyCollectionOrderData;
-import maniactivity.ListInformation;
 
 /**
  * Created by Administrator on 2016/11/30.
@@ -24,7 +23,7 @@ import maniactivity.ListInformation;
 public class MyCollectionPage02 extends Fragment {
     View view;
     ListView listView;
-    List<ListInformation> list;
+    List<MyCollectionOrderData> list;
 
     @Nullable
     @Override
@@ -33,19 +32,9 @@ public class MyCollectionPage02 extends Fragment {
         itemFindViewById();
         setData();
 
-        ListViewAdapter listViewAdapter = new ListViewAdapter(getActivity(), list, 2);
-        listView.setAdapter(listViewAdapter);
+        MyCollectionOrderAdapter myCollectionOrderData = new MyCollectionOrderAdapter(getActivity(), list, 2);
+        listView.setAdapter(myCollectionOrderData);
 
-        //限制ListView的高度
-        /*{
-            View view = listViewAdapter.getView(0, null, listView);
-            view.measure(0, 0);
-            int MeasuredHeight = view.getMeasuredHeight();
-            int DividerHeight = listView.getDividerHeight();
-            ViewGroup.LayoutParams params = listView.getLayoutParams();
-            params.height = (MeasuredHeight + DividerHeight) * list.size();
-            listView.setLayoutParams(params);
-        }*/
         return view;
     }
 
@@ -63,12 +52,14 @@ public class MyCollectionPage02 extends Fragment {
         MyCollectionOrderData myCollectionOrderData;
         for (int i = 0; i < 20; i++) {
             myCollectionOrderData = new MyCollectionOrderData();
-            myCollectionOrderData.setImg(R.mipmap.icon_add_img);
+            myCollectionOrderData.setImg(R.mipmap.icon_luan);
             myCollectionOrderData.setDate("2016-11-30");
-            myCollectionOrderData.setMethod("日本动漫");
+            myCollectionOrderData.setMethod("日本动漫谭王见监制");
             myCollectionOrderData.setPeople("金木研");
-            myCollectionOrderData.setTitle("东京食尸鬼");
-            myCollectionOrderData.setTotal("100");
+            myCollectionOrderData.setTitle("东京食尸鬼" + i);
+            myCollectionOrderData.setTotal("100" + i++ * 10);
+
+            list.add(myCollectionOrderData);
         }
     }
 }

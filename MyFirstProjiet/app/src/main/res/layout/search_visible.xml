@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    android:orientation="vertical"
-    android:background="#FFF">
+    android:background="#FFF"
+    android:orientation="vertical">
 
     <!--导航栏-->
     <LinearLayout
@@ -38,6 +38,7 @@
             android:paddingBottom="6dp"
             android:paddingLeft="8dp"
             android:paddingTop="6dp"
+            android:textColor="#000"
             android:textColorHint="#212121"
             android:textSize="15sp" />
 

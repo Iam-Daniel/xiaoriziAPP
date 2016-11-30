@@ -14,6 +14,7 @@ import com.example.administrator.myfirstprojiet.R;
 
 import java.util.List;
 
+import listclass.MyCollectionData;
 import listclass.MyOrderData;
 import maniactivity.ListInformation;
 
@@ -34,9 +35,6 @@ public class ListViewAdapter extends BaseAdapter {
         //2 是KitchenPageActivity界面调用
         //3 是WorldPageFragment界面调用
         this.style = style;
-    }
-
-    public ListViewAdapter(FragmentActivity activity, List<MyOrderData> list, int style) {
     }
 
     @Override

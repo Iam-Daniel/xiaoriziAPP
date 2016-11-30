@@ -1,5 +1,9 @@
 package listclass;
 
+import android.support.v4.app.FragmentActivity;
+
+import java.util.List;
+
 /**
  * Created by Administrator on 2016/11/30.
  */
@@ -10,6 +14,7 @@ public class MyCollectionOrderData {
     String total;
     String people;
     String date;
+
 
     public int getImg() {
         return img;

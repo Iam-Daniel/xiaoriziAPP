@@ -21,7 +21,7 @@ public class PassWorkPageActivity extends BaseActivity {
         passworkToSetpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(PassWorkPageActivity.this,SetPassWordPageActivity.class);
+//                startActivity(PassWorkPageActivity.this,SetPassWordPageActivity.class);
                 finish();
             }
         });

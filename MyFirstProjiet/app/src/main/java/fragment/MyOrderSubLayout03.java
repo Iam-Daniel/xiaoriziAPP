@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapter.ListViewAdapter;
+import adapter.MyOrderAdapter;
 import listclass.MyOrderData;
 import maniactivity.ListInformation;
 
@@ -23,7 +24,7 @@ import maniactivity.ListInformation;
 public class MyOrderSubLayout03 extends Fragment {
     View view;
     ListView listView;
-    List<ListInformation> list;
+    List<MyOrderData> list;
 
     @Nullable
     @Override
@@ -31,8 +32,8 @@ public class MyOrderSubLayout03 extends Fragment {
         view = inflater.inflate(R.layout.kitchen_sub_layout, container, false);
         itemFindViewById();
         setData();
-        ListViewAdapter listViewAdapter = new ListViewAdapter(getActivity(), list, 2);
-        listView.setAdapter(listViewAdapter);
+        MyOrderAdapter myOrderAdapter = new MyOrderAdapter(getActivity(), list, 2);
+        listView.setAdapter(myOrderAdapter);
         /*{
             View view = listViewAdapter.getView(0, null, listView);
             view.measure(0, 0);
@@ -55,13 +56,18 @@ public class MyOrderSubLayout03 extends Fragment {
         MyOrderData myOrderData;
         for (int t = 0; t < 10; t++) {
             myOrderData = new MyOrderData();
-            myOrderData.setCooking_img(R.mipmap.icon_bg_kitchen);
-            myOrderData.setCooking_name("000");
-            myOrderData.setDate("0000000");
+            myOrderData.setCooking_img(R.mipmap.icon_luan);
+            if (t == 0) {
+                myOrderData.setCooking_name("谭王见本人");
+            } else {
+                myOrderData.setCooking_name("谭王见" + t + "号小号");
+            }
+            myOrderData.setDate("2016-11-30");
             myOrderData.setCooking_method("" + t);
-            myOrderData.setCollect_counts("" + t);
+            myOrderData.setDoing_counts("1000" + t * 10);
+            myOrderData.setCollect_counts(t + "1");
 
-           // list.add(myOrderData);
+            list.add(myOrderData);
         }
     }
 }

@@ -24,7 +24,7 @@ public class NumberPageActivity extends BaseActivity {
         numberToSetpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(NumberPageActivity.this, SetPassWordPageActivity.class);
+//                startActivity(NumberPageActivity.this, SetPassWordPageActivity.class);
                 finish();
             }
         });
