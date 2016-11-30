@@ -57,7 +57,7 @@ public class MyCollectionPage02 extends Fragment {
             myCollectionOrderData.setMethod("日本动漫谭王见监制");
             myCollectionOrderData.setPeople("金木研");
             myCollectionOrderData.setTitle("东京食尸鬼" + i);
-            myCollectionOrderData.setTotal("100" + i++ * 10);
+            myCollectionOrderData.setTotal("100" + i * 10);
 
             list.add(myCollectionOrderData);
         }
