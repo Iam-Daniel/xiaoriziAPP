@@ -48,6 +48,7 @@ public class AddressPageActivity extends BaseActivity{
 
         getdata();
 
+        setdata();
         save= (TextView) findViewById(R.id.save);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +57,17 @@ public class AddressPageActivity extends BaseActivity{
             }
         });
 
+    }
+
+    //设置输入框文字
+    public void setdata(){
+        sharedPreferences=getSharedPreferences("Shipping_address",MODE_PRIVATE);
+        if (!sharedPreferences.getString("name","111").equals("111")){
+            name_edit.setText(sharedPreferences.getString("name","111"));
+            phone_edit.setText(sharedPreferences.getString("phonenumber","111"));
+            city_edit.setText(sharedPreferences.getString("city","111"));
+            adress_info.setText(sharedPreferences.getString("adress","111"));
+        }
     }
 
     //文字输入监听
