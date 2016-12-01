@@ -33,6 +33,7 @@
 
             </RelativeLayout>
             <LinearLayout
+                android:id="@+id/add_loadMenu_one"
                 android:layout_width="match_parent"
                 android:layout_height="175dp"
                 android:background="#E5E5E5"
@@ -91,6 +92,7 @@
                         android:textSize="15sp"
                         android:textColor="#212121" />
                     <LinearLayout
+                        android:id="@+id/add_loadMenu_two"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="8dp"
@@ -126,6 +128,7 @@
                         android:textSize="15sp"
                         android:textColor="#212121" />
                     <LinearLayout
+                        android:id="@+id/add_loadMenu_three"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="8dp"

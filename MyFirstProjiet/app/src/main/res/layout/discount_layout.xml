@@ -36,24 +36,27 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="44dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="12dp"
+            android:gravity="center"
             android:text="未使用的优惠券（2）"
             android:textColor="#212121"
             android:textSize="15sp" />
 
         <TextView
+            android:id="@+id/discount_coupons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
+            android:padding="13dp"
             android:text="优惠券说明"
             android:textColor="#fbbf41"
             android:textSize="12sp" />
@@ -66,14 +69,12 @@
         android:background="#C8C8C8" />
 
 
-
-
     <LinearLayout
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="81dp"
         android:background="#F0F0F0"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <TextView
             android:layout_width="wrap_content"
@@ -144,84 +145,84 @@
         android:background="#C8C8C8" />
 
     <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="81dp"-->
-        <!--android:background="#F0F0F0"-->
-        <!--android:orientation="vertical">-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="81dp"-->
+    <!--android:background="#F0F0F0"-->
+    <!--android:orientation="vertical">-->
 
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginLeft="12dp"-->
-            <!--android:layout_marginTop="12dp"-->
-            <!--android:text="满50减10"-->
-            <!--android:textColor="#212121"-->
-            <!--android:textSize="15sp" />-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="12dp"-->
+    <!--android:layout_marginTop="12dp"-->
+    <!--android:text="满50减10"-->
+    <!--android:textColor="#212121"-->
+    <!--android:textSize="15sp" />-->
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_marginLeft="12dp"-->
-            <!--android:layout_marginTop="12dp"-->
-            <!--android:orientation="vertical">-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="12dp"-->
+    <!--android:layout_marginTop="12dp"-->
+    <!--android:orientation="vertical">-->
 
-            <!--<LinearLayout-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="0dp"-->
-                <!--android:layout_weight="1">-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1">-->
 
-                <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="使用范围："-->
-                    <!--android:textColor="#505050"-->
-                    <!--android:textColorHighlight="#505050"-->
-                    <!--android:textSize="12sp" />-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="使用范围："-->
+    <!--android:textColor="#505050"-->
+    <!--android:textColorHighlight="#505050"-->
+    <!--android:textSize="12sp" />-->
 
-                <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="全场"-->
-                    <!--android:textColor="#505050"-->
-                    <!--android:textColorHighlight="#505050"-->
-                    <!--android:textSize="12sp" />-->
-            <!--</LinearLayout>-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="全场"-->
+    <!--android:textColor="#505050"-->
+    <!--android:textColorHighlight="#505050"-->
+    <!--android:textSize="12sp" />-->
+    <!--</LinearLayout>-->
 
-            <!--<LinearLayout-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="0dp"-->
-                <!--android:layout_weight="1">-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1">-->
 
-                <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="使用范围："-->
-                    <!--android:textColor="#505050"-->
-                    <!--android:textSize="12sp" />-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="使用范围："-->
+    <!--android:textColor="#505050"-->
+    <!--android:textSize="12sp" />-->
 
-                <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="2016-12-12"-->
-                    <!--android:textColor="#FBBF41"-->
-                    <!--android:textSize="12sp" />-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="2016-12-12"-->
+    <!--android:textColor="#FBBF41"-->
+    <!--android:textSize="12sp" />-->
 
-            <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
 
-        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
 
     <!--</LinearLayout>-->
 
     <View
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#C8C8C8" />
+        android:background="#C8C8C8"
+        android:visibility="gone" />
 
     <ListView
+        android:id="@+id/my_discount"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/my_discount"></ListView>
+        android:layout_height="wrap_content"></ListView>
 
 
 </LinearLayout>

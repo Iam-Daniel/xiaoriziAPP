@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:src="@mipmap/youhuiquan" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_quan"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="每张优惠券具有一定的使用条件和期限"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="优惠劵使用一般性规则如下："
+            android:textColor="@color/yellow"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:drawableLeft="@mipmap/icon_circle"
+            android:gravity="center_vertical"
+            android:text="优惠券有使用期限限制，过了有效期不能使用；"
+            android:textColor="#212121"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:drawableLeft="@mipmap/icon_circle"
+            android:gravity="center_vertical"
+            android:text="订单中包含特价商品时不能使用优惠券，优惠券不能与其他优惠（如促销活动）同时使用；"
+            android:textColor="#212121"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:drawableLeft="@mipmap/icon_circle"
+            android:gravity="center_vertical"
+            android:text="每个订单只能使用一张优惠券；"
+            android:textColor="#212121"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:drawableLeft="@mipmap/icon_circle"
+            android:gravity="center_vertical"
+            android:text="优惠券等抵扣金额不能开具发票；"
+            android:textColor="#212121"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:drawableLeft="@mipmap/icon_circle"
+            android:gravity="center_vertical"
+            android:text="使用优惠券支付的订单，如果退货，优惠券抵扣金额不能退还，只能退还实际支付商品金额；如果部分退货，将按照订单实际成交商品的金额进行结算；退货后订单金额不满足优惠券使用条件时，优惠券失效。退款金额＝退货商品价格-优惠金额；"
+            android:textColor="#212121"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:drawableLeft="@mipmap/icon_circle"
+            android:gravity="center_vertical"
+            android:text="小日子（lives）菜鸟-->在法律范围内保留对优惠券使用细则的最终解释权。"
+            android:textColor="#212121"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/exit_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/head_bg"
+            android:gravity="center"
+            android:paddingBottom="13dp"
+            android:paddingTop="13dp"
+            android:text="已了解"
+            android:textColor="#FFF9ED"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

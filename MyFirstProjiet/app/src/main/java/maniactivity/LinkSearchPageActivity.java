@@ -49,7 +49,6 @@ public class LinkSearchPageActivity extends Activity {
 
     private void addItem() {
         View newView = null;
-
         mContainerView.addView(newView, 0);
     }
 

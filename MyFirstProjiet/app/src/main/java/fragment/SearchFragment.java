@@ -1,20 +1,24 @@
 package fragment;
 
-
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import adapter.ListViewAdapter;
 import maniactivity.BaseFragment;
+import maniactivity.ListInformation;
 import maniactivity.MorePageActivity;
 import maniactivity.ShoppingActivity;
 import maniactivity.ShoppingCartPageActivity;
@@ -32,8 +36,11 @@ public class SearchFragment extends BaseFragment {
     TextView fangBian;
     TextView ganHuo;
     TextView yinPing;
+    /*下面是listView的一些参数*/
     View view;
-
+    ListView listView;
+    ListViewAdapter listViewAdapter;
+    List<ListInformation> list;
 
     public SearchFragment() {
 
@@ -50,9 +57,11 @@ public class SearchFragment extends BaseFragment {
         view = inflater.inflate(R.layout.search_layout, container, false);
         itemFindViewById();
         itemSetOnClickListener();
+        setData();
+        listViewAdapter = new ListViewAdapter(getActivity(), list, 2);
+        listView.setAdapter(listViewAdapter);
         return view;
     }
-
 
     private void itemFindViewById() {
         hongPei = (TextView) view.findViewById(R.id.hongpei);
@@ -64,6 +73,26 @@ public class SearchFragment extends BaseFragment {
         yinPing = (TextView) view.findViewById(R.id.yinping);
         searchMoreTv = (TextView) view.findViewById(R.id.search_more_tv);
         searchShoppingCartImg = (ImageView) view.findViewById(R.id.search_shoppingCart_img);
+        listView = (ListView) view.findViewById(R.id.listView);
+    }
+
+    private void setData() {
+        list = new ArrayList<>();
+        ListInformation information;
+        for (int t = 0; t < 10; t++) {
+            information = new ListInformation();
+            information.setAuthor("author" + t);
+            information.setImg(R.mipmap.icon_bg_kitchen);
+            information.setMedia(1);
+            information.setIcon_head(R.mipmap.icon_head);
+            information.setTime_y_m_d("2016-11-11");
+            information.setTime_f_a("PM");
+            information.setTime_m_s("" + t + ":" + t * 20);
+            information.setNumb_f("" + t * 10);
+            information.setNumb_m("" + t);
+            information.setTitle_bottom("-扬州什锦-");
+            list.add(information);
+        }
     }
 
     private void itemSetOnClickListener() {
