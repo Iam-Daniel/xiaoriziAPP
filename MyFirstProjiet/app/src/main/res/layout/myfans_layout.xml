@@ -33,9 +33,11 @@
 
     <!--ListView替换掉-->
     <RelativeLayout
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="44dp">
         <ImageView
+
             android:id="@+id/touxiang_imageview"
             android:layout_width="29dp"
             android:layout_height="29dp"
@@ -61,6 +63,7 @@
 
     </RelativeLayout>
     <View
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#F0F0F0"/>
@@ -69,6 +72,7 @@
 
 
     <RelativeLayout
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="44dp">
         <ImageView
@@ -97,8 +101,15 @@
 
     </RelativeLayout>
     <View
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#F0F0F0"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Myfan_list"></ListView>
+
 
 </LinearLayout>
