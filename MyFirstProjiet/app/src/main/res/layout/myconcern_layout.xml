@@ -33,6 +33,7 @@
 
     <!--ListView替换掉-->
     <RelativeLayout
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="44dp">
         <ImageView
@@ -68,6 +69,7 @@
 
     </RelativeLayout>
     <View
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#F0F0F0"/>
@@ -76,6 +78,7 @@
 
 
     <RelativeLayout
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="44dp">
         <ImageView
@@ -111,8 +114,15 @@
 
     </RelativeLayout>
     <View
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#F0F0F0"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myCollection_listview"></ListView>
+
 
 </LinearLayout>
