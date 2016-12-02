@@ -1,15 +1,13 @@
 package maniactivity;
 
-import android.content.Intent;
+import android.Manifest;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 
 import com.example.administrator.myfirstprojiet.R;
@@ -43,6 +41,14 @@ public class HomepageActivity extends FragmentActivity {
         //设置监听事件
         itemSetOnClickListener();
         setDefaultFragment();
+       if (Build.VERSION.SDK_INT>23){
+           this.requestPermissions(new String[]{Manifest.permission.INTERNET},1);
+       }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     private void setDefaultFragment() {
