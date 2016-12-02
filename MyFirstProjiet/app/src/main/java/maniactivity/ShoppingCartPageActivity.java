@@ -65,6 +65,7 @@ public class ShoppingCartPageActivity extends BaseActivity {
                 } else {
                     detailsVisibleRb.setVisibility(View.VISIBLE);
                 }
+
             }
         });
 

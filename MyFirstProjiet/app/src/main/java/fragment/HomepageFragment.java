@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,6 +55,8 @@ public class HomepageFragment extends BaseFragment {
             listViewAdapter = new ListViewAdapter(getActivity(),list,4);
             listView.setAdapter(listViewAdapter);
         }
+
+
         //限制ListView的高度
         {
             View view = listViewAdapter.getView(0, null, listView);
