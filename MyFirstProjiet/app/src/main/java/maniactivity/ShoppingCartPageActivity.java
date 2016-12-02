@@ -49,7 +49,7 @@ public class ShoppingCartPageActivity extends BaseActivity {
         shoppingCartBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(ShoppingCartPageActivity.this, SearchLayoutActivity.class);
+                //startActivity(ShoppingCartPageActivity.this, SearchLayoutActivity.class);
                 finish();
             }
         });
@@ -65,6 +65,7 @@ public class ShoppingCartPageActivity extends BaseActivity {
                 } else {
                     detailsVisibleRb.setVisibility(View.VISIBLE);
                 }
+
             }
         });
 

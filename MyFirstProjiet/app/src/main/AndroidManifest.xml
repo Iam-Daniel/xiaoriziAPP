@@ -78,6 +78,8 @@
         <activity android:name="maniactivity.SearchLayoutListView" />
         <activity android:name="maniactivity.LinkSearchPageActivity" />
         <activity android:name="maniactivity.UserAgreementActivity" />
+        <activity android:name="maniactivity.AboutUsPageActivity" />
+        <activity android:name="maniactivity.CouponsPageActivity" />
 
     </application>
 

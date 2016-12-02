@@ -42,8 +42,8 @@ public class ShoppingActivity extends Activity {
         shoppingBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ShoppingActivity.this,SearchLayoutActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(ShoppingActivity.this,SearchLayoutActivity.class);
+                //startActivity(intent);
                 finish();
             }
         });

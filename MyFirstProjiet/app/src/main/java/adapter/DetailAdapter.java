@@ -1,6 +1,8 @@
 package adapter;
 
 import android.content.Context;
+import android.os.Handler;
+import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,6 +69,7 @@ public class DetailAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.listshoppingitem_layout, null);
             viewHolder.tv = (TextView) convertView.findViewById(R.id.item_tv);
             viewHolder.cb = (CheckBox) convertView.findViewById(R.id.item_cb);
+
             // 为view设置标签
             convertView.setTag(viewHolder);
         } else {
@@ -96,4 +99,6 @@ public class DetailAdapter extends BaseAdapter {
         String content_textView;
         Float price_textView;
     }
+
+
 }

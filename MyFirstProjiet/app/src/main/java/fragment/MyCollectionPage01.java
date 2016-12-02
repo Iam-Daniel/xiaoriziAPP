@@ -16,7 +16,6 @@ import java.util.List;
 
 import adapter.MyCollectionAdapter;
 import listclass.MyCollectionData;
-import listclass.MyCollectionOrderData;
 
 
 /**
@@ -60,12 +59,6 @@ public class MyCollectionPage01 extends Fragment {
             myCollectionData.setTitle("凹凸世界第" + i + "集");
             myCollectionData.setWho("我是神仙" + i);
             list.add(myCollectionData);
-
-
-
-
-
-
 
         }
     }

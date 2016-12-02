@@ -1,10 +1,12 @@
 package maniactivity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
 
@@ -20,6 +22,7 @@ import listclass.MyDiscountData;
 public class DiscountPageActivity extends BaseActivity {
     ImageView discountBackImg;
     ListView my_discount;
+    TextView discount_coupons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,16 +37,23 @@ public class DiscountPageActivity extends BaseActivity {
                 finish();
             }
         });
+        discount_coupons = (TextView) findViewById(R.id.discount_coupons);
+        discount_coupons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(DiscountPageActivity.this, CouponsPageActivity.class);
+            }
+        });
 
-        my_discount= (ListView) findViewById(R.id.my_discount);
+        my_discount = (ListView) findViewById(R.id.my_discount);
         ArrayList<MyDiscountData> list = new ArrayList<MyDiscountData>();
         getMyDiscountData(list);
-        my_discount.setAdapter(new MyDiscountAdapter(this,list));
+        my_discount.setAdapter(new MyDiscountAdapter(this, list));
     }
 
-    public void getMyDiscountData(ArrayList<MyDiscountData> list){
+    public void getMyDiscountData(ArrayList<MyDiscountData> list) {
         MyDiscountData myDiscountData = new MyDiscountData();
-        for (int i=0;i<10;i++){
+        for (int i = 0; i < 10; i++) {
             list.add(myDiscountData);
         }
     }
