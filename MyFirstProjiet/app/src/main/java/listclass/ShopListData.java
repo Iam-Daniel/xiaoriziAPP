@@ -4,10 +4,10 @@ package listclass;
  * Created by Administrator on 2016/11/29.
  */
 public class ShopListData {
-    String shopping_cart_show_three;
-    String shoping_name;
-    String shoping_info;
-    String shoping_price;
+    int shopping_cart_show_three;
+    String shopping_name;
+    String shopping_info;
+    String shopping_price;
     String jiaru_gouwuche;
 
     public String getJiaru_gouwuche() {
@@ -18,35 +18,35 @@ public class ShopListData {
         this.jiaru_gouwuche = jiaru_gouwuche;
     }
 
-    public String getShopping_cart_show_three() {
+    public int getShopping_cart_show_three() {
         return shopping_cart_show_three;
     }
 
-    public void setShopping_cart_show_three(String shopping_cart_show_three) {
+    public void setShopping_cart_show_three(int shopping_cart_show_three) {
         this.shopping_cart_show_three = shopping_cart_show_three;
     }
 
-    public String getShoping_name() {
-        return shoping_name;
+    public String getShopping_name() {
+        return shopping_name;
     }
 
-    public void setShoping_name(String shoping_name) {
-        this.shoping_name = shoping_name;
+    public void setShopping_name(String shopping_name) {
+        this.shopping_name = shopping_name;
     }
 
-    public String getShoping_info() {
-        return shoping_info;
+    public String getShopping_info() {
+        return shopping_info;
     }
 
-    public void setShoping_info(String shoping_info) {
-        this.shoping_info = shoping_info;
+    public void setShopping_info(String shopping_info) {
+        this.shopping_info = shopping_info;
     }
 
-    public String getShoping_price() {
-        return shoping_price;
+    public String getShopping_price() {
+        return shopping_price;
     }
 
-    public void setShoping_price(String shoping_price) {
-        this.shoping_price = shoping_price;
+    public void setShopping_price(String shopping_price) {
+        this.shopping_price = shopping_price;
     }
 }

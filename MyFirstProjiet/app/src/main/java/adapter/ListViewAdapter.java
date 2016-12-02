@@ -34,6 +34,7 @@ public class ListViewAdapter extends BaseAdapter {
         //1 是SearchLayoutListView界面调用
         //2 是KitchenPageActivity界面调用
         //3 是WorldPageFragment界面调用
+        //4 是HomepageFragment界面调用
         this.style = style;
     }
 
@@ -53,6 +54,7 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     class ViewHolder {
+        LinearLayout layout_meddil;
         ImageView icon_head;//头像图片
         TextView author;//作者
         TextView time_y_m_d;//日期-年月日
@@ -95,6 +97,7 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.media = (ImageView) view.findViewById(R.id.media);
             viewHolder.like = (ImageView) view.findViewById(R.id.like);
             viewHolder.message = (ImageView) view.findViewById(R.id.message);
+            viewHolder.layout_meddil = (LinearLayout)view.findViewById(R.id.layout_middle);
             view.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) view.getTag();
@@ -137,6 +140,7 @@ public class ListViewAdapter extends BaseAdapter {
             setIcon();
             viewHolder.title.setText(information.getTitle());
             viewHolder.img.setImageResource(information.getImg());
+            viewHolder.layout_meddil.setVisibility(View.GONE);
         }
         return view;
     }

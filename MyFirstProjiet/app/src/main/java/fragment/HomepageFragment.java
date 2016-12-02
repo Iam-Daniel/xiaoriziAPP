@@ -2,6 +2,8 @@ package fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -125,6 +127,7 @@ public class HomepageFragment extends BaseFragment {
                 startActivity(intent);
             }
         });
+        //ListView点击事件
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override                                                   //Position
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -134,7 +137,7 @@ public class HomepageFragment extends BaseFragment {
     }
 
     //请求接口返回数据 并设置ListView
-            public void AskInternetData(final String method, final String keyAndValue) {
+    public void AskInternetData(final String method, final String keyAndValue) {
         new Thread() {
             @Override
             public void run() {
@@ -181,21 +184,8 @@ public class HomepageFragment extends BaseFragment {
                                 listInformation.setImg(R.mipmap.icon_bg_kitchen);
                                 list.add(listInformation);
                             }
-                            //设置listView
-                            if (list.size() != 0) {
-                                listViewAdapter = new ListViewAdapter(getActivity(), list, 4);
-                                listView.setAdapter(listViewAdapter);
-                                //限制ListView的高度
-                                {
-                                    View view = listViewAdapter.getView(0, null, listView);
-                                    view.measure(0, 0);
-                                    int MeasuredHeight = view.getMeasuredHeight();
-                                    int DividerHeight = listView.getDividerHeight();
-                                    ViewGroup.LayoutParams params = listView.getLayoutParams();
-                                    params.height = (MeasuredHeight + DividerHeight) * list.size();
-                                    listView.setLayoutParams(params);
-                                }
-                            }
+                            //发送信息设置ListView
+                            handler.sendEmptyMessage(0);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -203,12 +193,32 @@ public class HomepageFragment extends BaseFragment {
                     } else {
                         Toast.makeText(getActivity(), " httpURLConnection.connect Field", Toast.LENGTH_LONG).show();
                     }
-                }catch (IOException e) {
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         }.start();
     }
+    Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            {
+                listViewAdapter = new ListViewAdapter(getActivity(), list, 4);
+                listView.setAdapter(listViewAdapter);
+                //限制ListView的高度
+                {
+                    View view = listViewAdapter.getView(0, null, listView);
+                    view.measure(0, 0);
+                    int MeasuredHeight = view.getMeasuredHeight();
+                    int DividerHeight = listView.getDividerHeight();
+                    ViewGroup.LayoutParams params = listView.getLayoutParams();
+                    params.height = (MeasuredHeight + DividerHeight) * list.size();
+                    listView.setLayoutParams(params);
+                }
+            }
+        }
+    };
 
     @Override
     protected int setLayoutResouceId() {
