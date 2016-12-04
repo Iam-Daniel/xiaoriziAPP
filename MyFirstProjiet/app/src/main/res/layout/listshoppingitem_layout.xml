@@ -25,12 +25,18 @@
                 android:src="@mipmap/shopping_cart_show" />
 
             <ImageView
+            <CheckBox
                 android:id="@+id/checked_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="10dp"
                 android:src="@mipmap/icon_liwu" />
+                android:background="#F0F0F0"
+                android:button="@null"
+                android:focusable="false"
+                android:padding="3dp"
+                android:drawableLeft="@drawable/tab_detail_all"/>
         </RelativeLayout>
 
         <LinearLayout
