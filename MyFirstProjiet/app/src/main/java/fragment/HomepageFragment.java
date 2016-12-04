@@ -185,7 +185,9 @@ public class HomepageFragment extends BaseFragment {
                                 list.add(listInformation);
                             }
                             //发送信息设置ListView
-                            handler.sendEmptyMessage(0);
+                            if (list.size()!=0){
+                                handler.sendEmptyMessage(0);
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
