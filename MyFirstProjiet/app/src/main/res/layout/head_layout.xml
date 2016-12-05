@@ -1,89 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:orientation="vertical">
-    <!--头像布局-->
+
     <LinearLayout
-        android:id="@+id/myHead_background_img"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@mipmap/icon_mybg"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <LinearLayout
+            android:id="@+id/gone_or"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/head_back_img"
+            <!--头像布局-->
+            <LinearLayout
+                android:id="@+id/myHead_background_img"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@mipmap/icon_mybg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/head_back_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:src="@mipmap/left_back" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="头像"
+                        android:textColor="#212121"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:text="储存"
+                        android:textColor="#212121"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <classinit.CircularImage
+                    android:id="@+id/cover_user_photo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="62dp" />
+
+
+            </LinearLayout>
+
+            <View
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="17dp"
-                android:src="@mipmap/left_back" />
+                android:layout_height="10dp"
+                android:background="#FFFFFF" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="头像"
-                android:textColor="#212121"
-                android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="12dp"
-                android:text="储存"
-                android:textColor="#212121"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/head_upload_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="22dp"
+                    android:background="@drawable/head_bg"
+                    android:gravity="center"
+                    android:paddingBottom="14dp"
+                    android:paddingTop="14dp"
+                    android:text="上传头像"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
 
-        </RelativeLayout>
+            </LinearLayout>
 
-        <classinit.CircularImage
-            android:id="@+id/cover_user_photo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="62dp" />
-
+        </LinearLayout>
 
     </LinearLayout>
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="10dp"
-        android:background="#FFFFFF" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <TextView
-            android:id="@+id/head_upload_textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginTop="22dp"
-            android:background="@drawable/head_bg"
             android:gravity="center"
-            android:paddingBottom="14dp"
-            android:paddingTop="14dp"
-            android:text="上传头像"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:padding="10dp"
+            android:text="更换头像" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="更换头像" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="更换头像" />
 
     </LinearLayout>
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/gone_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c8c8c8" />
+
+        <LinearLayout
+            android:id="@+id/phone_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/icon_pic"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="从手机相册选择"
+                android:textColor="#212121" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c8c8c8" />
+
+        <LinearLayout
+            android:id="@+id/camera_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/icon_camera3"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="拍一张"
+                android:textColor="#212121" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#c8c8c8" />
+
+        <LinearLayout
+            android:id="@+id/dismiss_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#212121" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

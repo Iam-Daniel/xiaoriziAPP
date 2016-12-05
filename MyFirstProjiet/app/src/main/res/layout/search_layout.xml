@@ -30,6 +30,7 @@
             android:drawableLeft="@mipmap/search"
             android:drawablePadding="10dp"
             android:gravity="left"
+            android:textColor="#212121"
             android:hint="搜索商品"
             android:paddingBottom="6dp"
             android:paddingLeft="8dp"

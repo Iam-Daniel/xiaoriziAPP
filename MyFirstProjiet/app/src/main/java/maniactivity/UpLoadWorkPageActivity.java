@@ -1,7 +1,11 @@
 package maniactivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -16,6 +20,10 @@ import activity.BaseActivity;
  * Created by Administrator on 2016/10/29.
  */
 public class UpLoadWorkPageActivity extends BaseActivity {
+    private static final int ALBUM_REQUEST_CODE = 1;
+    private static final String IMAGE_UNSPECIFIED = "image/*";
+
+
     ImageView uploadWorkBackImg;
     ImageView gouOneImg;
     ImageView gouTwoImg;
@@ -69,15 +77,26 @@ public class UpLoadWorkPageActivity extends BaseActivity {
             }
         });
         //上传头像的控件
-        addWorkImg = (ImageView) findViewById(R.id.add_work_img);
+        /*addWorkImg = (ImageView) findViewById(R.id.add_work_img);
         addWorkImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setType("image:/*");
+                intent.setType("image:*//*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 //取得相片后返回本界面
                 startActivityForResult(intent, 1);
+            }
+        });*/
+        //上传头像的控件  另一种写法(不一样的上传方式)
+        addWorkImg = (ImageView) findViewById(R.id.add_work_img);
+        addWorkImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "相册");
+                Intent intent = new Intent(Intent.ACTION_PICK, null);
+                intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, IMAGE_UNSPECIFIED);//  IMAGE_UNSPECIFIED = "image/*";
+                startActivityForResult(intent, ALBUM_REQUEST_CODE);
             }
         });
 
@@ -96,6 +115,22 @@ public class UpLoadWorkPageActivity extends BaseActivity {
         gouThree.setOnClickListener(onClickListener);
         submit.setOnClickListener(onClickListener);
     }
+
+    /*@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == ALBUM_REQUEST_CODE) {
+            if (data == null) {
+                return;
+            }
+            Uri uri;
+            uri = data.getData();
+            Bundle bundle = data.getExtras();
+            Bitmap bitmap = bundle.getParcelable("data");
+            ImageView cover_user_photo = (ImageView) findViewById(R.id.cover_user_photo);
+            cover_user_photo.setImageBitmap(bitmap);
+            //Toast.makeText(HeadPageActivity.this, uri.toString(), Toast.LENGTH_SHORT).show();
+        }
+    }*/
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override

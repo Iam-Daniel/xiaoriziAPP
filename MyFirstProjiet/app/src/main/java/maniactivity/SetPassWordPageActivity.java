@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -55,18 +57,19 @@ public class SetPassWordPageActivity extends BaseActivity {
                         .setNegativeButton("取消", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(mContext, "你点击了取消按钮~", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(mContext, "你点击了取消按钮~", Toast.LENGTH_SHORT).show();
                             }
                         })
                         .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(mContext, "你点击了确定按钮~", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(mContext, "你点击了确定按钮~", Toast.LENGTH_SHORT).show();
                             }
                         }).create();
                 alert.show();
             }
         });
+//        跳转到关于我们页面
         aboutUsRelative.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -121,7 +124,7 @@ public class SetPassWordPageActivity extends BaseActivity {
                         .setNegativeButton("取消", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(mContext, "你点击了取消按钮~", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(mContext, "缓存还存在哦~", Toast.LENGTH_SHORT).show();
                             }
                         })
                         .setPositiveButton("确定", new DialogInterface.OnClickListener() {

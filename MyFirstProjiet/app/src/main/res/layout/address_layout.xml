@@ -124,7 +124,7 @@
             android:textSize="15sp" />
 
         <EditText
-            android:id="@+id/adress_info"
+            android:id="@+id/address_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="11dp"
