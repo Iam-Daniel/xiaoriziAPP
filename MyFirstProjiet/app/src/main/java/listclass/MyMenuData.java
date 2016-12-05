@@ -11,6 +11,15 @@ public class MyMenuData {
     String doing_counts;
     String collect_counts;
     String text;
+    String user_name;
+
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
+    }
 
     public String getCooking_img() {
         return cooking_img;

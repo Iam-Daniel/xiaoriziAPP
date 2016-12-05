@@ -4,16 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#fff">
-    <!--排行榜页面布局-->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#FFFFFF">
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,134 +24,48 @@
             android:textColor="#212121"/>
 
     </RelativeLayout>
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/icon_left_order"
-            android:layout_marginLeft="12dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="热门菜单"
-            android:textSize="13sp"
-            android:textColor="#505050"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="8dp"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp">
+        android:layout_height="wrap_content">
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
-            <ImageView
+            android:orientation="vertical">
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:src="@mipmap/icon_1bg"/>
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dole甜蕉、培根..."
-                android:layout_marginTop="6dp"
-                android:textSize="14sp"
-                android:textColor="#505050"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="小胖胖"
-                android:layout_marginTop="8dp"
-                android:textSize="11sp"
-                android:textColor="#505050"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@mipmap/icon_3bg"
-                android:layout_marginTop="13dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="三文鱼、菜心..."
-                android:layout_marginTop="12dp"
-                android:textSize="14sp"
-                android:textColor="#505050"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="野生态"
-                android:layout_marginTop="8dp"
-                android:textSize="11sp"
-                android:textColor="#505050"
-                android:layout_marginBottom="12dp"/>
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_left_order"
+                    android:layout_marginLeft="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="热门菜单"
+                    android:textSize="13sp"
+                    android:textColor="#505050"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"/>
 
-        </LinearLayout>
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="#F0F0F0"/>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
-            <ImageView
+            </LinearLayout>
+            <GridView
+                android:id="@+id/menu_hot_GridView"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:src="@mipmap/icon_bg_fenxiang"/>
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="凯芙沙丁鱼酱火腿吐司..."
-                android:layout_marginTop="6dp"
-                android:textSize="14sp"
-                android:textColor="#505050"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="路过"
-                android:layout_marginTop="8dp"
-                android:textSize="11sp"
-                android:textColor="#505050"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@mipmap/icon_1bg"
-                android:layout_marginTop="13dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="海鲜炒饭..."
-                android:layout_marginTop="12dp"
-                android:textSize="14sp"
-                android:textColor="#505050"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Canecre gril"
-                android:layout_marginTop="8dp"
-                android:textSize="11sp"
-                android:textColor="#505050"
-                android:layout_marginBottom="12dp"/>
-        </LinearLayout>
-
-    </LinearLayout>
+                android:layout_weight="1"
+                android:horizontalSpacing="5dp"
+                android:verticalSpacing="2dp"
+                android:numColumns="2"
+                android:background="#F4F4F4"></GridView>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="6dp"
                 android:background="#F4F4F4"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -182,113 +86,17 @@
                     android:layout_marginLeft="8dp"/>
 
             </LinearLayout>
-            <LinearLayout
+
+            <GridView
+                android:id="@+id/menuvedio_hot_GridView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp">
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:src="@mipmap/icon_4bg"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dole甜蕉、培根..."
-                        android:layout_marginTop="6dp"
-                        android:textSize="14sp"
-                        android:textColor="#505050"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="小胖胖"
-                        android:layout_marginTop="8dp"
-                        android:textSize="11sp"
-                        android:textColor="#505050"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:src="@mipmap/icon_3bg"
-                        android:layout_marginTop="13dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="三文鱼、菜心..."
-                        android:layout_marginTop="12dp"
-                        android:textSize="14sp"
-                        android:textColor="#505050"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="野生态"
-                        android:layout_marginTop="8dp"
-                        android:textSize="11sp"
-                        android:textColor="#505050"
-                        android:layout_marginBottom="12dp"/>
-
-                </LinearLayout>
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:background="#F0F0F0"/>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:src="@mipmap/icon_5bg"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="凯芙沙丁鱼酱火腿吐司..."
-                        android:layout_marginTop="6dp"
-                        android:textSize="14sp"
-                        android:textColor="#505050"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="路过"
-                        android:layout_marginTop="8dp"
-                        android:textSize="11sp"
-                        android:textColor="#505050"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:src="@mipmap/icon_1bg"
-                        android:layout_marginTop="13dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="海鲜炒饭..."
-                        android:layout_marginTop="12dp"
-                        android:textSize="14sp"
-                        android:textColor="#505050"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Canecre gril"
-                        android:layout_marginTop="8dp"
-                        android:textSize="11sp"
-                        android:textColor="#505050"
-                        android:layout_marginBottom="12dp"/>
-                </LinearLayout>
-
-            </LinearLayout>
-
+                android:horizontalSpacing="5dp"
+                android:verticalSpacing="2dp"
+                android:layout_weight="1"
+                android:numColumns="2"
+                android:background="#F4F4F4"></GridView>
         </LinearLayout>
-
     </ScrollView>
 
 </LinearLayout>

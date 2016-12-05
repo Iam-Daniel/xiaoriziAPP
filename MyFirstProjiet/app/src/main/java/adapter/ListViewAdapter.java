@@ -211,12 +211,12 @@ public class ListViewAdapter extends BaseAdapter {
         }
     }
 
-    private Bitmap getImage(final String path) {
+    private Bitmap getImage(final String Url) {
         new Thread(){
             @Override
             public void run() {
                 try {
-                    URL url = new URL(path);
+                    URL url = new URL(Url);
                     URLConnection connection = url.openConnection();
                     connection.connect();
                     InputStream inputStream = connection.getInputStream();
