@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -59,7 +60,7 @@ public class ShoppingActivity extends Activity {
         //设置标题栏
         title.setText(type);
         //请求接口返回数据
-        AskInternetData("requireGoodsInfo","type="+type);
+        AskInternetData("requireGoodsInfo_type","type="+type);
     }
 
     private void itemFindViewById(){
@@ -84,6 +85,16 @@ public class ShoppingActivity extends Activity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(ShoppingActivity.this,DetailShopPageActivity.class);
+                ShopListData data = list.get(i);
+                intent.putExtra("goods_id",""+data.getGoods_id());
+                startActivity(intent);
             }
         });
     }
@@ -134,6 +145,9 @@ public class ShoppingActivity extends Activity {
                                 shopListData.setShopping_name(object.optString("goods_name","获取失败"));
                                 shopListData.setShopping_info(object.optString("goods_information","获取失败"));
                                 shopListData.setShopping_price(object.optString("price","获取失败"));
+                                shopListData.setGoods_id(object.optString("goods_id","获取失败"));
+                                String rootPath = "http://10.0.2.2/project/Uploads/";
+                                shopListData.setImg(rootPath+object.getString("goods_img"));
                                 list.add(shopListData);
                             }
                         } catch (JSONException e) {
@@ -143,7 +157,8 @@ public class ShoppingActivity extends Activity {
                             //发送信息设置ListView
                             handler.sendEmptyMessage(0);
                         } else {
-                            layout_error.setVisibility(View.VISIBLE);
+                            //没有数据，设置错误页面
+                            handler.sendEmptyMessage(1);
                         }
                         //接口请求失败
                     } else {
@@ -159,7 +174,7 @@ public class ShoppingActivity extends Activity {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            {
+            if (msg.what==0){
                 //设置适配器
                 ShoppingListAdapter listViewAdapter = new ShoppingListAdapter(ShoppingActivity.this, list);
                 listView.setAdapter(listViewAdapter);
@@ -173,6 +188,9 @@ public class ShoppingActivity extends Activity {
                     params.height = (MeasuredHeight + DividerHeight) * list.size();
                     listView.setLayoutParams(params);
                 }
+            }else{
+                //设置没有数据提示页
+                layout_error.setVisibility(View.VISIBLE);
             }
         }
     };

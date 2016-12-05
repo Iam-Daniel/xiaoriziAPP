@@ -3,6 +3,8 @@ package adapter;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -35,6 +37,7 @@ public class ListViewAdapter extends BaseAdapter {
     ListInformation information;
     List<ListInformation> list;
     Bitmap bitmap = null;
+    int time;
     int style;//由于多个页面复用该适配器，需要传入参数来决定加载哪些内容
 
     public ListViewAdapter(Context context, List<ListInformation> list, int style) {
@@ -54,6 +57,7 @@ public class ListViewAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
+        time = position;
         return list.get(position);
     }
 
@@ -80,7 +84,7 @@ public class ListViewAdapter extends BaseAdapter {
         ImageView like;//喜欢图标
         ImageView message;//留言图标
         TextView title;//标题
-
+        boolean state = false;
     }
 
     @Override
@@ -114,28 +118,30 @@ public class ListViewAdapter extends BaseAdapter {
         information = list.get(position);
         //根据要加载的listView格式不同，分别加载对应对应内容
         //此处是SearchLayoutListView界面调用
-        if (style == 1) {
-            viewHolder.icon_head.setImageResource(information.getIcon_head());
+        if (style == 1 && !viewHolder.state) {
             viewHolder.author.setText(information.getAuthor());
             viewHolder.time_y_m_d.setText(information.getTime_y_m_d());
             viewHolder.time_f_a.setText(information.getTime_f_a());
             viewHolder.time_m_s.setText(information.getTime_m_s());
-            viewHolder.numb_f.setText(""+information.getNumb_f());
-            viewHolder.numb_m.setText(""+information.getNumb_m());
+            viewHolder.numb_f.setText("" + information.getNumb_f());
+            viewHolder.numb_m.setText("" + information.getNumb_m());
+            viewHolder.state = true;
             setIcon();
             //此处是KitchenPageActivity界面调用
-        } else if (style == 2) {
-//            viewHolder.icon_head.setImageResource(information.getIcon_head());
+        } else if (style == 2 && viewHolder.author.getText().equals("author")) {
+            //设置菜谱成果图
             String path = information.getImg();
-            viewHolder.img.setImageBitmap(getImage(path));
+            getImage(2, path);
+            //设置用户小头像
+            path = information.getIcon_head();
+            getImage(1, path);
             viewHolder.author.setText(information.getAuthor());
-            viewHolder.numb_f.setText(""+information.getNumb_f());
-            viewHolder.numb_m.setText(""+information.getNumb_m());
+            viewHolder.numb_f.setText("" + information.getNumb_f());
+            viewHolder.numb_m.setText("" + information.getNumb_m());
             viewHolder.changeLayout.setVisibility(View.GONE);
             viewHolder.details.setText(information.getDetails());
             setIcon();
-        } else if (style == 3) {
-            viewHolder.icon_head.setImageResource(information.getIcon_head());
+        } else if (style == 3 && viewHolder.author.getText().equals("author")) {
             viewHolder.author.setText(information.getAuthor());
             viewHolder.time_y_m_d.setText(information.getTime_y_m_d());
             viewHolder.time_f_a.setText(information.getTime_f_a());
@@ -144,8 +150,11 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.numb_m.setText(information.getNumb_m() + "");
             setIcon();
             viewHolder.title_bottom.setText(information.getTitle_bottom());
-        } else if (style == 4) {
+        } else if (style == 4 && viewHolder.author.getText().equals("author")) {
             setIcon();
+            //设置菜谱成果图
+            String path = information.getImg();
+            getImage(2, path);
             viewHolder.title.setText(information.getTitle());
             viewHolder.layout_meddil.setVisibility(View.GONE);
         }
@@ -172,7 +181,7 @@ public class ListViewAdapter extends BaseAdapter {
 
         //设置不用的控件隐藏
         {
-            if (information.getIcon_head() == 0) {
+            if (information.getIcon_head() == null) {
                 viewHolder.icon_head.setVisibility(View.GONE);
             }
             if (information.getAuthor() == null) {
@@ -211,8 +220,9 @@ public class ListViewAdapter extends BaseAdapter {
         }
     }
 
-    private Bitmap getImage(final String path) {
-        new Thread(){
+    private void getImage(final int t, final String path) {
+        bitmap = null;
+        new Thread() {
             @Override
             public void run() {
                 try {
@@ -221,11 +231,28 @@ public class ListViewAdapter extends BaseAdapter {
                     connection.connect();
                     InputStream inputStream = connection.getInputStream();
                     bitmap = BitmapFactory.decodeStream(inputStream);
+                    Log.i("TAG========Bitmap", "position=>" + time + "Bitmap=>" + bitmap);
+                    Message message = new Message();
+                    message.what = t;
+                    handler.sendMessage(message);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         }.start();
-        return bitmap;
     }
+
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+                    //设置头像
+            if (msg.what == 1) {
+                viewHolder.icon_head.setImageBitmap(bitmap);
+                    //设置成果图
+            }else if (msg.what==2){
+                viewHolder.img.setImageBitmap(bitmap);
+            }
+        }
+    };
 }

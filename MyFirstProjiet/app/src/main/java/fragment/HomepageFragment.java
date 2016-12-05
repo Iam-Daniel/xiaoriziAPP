@@ -227,9 +227,13 @@ public class HomepageFragment extends BaseFragment {
                                 JSONObject object = jsonArray.getJSONObject(t);
                                 listInformation = new ListInformation();
                                 listInformation.setTitle(object.getString("cooking_name"));
+                                //隐藏喜欢人数，留言数和关注图标
                                 listInformation.setLike(0);
                                 listInformation.setMessage(0);
                                 listInformation.setConcern(0);
+                                //获得菜品完成图
+                                String rootPath = "http://10.0.2.2/project/Uploads/";
+                                listInformation.setImg(rootPath+object.getString("cooking_img"));
                                 list.add(listInformation);
                             }
                             if (list.size() != 0) {

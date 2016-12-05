@@ -80,6 +80,7 @@
         <activity android:name="maniactivity.UserAgreementActivity" />
         <activity android:name="maniactivity.AboutUsPageActivity" />
         <activity android:name="maniactivity.CouponsPageActivity" />
+        <activity android:name="maniactivity.DetailShopPageActivity" />
 
     </application>
 

@@ -5,17 +5,19 @@ package listclass;
  */
 public class ShopListData {
     int shopping_cart_show_three;
-    String shopping_name;
-    String shopping_info;
-    String shopping_price;
-    String jiaru_gouwuche;
+    private String shopping_name;//商品名
+    private String shopping_info;//商品详情
+    private String shopping_price;//价格
+    private String jiaru_gouwuche;
+    private String goods_id;//商品ID
+    private String img;//商品图
 
-    public String getJiaru_gouwuche() {
-        return jiaru_gouwuche;
+    public String getImg() {
+        return img;
     }
 
-    public void setJiaru_gouwuche(String jiaru_gouwuche) {
-        this.jiaru_gouwuche = jiaru_gouwuche;
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public int getShopping_cart_show_three() {
@@ -48,5 +50,21 @@ public class ShopListData {
 
     public void setShopping_price(String shopping_price) {
         this.shopping_price = shopping_price;
+    }
+
+    public String getJiaru_gouwuche() {
+        return jiaru_gouwuche;
+    }
+
+    public void setJiaru_gouwuche(String jiaru_gouwuche) {
+        this.jiaru_gouwuche = jiaru_gouwuche;
+    }
+
+    public String getGoods_id() {
+        return goods_id;
+    }
+
+    public void setGoods_id(String goods_id) {
+        this.goods_id = goods_id;
     }
 }
