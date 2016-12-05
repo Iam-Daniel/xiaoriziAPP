@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
     <LinearLayout
@@ -20,13 +20,14 @@
             android:src="@mipmap/arrow_left" />
 
         <TextView
+            android:id="@+id/title"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
             android:text="厨房电器"
-            android:textSize="20sp"
-            android:textColor="#212121"/>
+            android:textColor="#212121"
+            android:textSize="20sp" />
 
         <ImageView
             android:id="@+id/search_shoppingCart_img"
@@ -39,326 +40,33 @@
 
     </LinearLayout>
 
-    <!--<ScrollView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content">-->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#F0F0F0" />
+    <!--错误提示页面-->
+    <LinearLayout
+        android:id="@+id/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
 
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:background="#FFF"-->
-        <!--android:orientation="vertical">-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@mipmap/error2"
+            android:text="抱歉！暂时没有商品信息"
+            android:textColor="@android:color/black" />
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="15dp">-->
-
-            <!--<ImageView-->
-                <!--android:id="@+id/left_back"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_centerVertical="true"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:layout_marginLeft="12dp"-->
-                <!--android:src="@mipmap/arrow_left" />-->
-
-            <!--<TextView-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_weight="1"-->
-                <!--android:gravity="center"-->
-                <!--android:text="厨房电器"-->
-                <!--android:textSize="20sp"-->
-                <!--android:textColor="#212121"/>-->
-
-            <!--<ImageView-->
-                <!--android:id="@+id/search_shoppingCart_img"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:layout_marginRight="12dp"-->
-                <!--android:src="@mipmap/iocn_gouwuche" />-->
-
-        <!--</LinearLayout>-->
-
-        <!--<View-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="1dp"-->
-            <!--android:layout_marginTop="13dp"-->
-            <!--android:background="#cccccc" />-->
-
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="0dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:orientation="vertical">-->
-            <!--&lt;!&ndash;单个商品信息&ndash;&gt;-->
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginLeft="12dp"-->
-                <!--android:layout_marginRight="12dp"-->
-                <!--android:orientation="vertical">-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_marginTop="10dp"-->
-                    <!--android:background="#f0f0f0"-->
-                    <!--android:orientation="horizontal">-->
-
-                    <!--<ImageView-->
-                        <!--android:id="@+id/shopping_cart_show"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:padding="2dp"-->
-                        <!--android:src="@mipmap/shopping_cart_show" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_marginLeft="10dp"-->
-                        <!--android:orientation="vertical">-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginTop="12dp"-->
-                            <!--android:text="美威欧式原味三文鱼排"-->
-                            <!--android:textColor="#212121"-->
-                            <!--android:textSize="15sp" />-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginTop="12dp"-->
-                            <!--android:text="(2片装) 250g 品质生鲜"-->
-                            <!--android:textColor="#212121" />-->
-
-                        <!--<LinearLayout-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginTop="12dp"-->
-                            <!--android:orientation="horizontal">-->
-
-                            <!--<TextView-->
-                                <!--android:layout_width="0dp"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:layout_weight="1"-->
-                                <!--android:text="￥59.00"-->
-                                <!--android:textColor="#FB5454" />-->
-
-                            <!--<TextView-->
-                                <!--android:layout_width="wrap_content"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:background="#FC5454"-->
-                                <!--android:paddingBottom="2dp"-->
-                                <!--android:paddingLeft="10dp"-->
-                                <!--android:paddingRight="10dp"-->
-                                <!--android:paddingTop="2dp"-->
-                                <!--android:text="加入购物车"-->
-                                <!--android:textColor="#ffffff" />-->
-                        <!--</LinearLayout>-->
-                    <!--</LinearLayout>-->
-                <!--</LinearLayout>-->
-            <!--</LinearLayout>-->
-            <!--&lt;!&ndash;单个商品信息&ndash;&gt;-->
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginLeft="12dp"-->
-                <!--android:layout_marginRight="12dp"-->
-                <!--android:orientation="vertical">-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_marginTop="10dp"-->
-                    <!--android:background="#f0f0f0"-->
-                    <!--android:orientation="horizontal">-->
-
-                    <!--<ImageView-->
-                        <!--android:id="@+id/shopping_cart_show_two"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:padding="2dp"-->
-                        <!--android:src="@mipmap/shopping_cart_show" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_marginLeft="10dp"-->
-                        <!--android:orientation="vertical">-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginTop="12dp"-->
-                            <!--android:text="美威欧式原味三文鱼排"-->
-                            <!--android:textColor="#212121"-->
-                            <!--android:textSize="15sp" />-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginTop="12dp"-->
-                            <!--android:text="(2片装) 250g 品质生鲜"-->
-                            <!--android:textColor="#212121" />-->
-
-                        <!--<LinearLayout-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginTop="12dp"-->
-                            <!--android:orientation="horizontal">-->
-
-                            <!--<TextView-->
-                                <!--android:layout_width="0dp"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:layout_weight="1"-->
-                                <!--android:text="￥59.00"-->
-                                <!--android:textColor="#FB5454" />-->
-
-                            <!--<TextView-->
-                                <!--android:layout_width="wrap_content"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:background="#FC5454"-->
-                                <!--android:paddingBottom="2dp"-->
-                                <!--android:paddingLeft="10dp"-->
-                                <!--android:paddingRight="10dp"-->
-                                <!--android:paddingTop="2dp"-->
-                                <!--android:text="加入购物车"-->
-                                <!--android:textColor="#ffffff" />-->
-                        <!--</LinearLayout>-->
-                    <!--</LinearLayout>-->
-                <!--</LinearLayout>-->
-            <!--</LinearLayout>-->
-            <!--&lt;!&ndash;单个商品信息&ndash;&gt;-->
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginLeft="12dp"-->
-                <!--android:layout_marginRight="12dp"-->
-                <!--android:orientation="vertical">-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_marginTop="10dp"-->
-                    <!--android:background="#f0f0f0"-->
-                    <!--android:orientation="horizontal">-->
-
-                    <!--<ImageView-->
-                        <!--android:id="@+id/shopping_cart_show_three"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:padding="2dp"-->
-                        <!--android:src="@mipmap/shopping_cart_show" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_marginLeft="10dp"-->
-                        <!--android:orientation="vertical">-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginTop="12dp"-->
-                            <!--android:text="美威欧式原味三文鱼排"-->
-                            <!--android:textColor="#212121"-->
-                            <!--android:textSize="15sp" />-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginTop="12dp"-->
-                            <!--android:text="(2片装) 250g 品质生鲜"-->
-                            <!--android:textColor="#212121" />-->
-
-                        <!--<LinearLayout-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginTop="12dp"-->
-                            <!--android:orientation="horizontal">-->
-
-                            <!--<TextView-->
-                                <!--android:layout_width="0dp"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:layout_weight="1"-->
-                                <!--android:text="￥59.00"-->
-                                <!--android:textColor="#FB5454" />-->
-
-                            <!--<TextView-->
-                                <!--android:layout_width="wrap_content"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:background="#FC5454"-->
-                                <!--android:paddingBottom="2dp"-->
-                                <!--android:paddingLeft="10dp"-->
-                                <!--android:paddingRight="10dp"-->
-                                <!--android:paddingTop="2dp"-->
-                                <!--android:text="加入购物车"-->
-                                <!--android:textColor="#ffffff" />-->
-                        <!--</LinearLayout>-->
-                    <!--</LinearLayout>-->
-                <!--</LinearLayout>-->
-            <!--</LinearLayout>-->
-        <!--</LinearLayout>-->
-        <!--&lt;!&ndash;底部菜单栏&ndash;&gt;-->
-        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_gravity="bottom"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_marginBottom="4dp"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_marginTop="10dp"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:orientation="horizontal"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:visibility="gone">&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/home"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:drawableTop="@mipmap/home"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:text="首页" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/buy"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:drawableTop="@mipmap/buy"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:text="商城" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/concern"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:drawableTop="@mipmap/food"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:text="圈圈" />&ndash;&gt;-->
-
-            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                <!--&lt;!&ndash;android:id="@+id/account"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:drawableTop="@mipmap/account"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
-                <!--&lt;!&ndash;android:text="我的" />&ndash;&gt;-->
-        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
-    <!--</LinearLayout>-->
-<!--</ScrollView>-->
+    </LinearLayout>
 
     <ListView
+        android:id="@+id/shopping_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/shopping_list">
+        android:layout_height="wrap_content">
 
     </ListView>
-
 </LinearLayout>

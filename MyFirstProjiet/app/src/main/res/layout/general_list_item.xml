@@ -132,6 +132,7 @@
             android:layout_marginTop="8dp">
 
             <ImageView
+                android:src="@mipmap/concern_page_show"
                 android:id="@+id/img"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -195,6 +196,23 @@
             android:layout_marginTop="8dp"
             android:textColor="#505050"
             android:textSize="15sp" />
+    </LinearLayout>
+    <!--错误提示页面-->
+    <LinearLayout
+        android:id="@+id/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@mipmap/error2"
+            android:text="抱歉！暂时没有商品信息"
+            android:textColor="@android:color/black" />
+
     </LinearLayout>
     <View
         android:layout_marginTop="5dp"

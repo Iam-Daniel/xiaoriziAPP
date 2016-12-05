@@ -117,11 +117,11 @@ public class ListViewAdapter extends BaseAdapter {
             setIcon();
             //此处是KitchenPageActivity界面调用
         } else if (style == 2) {
-            viewHolder.icon_head.setImageResource(information.getIcon_head());
-            viewHolder.img.setImageResource(information.getImg());
+//            viewHolder.icon_head.setImageResource(information.getIcon_head());
+//            viewHolder.img.setImageResource(information.getImg());
             viewHolder.author.setText(information.getAuthor());
-            viewHolder.numb_f.setText(information.getNumb_f());
-            viewHolder.numb_m.setText(information.getNumb_m());
+            viewHolder.numb_f.setText(""+information.getNumb_f());
+            viewHolder.numb_m.setText(""+information.getNumb_m());
             viewHolder.changeLayout.setVisibility(View.GONE);
             viewHolder.details.setText(information.getDetails());
             setIcon();
@@ -183,10 +183,10 @@ public class ListViewAdapter extends BaseAdapter {
             if (information.getImg() == 0) {
                 viewHolder.img.setVisibility(View.GONE);
             }
-            if (information.getNumb_f() == null) {
+            if (information.getNumb_f() == 0) {
                 viewHolder.numb_f.setVisibility(View.GONE);
             }
-            if (information.getNumb_m() == null) {
+            if (information.getNumb_m() == 0) {
                 viewHolder.numb_m.setVisibility(View.GONE);
             }
             if (information.getDetails() == null) {
