@@ -42,8 +42,7 @@ public class ShoppingCartPageActivity extends BaseActivity {
     TextView content_textView;
     TextView price_textView;
 
-    RadioButton bt_cancel;
-    RadioButton bt_selectall;
+
     CheckBox bt_cancel;
     CheckBox bt_selectall;
     ShoppingCartsData shoppingCartsData;
@@ -114,7 +113,6 @@ public class ShoppingCartPageActivity extends BaseActivity {
                                 all_price += d;
                                 allprice.setText("("+all_price+")");
                             }
-
                         }else {
                             if (detailsVisibleRb.getVisibility() == View.VISIBLE){
                                 checked_state.setChecked(false);
@@ -123,7 +121,6 @@ public class ShoppingCartPageActivity extends BaseActivity {
                                 all_price -= d;
                                 allprice.setText("("+all_price+")");
                             }
-
                         }
                     }
                 });

@@ -209,15 +209,13 @@
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:visibility="gone">
         android:layout_weight="1">
+
 
     </ListView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:layout_height="wrap_content"
         android:gravity="bottom"
         android:orientation="vertical">
@@ -240,7 +238,6 @@
                     android:layout_weight="1"
                     android:visibility="invisible">
 
-                    <RadioButton
                     <CheckBox
                         android:id="@+id/bt_selectall"
                         android:layout_width="0dp"
@@ -255,7 +252,6 @@
                         android:text="全选"
                         android:textColor="#727272" />
 
-                    <RadioButton
                     <CheckBox
                         android:id="@+id/bt_cancel"
                         android:layout_width="0dp"
@@ -293,7 +289,6 @@
                         android:id="@+id/allprice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="(54)"
                         android:text="(0)"
                         android:textColor="#000"
                         android:textSize="15sp" />
