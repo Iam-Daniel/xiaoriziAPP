@@ -34,6 +34,7 @@ public class MorePageActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MorePageActivity.this, ShoppingActivity.class);
+                intent.putExtra("type","厨房电器");
                 startActivity(intent);
             }
         });
@@ -42,6 +43,7 @@ public class MorePageActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MorePageActivity.this, ShoppingActivity.class);
+                intent.putExtra("type","腌制食品");
                 startActivity(intent);
             }
         });
@@ -49,6 +51,7 @@ public class MorePageActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MorePageActivity.this, ShoppingActivity.class);
+                intent.putExtra("type","米面粮油");
                 startActivity(intent);
             }
         });
@@ -56,6 +59,7 @@ public class MorePageActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MorePageActivity.this, ShoppingActivity.class);
+                intent.putExtra("type","礼盒");
                 startActivity(intent);
             }
         });

@@ -66,8 +66,8 @@ public class WorldConcern extends Fragment {
             information.setTime_y_m_d("2016-11-11");
             information.setTime_f_a("PM");
             information.setTime_m_s(""+t+":"+t*20);
-            information.setNumb_f(""+t*10);
-            information.setNumb_m(""+t);
+            information.setNumb_f(t*10);
+            information.setNumb_m(t);
             information.setTitle_bottom("-扬州什锦-");
             list.add(information);
         }

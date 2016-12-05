@@ -38,11 +38,11 @@ public class SearchLayoutListView extends Activity {
             information.setAuthor("author"+t);
             information.setImg(R.mipmap.icon_bg_kitchen);
             information.setTime_y_m_d("2016-11-"+t);
-            information.setNumb_f("AM");
+            information.setTime_f_a("AM");
             information.setTime_m_s("16:"+t);
             information.setIcon_head(R.mipmap.icon_head);
-            information.setNumb_f(""+t*10);
-            information.setNumb_m(""+t);
+            information.setNumb_f(t*10);
+            information.setNumb_m(t);
             list.add(information);
         }
     }

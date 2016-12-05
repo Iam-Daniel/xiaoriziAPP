@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -53,6 +54,8 @@ public class HomepageFragment extends BaseFragment {
     ListViewAdapter listViewAdapter;
     List<ListInformation> list;
     String result;
+    TextView count;
+    String number_count="0";//菜谱总数
 
     public HomepageFragment() {
     }
@@ -65,10 +68,13 @@ public class HomepageFragment extends BaseFragment {
         itemSetOnClickListener();
         //请求接口返回数据并设置listView
         AskInternetData("requireReferenceCookBooks", "");
+        //设置首页显示一共有多少菜谱
+        setCount();
         return view;
     }
 
     private void itemFindViewById() {
+        count = (TextView) view.findViewById(R.id.count);
         homepage_search_img = (ImageView) view.findViewById(R.id.homepage_search_img);
         homepage_buy = (TextView) view.findViewById(R.id.homepage_buy);
         homepage_basket_img = (ImageView) view.findViewById(R.id.homepage_basket_img);
@@ -136,6 +142,49 @@ public class HomepageFragment extends BaseFragment {
         });
     }
 
+    public void setCount() {
+        new Thread(){
+            @Override
+            public void run() {
+                try {
+                    /**
+                     * 模拟器默认把127.0.0.1和localhost当做本身了，在模拟器上可以用10.0.2.2代替127.0.0.1和localhost，
+                     * 另外如果是在局域网环境可以用 192.168.0.x或者192.168.1.x(根据具体配置)连接本机,这样应该就不会报错了。
+                     */
+                    URL url;
+                    HttpURLConnection httpURLConnection;
+                    String httpUrl = "http://10.0.2.2/project/index.php/home/index/" + "getCount";
+                    url = new URL(httpUrl);
+                    httpURLConnection = (HttpURLConnection) url.openConnection();
+                    httpURLConnection.setConnectTimeout(5000);
+                    httpURLConnection.connect();
+                    //传回的数据解析成String
+                    if (httpURLConnection.getResponseCode() == 200) {
+                        InputStream inputStream = httpURLConnection.getInputStream();
+                        InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "utf-8");
+                        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                        StringBuilder stringBuilder = new StringBuilder();
+                        String str;
+                        while ((str = bufferedReader.readLine()) != null) {
+                            stringBuilder.append(str);
+                        }
+                        number_count = stringBuilder.toString();
+                        //发送信息设置ListView
+                        Message message = new Message();
+                        message.arg1 =2;
+                        handler.sendMessage(message);
+                        //接口请求失败
+                    } else {
+                        Toast.makeText(getActivity(), " httpURLConnection.connect Field", Toast.LENGTH_LONG).show();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+    }
+
+
     //请求接口返回数据 并设置ListView
     public void AskInternetData(final String method, final String keyAndValue) {
         new Thread() {
@@ -186,8 +235,12 @@ public class HomepageFragment extends BaseFragment {
                                 listInformation.setImg(R.mipmap.icon_bg_kitchen);
                                 list.add(listInformation);
                             }
-                            //发送信息设置ListView
-                            handler.sendEmptyMessage(0);
+                            if (list.size() != 0) {
+                                //发送信息设置ListView
+                                Message message = new Message();
+                                message.arg1 =1;
+                                handler.sendMessage(message);
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -201,11 +254,12 @@ public class HomepageFragment extends BaseFragment {
             }
         }.start();
     }
-    Handler handler = new Handler(){
+
+    Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            {
+            if (msg.arg1==1){
                 listViewAdapter = new ListViewAdapter(getActivity(), list, 4);
                 listView.setAdapter(listViewAdapter);
                 //限制ListView的高度
@@ -218,6 +272,8 @@ public class HomepageFragment extends BaseFragment {
                     params.height = (MeasuredHeight + DividerHeight) * list.size();
                     listView.setLayoutParams(params);
                 }
+            }else{
+                count.setText(number_count.replace("\"",""));
             }
         }
     };

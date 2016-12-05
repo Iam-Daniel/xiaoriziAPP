@@ -8,7 +8,9 @@ import android.os.Message;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.myfirstprojiet.R;
@@ -39,22 +41,30 @@ public class ShoppingActivity extends Activity {
     ListView listView;
     ImageView search_shoppingCart_img;
     ImageView shoppingBackImg;
+    TextView title;
+    LinearLayout layout_error;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shopping_layout);
+
         //接收传递过来的商品类型
         Intent intent = getIntent();
         String type = intent.getStringExtra("type");
+
         itemFindViewById();
         itemSetOnClickListener();
 
+        //设置标题栏
+        title.setText(type);
         //请求接口返回数据
         AskInternetData("requireGoodsInfo","type="+type);
     }
 
     private void itemFindViewById(){
+        layout_error = (LinearLayout)findViewById(R.id.layout_error);
+        title = (TextView)findViewById(R.id.title);
         listView = (ListView)findViewById(R.id.shopping_list);
         search_shoppingCart_img = (ImageView)findViewById(R.id.search_shoppingCart_img);
         shoppingBackImg = (ImageView) findViewById(R.id.left_back);
@@ -126,12 +136,14 @@ public class ShoppingActivity extends Activity {
                                 shopListData.setShopping_price(object.optString("price","获取失败"));
                                 list.add(shopListData);
                             }
-                            //发送信息设置ListView
-                            if (list.size()!=0){
-                                handler.sendEmptyMessage(0);
-                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
+                        }
+                        if (list.size() != 0) {
+                            //发送信息设置ListView
+                            handler.sendEmptyMessage(0);
+                        } else {
+                            layout_error.setVisibility(View.VISIBLE);
                         }
                         //接口请求失败
                     } else {

@@ -41,8 +41,6 @@ public class KitchenPageFragment extends FragmentActivity {
         itemSetOnClickListener();
         //设置viewPager页面
         setViewPager();
-        myViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(), list);
-        viewPager.setAdapter(myViewPagerAdapter);
     }
 
     private void itemFindViewById() {
@@ -133,5 +131,7 @@ public class KitchenPageFragment extends FragmentActivity {
         list.add(new KitchenSubLayout01());
         list.add(new KitchenSubLayout02());
         list.add(new KitchenSubLayout03());
+        myViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(), list);
+        viewPager.setAdapter(myViewPagerAdapter);
     }
 }
