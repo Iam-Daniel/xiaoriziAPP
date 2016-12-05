@@ -15,12 +15,15 @@ import com.example.administrator.myfirstprojiet.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import listclass.ShoppingCartsData;
+
 /**
  * Created by Administrator on 2016/11/29.
  */
 public class DetailAdapter extends BaseAdapter {
     // 填充数据的list
     private ArrayList<String> list;
+    ArrayList<ShoppingCartsData> shoppingCartsDatas;
     // 用来控制CheckBox的选中状况
     private static HashMap<Integer, Boolean> isSelected;
     // 上下文
@@ -28,30 +31,36 @@ public class DetailAdapter extends BaseAdapter {
     // 用来导入布局
     private LayoutInflater inflater = null;
 
-    public DetailAdapter(ArrayList<String> list, Context context) {
-        this.list = list;
+//    public DetailAdapter(ArrayList<String> list, Context context) {
+//        this.list = list;
+//    LayoutInflater inflater = null;
+//    boolean checked;
+    public DetailAdapter(ArrayList<ShoppingCartsData> shoppingCartsDatas, Context context,boolean checked_img) {
+        this.shoppingCartsDatas = shoppingCartsDatas;
         this.context = context;
         inflater = LayoutInflater.from(context);
         isSelected = new HashMap<Integer, Boolean>();
         // 初始化数据
-        initDate();
+//        initDate();
     }
 
-    private void initDate() {
-        for (int i = 0; i < list.size(); i++) {
-            getIsSelected().put(i, false);
-        }
-    }
+//    private void initDate() {
+//        for (int i = 0; i < list.size(); i++) {
+//            getIsSelected().put(i, false);
+//        }
+//        this.checked=checked_img;
+//    }
 
 
     @Override
     public int getCount() {
-        return list.size();
+
+        return shoppingCartsDatas.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return list.get(i);
+        return shoppingCartsDatas.get(i);
     }
 
     @Override
@@ -64,29 +73,29 @@ public class DetailAdapter extends BaseAdapter {
         ViewHolder viewHolder = null;
         if (convertView == null) {
 // 获得ViewHolder对象
+            // 获得ViewHolder对象
             viewHolder = new ViewHolder();
             // 导入布局并赋值给convertview
             convertView = inflater.inflate(R.layout.listshoppingitem_layout, null);
             viewHolder.tv = (TextView) convertView.findViewById(R.id.item_tv);
             viewHolder.cb = (CheckBox) convertView.findViewById(R.id.item_cb);
-
             // 为view设置标签
             convertView.setTag(viewHolder);
+
+            CheckBox checked_img= (CheckBox) convertView.findViewById(R.id.checked_img);
+            ShoppingCartsData shoppingCartsData = shoppingCartsDatas.get(0);
+            if (shoppingCartsData.getisCheck_Show_hidden()){
+                checked_img.setVisibility(View.VISIBLE);
+            }else {
+                checked_img.setVisibility(View.GONE);
+            }
         } else {
             // 取出holder
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.tv.setText(list.get(i));
         return convertView;
     }
 
-    public static HashMap<Integer, Boolean> getIsSelected() {
-        return isSelected;
-    }
-
-    public static void setIsSelected(HashMap<Integer, Boolean> isSelected) {
-        DetailAdapter.isSelected = isSelected;
-    }
 
     public static class ViewHolder {
         TextView tv;
