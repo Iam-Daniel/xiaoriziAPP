@@ -109,6 +109,8 @@ public class KitchenSubLayout01 extends Fragment {
                                 information.setAuthor(object.optString("user_name","获取失败"));
                                 information.setNumb_f(object.optInt("care_counts",1));
                                 information.setNumb_m(object.optInt("comment_counts",1));
+                                String rootPath = "http://10.0.2.2/project/Uploads/";
+                                information.setImg(rootPath+object.getString("cooking_img"));
                                 list.add(information);
                             }
                         } catch (JSONException e) {

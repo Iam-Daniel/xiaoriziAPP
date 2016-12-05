@@ -60,7 +60,6 @@ public class WorldConcern extends Fragment {
         for (int t =0;t<5;t++){
             information  = new ListInformation();
             information.setAuthor("author"+t);
-            information.setImg(R.mipmap.icon_bg_kitchen);
             information.setMedia(1);
             information.setIcon_head(R.mipmap.icon_head);
             information.setTime_y_m_d("2016-11-11");
