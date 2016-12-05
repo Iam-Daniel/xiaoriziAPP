@@ -23,6 +23,7 @@ public class SearchLayoutActivity extends BaseActivity {
     TextView fangBian;
     TextView ganHuo;
     TextView yinPing;
+    ImageView exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class SearchLayoutActivity extends BaseActivity {
     }
 
     private void itemFindViewById() {
+        exit = (ImageView)findViewById(R.id.exit);
         hongPei = (TextView) findViewById(R.id.hongpei);
         shengXian = (TextView) findViewById(R.id.shengxian);
         qiJu = (TextView) findViewById(R.id.qiju);
@@ -123,6 +125,13 @@ public class SearchLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 startActivity(SearchLayoutActivity.this, ShoppingCartPageActivity.class);
+            }
+        });
+//       返回上一级
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }
