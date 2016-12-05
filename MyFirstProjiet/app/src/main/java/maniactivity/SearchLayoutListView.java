@@ -36,7 +36,6 @@ public class SearchLayoutListView extends Activity {
         for (int t =0;t<10;t++){
             information  = new ListInformation();
             information.setAuthor("author"+t);
-            information.setImg(R.mipmap.icon_bg_kitchen);
             information.setTime_y_m_d("2016-11-"+t);
             information.setTime_f_a("AM");
             information.setTime_m_s("16:"+t);

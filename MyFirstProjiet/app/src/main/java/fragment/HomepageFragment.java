@@ -230,7 +230,6 @@ public class HomepageFragment extends BaseFragment {
                                 listInformation.setLike(0);
                                 listInformation.setMessage(0);
                                 listInformation.setConcern(0);
-                                listInformation.setImg(R.mipmap.icon_bg_kitchen);
                                 list.add(listInformation);
                             }
                             if (list.size() != 0) {

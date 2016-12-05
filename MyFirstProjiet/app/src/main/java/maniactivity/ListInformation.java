@@ -10,7 +10,7 @@ public class ListInformation {
     private String time_y_m_d;//日期-年月日
     private String time_f_a;//日期-AM/PM
     private String time_m_s;//日期-小时 分钟
-    private int img;//示例背景图
+    private String img;//示例背景图
     private int numb_f;//喜欢人数
     private int numb_m;//留言数
     private String details;//详细做法
@@ -136,11 +136,11 @@ public class ListInformation {
         this.time_m_s = time_m_s;
     }
 
-    public int getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(String img) {
         this.img = img;
     }
 
