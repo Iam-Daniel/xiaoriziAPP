@@ -220,6 +220,8 @@ public class HomepageFragment extends BaseFragment {
                         }
                         result = stringBuilder.toString();
                         list = new ArrayList<>();
+
+
                         try {
                             JSONArray jsonArray = new JSONArray(result);
                             ListInformation listInformation;

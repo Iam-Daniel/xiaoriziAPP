@@ -13,6 +13,17 @@ import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,6 +52,8 @@ public class SearchFragment extends BaseFragment {
     ListView listView;
     ListViewAdapter listViewAdapter;
     List<ListInformation> list;
+    //访问接口返回的数组
+    String result;
 
     public SearchFragment() {
 
@@ -77,7 +90,7 @@ public class SearchFragment extends BaseFragment {
     }
 
     private void setData() {
-        list = new ArrayList<>();
+        list = new ArrayList<ListInformation>();
         ListInformation information;
         for (int t = 0; t < 10; t++) {
             information = new ListInformation();
@@ -166,4 +179,51 @@ public class SearchFragment extends BaseFragment {
             }
         });
     }
+
+//    public void getdata(final String method,final String KeyAndValue){
+//        new Thread(){
+//            @Override
+//            public void run() {
+//                try {
+//                    URL url;
+//                    HttpURLConnection httpURLConnection;
+//                    String httpUrl = "http://10.0.2.2/project/index.php/home/index/" + method;
+//                    StringBuilder stringBuilder = new StringBuilder();
+//                    //有参数传递
+//                    if (!KeyAndValue.equals("")) {
+//                        url = new URL(httpUrl + "?" + KeyAndValue);
+//                        //没有参数传递
+//                    } else {
+//                        url = new URL(httpUrl);
+//                    }
+//                    httpURLConnection = (HttpURLConnection) url.openConnection();
+//                    httpURLConnection.setConnectTimeout(5000);
+//                    httpURLConnection.connect();
+//                    if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK){
+//                        BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream(),"utf-8"));
+//                        String str;
+//                        while ((str = bufferedReader.readLine()) != null) {
+//                            stringBuilder.append(str);
+//                        }
+//                        result = stringBuilder.toString();
+//                        JSONArray jsonArray = new JSONArray(result);
+//                        ListInformation listInformation;
+//                        for(int i=0;i<jsonArray.length();i++){
+//                            JSONObject object = jsonArray.getJSONObject(i);
+//                            listInformation = new ListInformation();
+//
+//                            list.add(listInformation);
+//                        }
+//                    }
+//                } catch (MalformedURLException e) {
+//                e.printStackTrace();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }.start();
+//    }
+
 }

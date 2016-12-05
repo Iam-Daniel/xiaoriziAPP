@@ -83,6 +83,7 @@ public class DetailAdapter extends BaseAdapter {
             convertView.setTag(viewHolder);
 
             CheckBox checked_img= (CheckBox) convertView.findViewById(R.id.checked_img);
+            checked_img.setChecked(false);
             ShoppingCartsData shoppingCartsData = shoppingCartsDatas.get(0);
             if (shoppingCartsData.getisCheck_Show_hidden()){
                 checked_img.setVisibility(View.VISIBLE);
