@@ -40,16 +40,8 @@ public class DetailAdapter extends BaseAdapter {
         this.context = context;
         inflater = LayoutInflater.from(context);
         isSelected = new HashMap<Integer, Boolean>();
-        // 初始化数据
-//        initDate();
     }
 
-//    private void initDate() {
-//        for (int i = 0; i < list.size(); i++) {
-//            getIsSelected().put(i, false);
-//        }
-//        this.checked=checked_img;
-//    }
 
 
     @Override
@@ -72,7 +64,6 @@ public class DetailAdapter extends BaseAdapter {
     public View getView(int i, View convertView, ViewGroup parent) {
         ViewHolder viewHolder = null;
         if (convertView == null) {
-// 获得ViewHolder对象
             // 获得ViewHolder对象
             viewHolder = new ViewHolder();
             // 导入布局并赋值给convertview

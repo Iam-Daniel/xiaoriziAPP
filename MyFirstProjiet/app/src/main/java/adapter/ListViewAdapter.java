@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
