@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +20,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 
-import maniactivity.GoodsTopInfo;
+import ListItemInfor.GoodsTopInfo;
 
 /**
  * Created by Administrator on 2016/12/6.

@@ -30,50 +30,43 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by admin on 2016/10/23.
+ * Created by admin on 2016/10/20.
  */
-public class TeachCookPageActivity extends Activity {
-    TextView title ;
-    TextView author;
-    TextView method;
-    TextView concern;
-    ImageView img;
-    ImageView teach_cook_img;
-    String cooking_menu_id="";
-    Map<String, String> info = null;
+public class UserInfoLayoutActivity extends Activity {
     String result;
+    TextView user_name;
+    ImageView icon_head,exit;
+    String user_id;
+    Map<String, String> info = null;
     Bitmap bitmap;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.teach_cook_page);
-        itemFindViewById();
-        Intent intent = getIntent();
+        setContentView(R.layout.user_information_layout);
+        Intent intent =getIntent();
         if (intent!=null){
-            cooking_menu_id = intent.getStringExtra("cooking_menu_id");
-            AskInternetData("requireCookInfo_id","cooking_menu_id="+cooking_menu_id);
+            user_id = intent.getStringExtra("user_id");
         }
+        itemFindViewById();
+        AskInternetData("requireUserInfo_id","user_id="+user_id);
         itemSetOnClickListener();
     }
 
     private void itemFindViewById(){
-        title  = (TextView)findViewById(R.id.title);
-        author  = (TextView)findViewById(R.id.author);
-        method  = (TextView)findViewById(R.id.cooking_method);
-        concern  = (TextView)findViewById(R.id.concern);
-        img = (ImageView)findViewById(R.id.img);
-        teach_cook_img = (ImageView)findViewById(R.id.teach_cook_img);
+        user_name = (TextView)findViewById(R.id.user_name);
+        icon_head = (ImageView)findViewById(R.id.icon_head);
+        exit = (ImageView)findViewById(R.id.exit);
     }
 
     private void itemSetOnClickListener(){
-        teach_cook_img.setOnClickListener(new View.OnClickListener() {
+        exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
     }
+
     //请求接口返回数据 并设置ListView
     public void AskInternetData(final String method, final String keyAndValue) {
         new Thread() {
@@ -114,12 +107,9 @@ public class TeachCookPageActivity extends Activity {
                             JSONArray jsonArray = new JSONArray(result);
                             info = new HashMap<>();
                             JSONObject object = jsonArray.getJSONObject(0);
-                            info.put("title", object.optString("cooking_name", "获取失败"));//菜谱名
-                            info.put("author", object.optString("user_name", "获取失败"));//作者
-                            info.put("method", object.optString("cooking_method", "获取失败"));//做法
-                            info.put("concern", object.optString("care_counts", "0"));//喜欢人数
+                            info.put("user_name", object.optString("user_name", "获取失败"));//作者
                             String rootPath = "http://10.0.2.2/project/Uploads/";
-                            info.put("img", rootPath + object.getString("cooking_img_small"));
+                            info.put("img", rootPath + object.getString("user_icon_head_small"));
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -129,7 +119,7 @@ public class TeachCookPageActivity extends Activity {
                         handler.sendMessage(message);
                         //接口请求失败
                     } else {
-                        Toast.makeText(TeachCookPageActivity.this, " httpURLConnection.connect Field", Toast.LENGTH_LONG).show();
+                        Toast.makeText(UserInfoLayoutActivity.this, " httpURLConnection.connect Field", Toast.LENGTH_LONG).show();
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -144,15 +134,12 @@ public class TeachCookPageActivity extends Activity {
             super.handleMessage(msg);
             if (msg.what==1){
                 if (info != null) {
-                    title.setText(info.get("title"));
-                    author.setText(info.get("author"));
-                    method.setText(info.get("method"));
-                    concern.setText(info.get("concern"));
+                    user_name.setText(info.get("user_name"));
                     getImage(info.get("img"));
                 }
             }else{
                 if (bitmap != null) {
-                    img.setImageBitmap(bitmap);
+                    icon_head.setImageBitmap(bitmap);
                 }
             }
         }

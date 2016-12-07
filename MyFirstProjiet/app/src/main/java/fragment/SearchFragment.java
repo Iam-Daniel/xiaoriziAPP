@@ -17,7 +17,7 @@ import java.util.List;
 
 import adapter.ListViewAdapter;
 import maniactivity.BaseFragment;
-import maniactivity.ListInformation;
+import ListItemInfor.ListInformation;
 import maniactivity.MorePageActivity;
 import maniactivity.ShoppingActivity;
 import maniactivity.ShoppingCartPageActivity;

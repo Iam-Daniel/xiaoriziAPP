@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -31,9 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapter.ListViewAdapter;
-import adapter.ShoppingListAdapter;
-import listclass.ShopListData;
-import maniactivity.ListInformation;
+import ListItemInfor.ListInformation;
 import maniactivity.TeachCookPageActivity;
 
 /**

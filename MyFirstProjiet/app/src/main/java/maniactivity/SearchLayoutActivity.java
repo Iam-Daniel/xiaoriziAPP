@@ -26,9 +26,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import ListItemInfor.GoodsTopInfo;
 import activity.BaseActivity;
 import adapter.GoodsTopListViewAdapter;
-import adapter.ListViewAdapter;
 
 /**
  * Created by Administrator on 2016/10/29.
@@ -54,7 +54,7 @@ public class SearchLayoutActivity extends BaseActivity {
         setContentView(R.layout.search_layout);
         itemFindViewById();
         itemSetOnClickListener();
-        AskInternetData("requireGoodsInfo","");
+        AskInternetData("requireGoodsInfo_limit","");
     }
 
     private void itemFindViewById() {
