@@ -94,8 +94,10 @@ public class UpLoadWorkPageActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "相册");
-                Intent intent = new Intent(Intent.ACTION_PICK, null);
-                intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, IMAGE_UNSPECIFIED);//  IMAGE_UNSPECIFIED = "image/*";
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                //Intent intent = new Intent(Intent.ACTION_PICK, null);
+                intent.setType("image:/*");
+                //intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, IMAGE_UNSPECIFIED);//  IMAGE_UNSPECIFIED = "image/*";
                 startActivityForResult(intent, ALBUM_REQUEST_CODE);
             }
         });
@@ -116,21 +118,18 @@ public class UpLoadWorkPageActivity extends BaseActivity {
         submit.setOnClickListener(onClickListener);
     }
 
-    /*@Override
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == ALBUM_REQUEST_CODE) {
             if (data == null) {
                 return;
             }
-            Uri uri;
-            uri = data.getData();
             Bundle bundle = data.getExtras();
             Bitmap bitmap = bundle.getParcelable("data");
-            ImageView cover_user_photo = (ImageView) findViewById(R.id.cover_user_photo);
-            cover_user_photo.setImageBitmap(bitmap);
-            //Toast.makeText(HeadPageActivity.this, uri.toString(), Toast.LENGTH_SHORT).show();
+            ImageView addWorkIma = (ImageView) findViewById(R.id.add_work_img);
+            addWorkIma.setImageBitmap(bitmap);
         }
-    }*/
+    }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override

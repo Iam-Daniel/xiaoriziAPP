@@ -24,16 +24,21 @@
             android:id="@+id/search_to_linkPage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
+            android:background="@drawable/search_bg"
             android:drawableLeft="@mipmap/search"
             android:drawablePadding="10dp"
-            android:gravity="center_vertical"
+            android:gravity="left"
             android:hint="菜谱 食材"
-            android:paddingLeft="80dp"
-            android:textColorHint="#212121"
-            android:textSize="18sp" />
+            android:paddingBottom="6dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="6dp"
+            android:textColor="#000"
+            android:textColorHint="#787878"
+            android:textSize="15sp" />
 
         <ImageView
             android:layout_width="wrap_content"

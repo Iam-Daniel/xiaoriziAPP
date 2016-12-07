@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
 
@@ -15,14 +16,15 @@ import listclass.MyDiscountData;
 /**
  * Created by Administrator on 2016/11/30.
  */
-public class MyDiscountAdapter extends BaseAdapter{
+public class MyDiscountAdapter extends BaseAdapter {
     Context context;
     ArrayList<MyDiscountData> list = new ArrayList<MyDiscountData>();
     LayoutInflater layoutInflater;
-    public MyDiscountAdapter(Context context,ArrayList<MyDiscountData> list){
-        this.context=context;
-        this.list=list;
-        layoutInflater=LayoutInflater.from(context);
+
+    public MyDiscountAdapter(Context context, ArrayList<MyDiscountData> list) {
+        this.context = context;
+        this.list = list;
+        layoutInflater = LayoutInflater.from(context);
     }
 
     @Override
@@ -42,9 +44,16 @@ public class MyDiscountAdapter extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if (convertView==null){
-            convertView=layoutInflater.inflate(R.layout.discount_list_item,null);
+        if (convertView == null) {
+            convertView = layoutInflater.inflate(R.layout.discount_list_item, null);
         }
         return convertView;
+    }
+
+    public class ViewHolder {
+        private TextView count_textView;  //满50减10
+        private TextView all_textView;   //使用范围  全场
+        private TextView date_textView; //使用范围 日期
+        public boolean state;
     }
 }

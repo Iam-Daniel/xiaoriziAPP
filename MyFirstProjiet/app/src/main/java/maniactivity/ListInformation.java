@@ -10,9 +10,9 @@ public class ListInformation {
     private String time_y_m_d;//日期-年月日
     private String time_f_a;//日期-AM/PM
     private String time_m_s;//日期-小时 分钟
-    private int img;//示例背景图
-    private String numb_f;//喜欢人数
-    private String numb_m;//留言数
+    private String img;//示例背景图
+    private int numb_f;//喜欢人数
+    private int numb_m;//留言数
     private String details;//详细做法
     private int concern=1;//关注图标(默认显示)
     private int media=0;//是否有视频(默认不显示)
@@ -20,6 +20,15 @@ public class ListInformation {
     private int like=1;//是否显示喜欢图标(默认显示)
     private int message=1;//是否显示留言图标(默认显示)
     private String title;//标题
+    private String id;//菜谱ID 用户ID 商品ID
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -127,27 +136,27 @@ public class ListInformation {
         this.time_m_s = time_m_s;
     }
 
-    public int getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(String img) {
         this.img = img;
     }
 
-    public String getNumb_f() {
+    public int getNumb_f() {
         return numb_f;
     }
 
-    public void setNumb_f(String numb_f) {
+    public void setNumb_f(int numb_f) {
         this.numb_f = numb_f;
     }
 
-    public String getNumb_m() {
+    public int getNumb_m() {
         return numb_m;
     }
 
-    public void setNumb_m(String numb_m) {
+    public void setNumb_m(int numb_m) {
         this.numb_m = numb_m;
     }
 }

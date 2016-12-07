@@ -1,22 +1,14 @@
 package maniactivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import activity.BaseActivity;
-import adapter.ListViewAdapter;
 
 /**
  * Created by Administrator on 2016/10/29.
@@ -38,7 +30,6 @@ public class SearchLayoutActivity extends BaseActivity {
         setContentView(R.layout.search_layout);
         itemFindViewById();
         itemSetOnClickListener();
-
     }
 
     private void itemFindViewById() {
@@ -59,6 +50,7 @@ public class SearchLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this, ShoppingActivity.class);
+                intent.putExtra("type","烘培");
                 startActivity(intent);
             }
         });
@@ -67,6 +59,7 @@ public class SearchLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this, ShoppingActivity.class);
+                intent.putExtra("type","生鲜果蔬");
                 startActivity(intent);
             }
         });
@@ -75,6 +68,7 @@ public class SearchLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this, ShoppingActivity.class);
+                intent.putExtra("type","器具");
                 startActivity(intent);
             }
         });
@@ -83,6 +77,7 @@ public class SearchLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this, ShoppingActivity.class);
+                intent.putExtra("type","调味");
                 startActivity(intent);
             }
         });
@@ -91,6 +86,7 @@ public class SearchLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this, ShoppingActivity.class);
+                intent.putExtra("type","方便食品");
                 startActivity(intent);
             }
         });
@@ -99,6 +95,7 @@ public class SearchLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this, ShoppingActivity.class);
+                intent.putExtra("type","干货");
                 startActivity(intent);
             }
         });
@@ -107,6 +104,7 @@ public class SearchLayoutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SearchLayoutActivity.this, ShoppingActivity.class);
+                intent.putExtra("type","饮品茶酒");
                 startActivity(intent);
             }
         });

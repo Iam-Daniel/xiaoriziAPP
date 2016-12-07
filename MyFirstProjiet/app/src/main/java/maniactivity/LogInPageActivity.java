@@ -19,6 +19,8 @@ public class LogInPageActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.log_in_page);
+        /*cn.smssdk.SMSSDK.init(this, "19a7b225da8e8", "8ed5500a98d991bb5474266027cac5a0");
+        cn.smssdk.SMSSDK.getVerificationCode("86", "");*/
 
         bindView();
     }

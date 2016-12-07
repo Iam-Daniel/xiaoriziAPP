@@ -1,7 +1,10 @@
 package adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +15,11 @@ import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.List;
 
 import listclass.MyCollectionData;
@@ -26,6 +34,7 @@ public class ListViewAdapter extends BaseAdapter {
     Context context;
     ListInformation information;
     List<ListInformation> list;
+    Bitmap bitmap = null;
     int style;//由于多个页面复用该适配器，需要传入参数来决定加载哪些内容
 
     public ListViewAdapter(Context context, List<ListInformation> list, int style) {
@@ -34,6 +43,7 @@ public class ListViewAdapter extends BaseAdapter {
         //1 是SearchLayoutListView界面调用
         //2 是KitchenPageActivity界面调用
         //3 是WorldPageFragment界面调用
+        //4 是HomepageFragment界面调用
         this.style = style;
     }
 
@@ -53,6 +63,7 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     class ViewHolder {
+        LinearLayout layout_meddil;
         ImageView icon_head;//头像图片
         TextView author;//作者
         TextView time_y_m_d;//日期-年月日
@@ -95,6 +106,7 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.media = (ImageView) view.findViewById(R.id.media);
             viewHolder.like = (ImageView) view.findViewById(R.id.like);
             viewHolder.message = (ImageView) view.findViewById(R.id.message);
+            viewHolder.layout_meddil = (LinearLayout) view.findViewById(R.id.layout_middle);
             view.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) view.getTag();
@@ -104,39 +116,38 @@ public class ListViewAdapter extends BaseAdapter {
         //此处是SearchLayoutListView界面调用
         if (style == 1) {
             viewHolder.icon_head.setImageResource(information.getIcon_head());
-            viewHolder.img.setImageResource(information.getImg());
             viewHolder.author.setText(information.getAuthor());
             viewHolder.time_y_m_d.setText(information.getTime_y_m_d());
             viewHolder.time_f_a.setText(information.getTime_f_a());
             viewHolder.time_m_s.setText(information.getTime_m_s());
-            viewHolder.numb_f.setText(information.getNumb_f());
-            viewHolder.numb_m.setText(information.getNumb_m());
+            viewHolder.numb_f.setText(""+information.getNumb_f());
+            viewHolder.numb_m.setText(""+information.getNumb_m());
             setIcon();
             //此处是KitchenPageActivity界面调用
         } else if (style == 2) {
-            viewHolder.icon_head.setImageResource(information.getIcon_head());
-            viewHolder.img.setImageResource(information.getImg());
+//            viewHolder.icon_head.setImageResource(information.getIcon_head());
+            String path = information.getImg();
+            viewHolder.img.setImageBitmap(getImage(path));
             viewHolder.author.setText(information.getAuthor());
-            viewHolder.numb_f.setText(information.getNumb_f());
-            viewHolder.numb_m.setText(information.getNumb_m());
+            viewHolder.numb_f.setText(""+information.getNumb_f());
+            viewHolder.numb_m.setText(""+information.getNumb_m());
             viewHolder.changeLayout.setVisibility(View.GONE);
             viewHolder.details.setText(information.getDetails());
             setIcon();
         } else if (style == 3) {
             viewHolder.icon_head.setImageResource(information.getIcon_head());
-            viewHolder.img.setImageResource(information.getImg());
             viewHolder.author.setText(information.getAuthor());
             viewHolder.time_y_m_d.setText(information.getTime_y_m_d());
             viewHolder.time_f_a.setText(information.getTime_f_a());
             viewHolder.time_m_s.setText(information.getTime_m_s());
-            viewHolder.numb_f.setText(information.getNumb_f());
-            viewHolder.numb_m.setText(information.getNumb_m());
+            viewHolder.numb_f.setText(information.getNumb_f() + "");
+            viewHolder.numb_m.setText(information.getNumb_m() + "");
             setIcon();
             viewHolder.title_bottom.setText(information.getTitle_bottom());
         } else if (style == 4) {
             setIcon();
             viewHolder.title.setText(information.getTitle());
-            viewHolder.img.setImageResource(information.getImg());
+            viewHolder.layout_meddil.setVisibility(View.GONE);
         }
         return view;
     }
@@ -176,13 +187,13 @@ public class ListViewAdapter extends BaseAdapter {
             if (information.getTime_m_s() == null) {
                 viewHolder.time_m_s.setVisibility(View.GONE);
             }
-            if (information.getImg() == 0) {
+            if (information.getImg() == null) {
                 viewHolder.img.setVisibility(View.GONE);
             }
-            if (information.getNumb_f() == null) {
+            if (information.getNumb_f() == 0) {
                 viewHolder.numb_f.setVisibility(View.GONE);
             }
-            if (information.getNumb_m() == null) {
+            if (information.getNumb_m() == 0) {
                 viewHolder.numb_m.setVisibility(View.GONE);
             }
             if (information.getDetails() == null) {
@@ -198,5 +209,23 @@ public class ListViewAdapter extends BaseAdapter {
                 viewHolder.title.setVisibility(View.GONE);
             }
         }
+    }
+
+    private Bitmap getImage(final String path) {
+        new Thread(){
+            @Override
+            public void run() {
+                try {
+                    URL url = new URL(path);
+                    URLConnection connection = url.openConnection();
+                    connection.connect();
+                    InputStream inputStream = connection.getInputStream();
+                    bitmap = BitmapFactory.decodeStream(inputStream);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+        return bitmap;
     }
 }

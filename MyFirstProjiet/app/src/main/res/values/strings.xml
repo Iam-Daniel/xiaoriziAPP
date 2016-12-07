@@ -20,4 +20,11 @@
     <string name="agreement_2">《小日子用户服务协议》</string>
     <string name="play_title">播放</string>
     <string name="video_zone_title">热门视频</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_edit">编辑</string>
+    <string name="menu_enter">完成</string>
+    <string name="menu_del">删除</string>
+    <string name="menu_sett">结算</string>
 </resources>

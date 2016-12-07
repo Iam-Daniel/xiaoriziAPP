@@ -6,10 +6,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import adapter.MenuGoodsAdapter;
+import adapter.MyDiscountAdapter;
+import listclass.MenuGoodsData;
+import listclass.MyCollectionOrderData;
+import listclass.MyDiscountData;
 
 /**
  * Created by Administrator on 2016/11/27.
@@ -39,12 +49,19 @@ public class LinkSearchPageActivity extends Activity {
 
     private ViewGroup mContainerView;
 
+    /*适配器*/
+    View view;
+    ListView listView;
+    //List<MenuGoodsData> list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_visible);
 
         bindView();
+        itemById();
+        //setData((ArrayList<MenuGoodsData>) list);
     }
 
     private void addItem() {
@@ -243,4 +260,25 @@ public class LinkSearchPageActivity extends Activity {
             }
         }
     };
+
+    public void itemById() {
+        listView = (ListView) findViewById(R.id.listView);
+        ArrayList<MenuGoodsData> list = new ArrayList<MenuGoodsData>();
+        setData(list);
+        listView.setAdapter(new MenuGoodsAdapter(this, list));
+    }
+
+    public void setData(ArrayList<MenuGoodsData> list) {
+        // list = new ArrayList<>();
+        MenuGoodsData menuGoodsData;
+        for (int i = 0; i < 20; i++) {
+            menuGoodsData = new MenuGoodsData();
+            menuGoodsData.setCaipu_img(R.mipmap.icon_luan);
+            menuGoodsData.setPeople_textView("我做的");
+            menuGoodsData.setPeople_numb("50");
+            menuGoodsData.setTitle_textView("西式炒面");
+
+            list.add(menuGoodsData);
+        }
+    }
 }
