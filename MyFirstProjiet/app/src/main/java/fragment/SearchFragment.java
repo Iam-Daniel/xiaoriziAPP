@@ -3,7 +3,6 @@ package fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +40,8 @@ public class SearchFragment extends BaseFragment {
     ListView listView;
     ListViewAdapter listViewAdapter;
     List<ListInformation> list;
+    //访问接口返回的数组
+    String result;
 
     public SearchFragment() {
 
@@ -77,13 +78,12 @@ public class SearchFragment extends BaseFragment {
     }
 
     private void setData() {
-        list = new ArrayList<>();
+        list = new ArrayList<ListInformation>();
         ListInformation information;
         for (int t = 0; t < 10; t++) {
             information = new ListInformation();
             information.setAuthor("author" + t);
             information.setMedia(1);
-            information.setIcon_head(R.mipmap.icon_head);
             information.setTime_y_m_d("2016-11-11");
             information.setTime_f_a("PM");
             information.setTime_m_s("" + t + ":" + t * 20);

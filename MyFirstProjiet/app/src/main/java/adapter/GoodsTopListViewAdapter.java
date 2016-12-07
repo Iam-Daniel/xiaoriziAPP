@@ -21,24 +21,21 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 
-import listclass.ShopListData;
+import maniactivity.GoodsTopInfo;
 
 /**
- * Created by Administrator on 2016/11/29.
+ * Created by Administrator on 2016/12/6.
  */
-public class ShoppingListAdapter extends BaseAdapter {
+public class GoodsTopListViewAdapter extends BaseAdapter{
     Context context;
-    List<ShopListData> list;
-    LayoutInflater layoutInflater;
+    List<GoodsTopInfo>list;
     ViewHolder viewHolder;
     Bitmap bitmap;
 
-    public ShoppingListAdapter(Context context, List<ShopListData> list) {
+    public GoodsTopListViewAdapter(Context context, List<GoodsTopInfo>list){
         this.context = context;
         this.list = list;
-        layoutInflater = LayoutInflater.from(context);
     }
-
     @Override
     public int getCount() {
         return list.size();
@@ -54,34 +51,34 @@ public class ShoppingListAdapter extends BaseAdapter {
         return position;
     }
 
-
-    class ViewHolder {
-        ImageView shopping_cart_show_three;
-        TextView shopping_name;
-        TextView shopping_info;
-        TextView shopping_price;
+    class ViewHolder{
+        TextView title;
+        TextView information;
+        TextView price;
+        ImageView img;
     }
-
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        viewHolder = new ViewHolder();
-        if (convertView == null) {
-            convertView = layoutInflater.inflate(R.layout.shop_listeview_item, null);
-            viewHolder.shopping_cart_show_three = (ImageView) convertView.findViewById(R.id.shopping_cart_show_three);
-            viewHolder.shopping_name = (TextView) convertView.findViewById(R.id.shopping_name);
-            viewHolder.shopping_info = (TextView) convertView.findViewById(R.id.shopping_info);
-            viewHolder.shopping_price = (TextView) convertView.findViewById(R.id.shopping_price);
-            convertView.setTag(viewHolder);
-        } else {
-            viewHolder = (ViewHolder) convertView.getTag();
+    public View getView(int position, View view, ViewGroup viewGroup) {
+        LayoutInflater layoutInflater = LayoutInflater.from(context);
+        if (view==null){
+            viewHolder = new ViewHolder();
+            view = layoutInflater.inflate(R.layout.goods_top_list_item,null);
+            viewHolder.title = (TextView)view.findViewById(R.id.title);
+            viewHolder.information = (TextView)view.findViewById(R.id.goods_information);
+            viewHolder.price = (TextView)view.findViewById(R.id.price);
+            viewHolder.img = (ImageView)view.findViewById(R.id.img);
+            view.setTag(viewHolder);
+        }else{
+            viewHolder = (ViewHolder)view.getTag();
         }
-        ShopListData shopListData = list.get(position);
-        String path = shopListData.getImg();
-        getImage(path);
-        viewHolder.shopping_name.setText(shopListData.getShopping_name());
-        viewHolder.shopping_info.setText(shopListData.getShopping_info());
-        viewHolder.shopping_price.setText(shopListData.getShopping_price() + "元");
-        return convertView;
+        if (viewHolder.title.getText().equals("title")){
+            GoodsTopInfo goodsTopInfo = list.get(position);
+            viewHolder.title.setText(goodsTopInfo.getTitle());
+            viewHolder.information.setText(goodsTopInfo.getInformation());
+            viewHolder.price.setText(goodsTopInfo.getPrice());
+            getImage(goodsTopInfo.getImg());
+        }
+        return view;
     }
 
     private void getImage(final String path) {
@@ -107,7 +104,7 @@ public class ShoppingListAdapter extends BaseAdapter {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            viewHolder.shopping_cart_show_three.setImageBitmap(bitmap);
+            viewHolder.img.setImageBitmap(bitmap);
         }
     };
 }

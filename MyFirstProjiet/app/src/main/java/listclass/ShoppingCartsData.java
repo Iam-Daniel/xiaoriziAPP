@@ -11,6 +11,11 @@ public class ShoppingCartsData {
     double price;
     boolean isChoose;
 
+    //表示checkbox的显影状态
+    boolean check_Show_hidden =false;
+    //表示checkbox
+    boolean check_state;
+
     public boolean isChoose() {
         return isChoose;
     }

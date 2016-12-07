@@ -5,7 +5,7 @@ package maniactivity;
  */
 public class ListInformation {
     //使用数据库后需要将icon_head和img类型修改为String，解析来自于数据库的地址
-    private int icon_head;//头像图片
+    private String icon_head;//头像图片
     private String author;//作者
     private String time_y_m_d;//日期-年月日
     private String time_f_a;//日期-AM/PM
@@ -96,11 +96,11 @@ public class ListInformation {
         this.details = detail;
     }
 
-    public int getIcon_head() {
+    public String getIcon_head() {
         return icon_head;
     }
 
-    public void setIcon_head(int icon_head) {
+    public void setIcon_head(String icon_head) {
         this.icon_head = icon_head;
     }
 

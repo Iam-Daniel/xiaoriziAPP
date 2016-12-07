@@ -30,51 +30,50 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by admin on 2016/10/23.
+ * Created by Administrator on 2016/12/5.
  */
-public class TeachCookPageActivity extends Activity {
-    TextView title ;
-    TextView author;
-    TextView method;
-    TextView concern;
+public class DetailShopPageActivity extends Activity {
+    TextView title;
+    TextView detail;
+    TextView price;
     ImageView img;
-    ImageView teach_cook_img;
-    String cooking_menu_id="";
-    Map<String, String> info = null;
+    ImageView headBackground_back_img;
+    String goodsId;
     String result;
+    Map<String, String> info = null;
     Bitmap bitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.teach_cook_page);
+        setContentView(R.layout.detailshop_layout);
         itemFindViewById();
-        Intent intent = getIntent();
-        if (intent!=null){
-            cooking_menu_id = intent.getStringExtra("cooking_menu_id");
-            Log.i("TAG===>","cooking_menu_id=>"+cooking_menu_id);
-            AskInternetData("requireCookInfo_id","cooking_menu_id="+cooking_menu_id);
-        }
         itemSetOnClickListener();
+        Intent intent = getIntent();
+
+        if (intent != null) {
+            goodsId = intent.getStringExtra("goods_id");
+            AskInternetData("requireGoodsInfo_id", "goods_id=" + goodsId);
+        }
     }
 
-    private void itemFindViewById(){
-        title  = (TextView)findViewById(R.id.title);
-        author  = (TextView)findViewById(R.id.author);
-        method  = (TextView)findViewById(R.id.cooking_method);
-        concern  = (TextView)findViewById(R.id.concern);
-        img = (ImageView)findViewById(R.id.img);
-        teach_cook_img = (ImageView)findViewById(R.id.teach_cook_img);
+    private void itemFindViewById() {
+        title = (TextView) findViewById(R.id.title);
+        detail = (TextView) findViewById(R.id.detail);
+        price = (TextView) findViewById(R.id.price);
+        img = (ImageView) findViewById(R.id.img);
+        headBackground_back_img = (ImageView) findViewById(R.id.headBackground_back_img);
     }
 
-    private void itemSetOnClickListener(){
-        teach_cook_img.setOnClickListener(new View.OnClickListener() {
+    private void itemSetOnClickListener() {
+        headBackground_back_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
     }
+
     //请求接口返回数据 并设置ListView
     public void AskInternetData(final String method, final String keyAndValue) {
         new Thread() {
@@ -91,7 +90,6 @@ public class TeachCookPageActivity extends Activity {
                     //有参数传递
                     if (!keyAndValue.equals("")) {
                         url = new URL(httpUrl + "?" + keyAndValue);
-                        Log.i("TAG===>","url=>"+url);
                         //没有参数传递
                     } else {
                         url = new URL(httpUrl);
@@ -115,12 +113,11 @@ public class TeachCookPageActivity extends Activity {
                             JSONArray jsonArray = new JSONArray(result);
                             info = new HashMap<>();
                             JSONObject object = jsonArray.getJSONObject(0);
-                            info.put("title", object.optString("cooking_name", "获取失败"));//菜谱名
-                            info.put("author", object.optString("user_name", "获取失败"));//作者
-                            info.put("method", object.optString("cooking_method", "获取失败"));//做法
-                            info.put("concern", object.optString("care_counts", "0"));//喜欢人数
+                            info.put("goods_name", object.optString("goods_name", "获取失败"));
+                            info.put("price", "￥" + object.optString("price", "0"));
+                            info.put("detail", object.optString("goods_information", "获取失败"));
                             String rootPath = "http://10.0.2.2/project/Uploads/";
-                            info.put("img", rootPath + object.getString("cooking_img_small"));
+                            info.put("img", rootPath + object.getString("goods_img"));
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -130,7 +127,7 @@ public class TeachCookPageActivity extends Activity {
                         handler.sendMessage(message);
                         //接口请求失败
                     } else {
-                        Toast.makeText(TeachCookPageActivity.this, " httpURLConnection.connect Field", Toast.LENGTH_LONG).show();
+                        Toast.makeText(DetailShopPageActivity.this, " httpURLConnection.connect Field", Toast.LENGTH_LONG).show();
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -145,21 +142,22 @@ public class TeachCookPageActivity extends Activity {
             super.handleMessage(msg);
             if (msg.what==1){
                 if (info != null) {
-                    title.setText(info.get("title"));
-                    author.setText(info.get("author"));
-                    method.setText(info.get("method"));
-                    concern.setText(info.get("concern"));
+                    title.setText(info.get("goods_name"));
+                    price.setText(info.get("price"));
+                    detail.setText(info.get("detail"));
                     getImage(info.get("img"));
                 }
             }else{
                 if (bitmap != null) {
                     img.setImageBitmap(bitmap);
+                    Log.i("TAG======>","img set Bitmap success");
                 }
             }
         }
     };
 
     private void getImage(final String path) {
+        bitmap = null;
         new Thread() {
             @Override
             public void run() {
@@ -181,8 +179,5 @@ public class TeachCookPageActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (bitmap!=null){
-            bitmap.recycle();
-        }
     }
 }

@@ -1,5 +1,6 @@
 package fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -8,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -32,6 +34,7 @@ import adapter.ListViewAdapter;
 import adapter.ShoppingListAdapter;
 import listclass.ShopListData;
 import maniactivity.ListInformation;
+import maniactivity.TeachCookPageActivity;
 
 /**
  * Created by admin on 2016/11/26.
@@ -48,7 +51,8 @@ public class KitchenSubLayout01 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.kitchen_sub_layout, null);
         itemFindViewById();
-        AskInternetData("requireCookMethodHot","");
+        itemSetOnClickListener();
+        AskInternetData("requireCookMethodHot","type=1001");
         return view;
     }
 
@@ -59,7 +63,15 @@ public class KitchenSubLayout01 extends Fragment {
     }
 
     private void itemSetOnClickListener() {
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getActivity(), TeachCookPageActivity.class);
+                ListInformation information = list.get(i);
+                intent.putExtra("cooking_menu_id",information.getId());
+                startActivity(intent);
+            }
+        });
     }
 
     //请求接口返回数据 并设置ListView
@@ -111,12 +123,13 @@ public class KitchenSubLayout01 extends Fragment {
                                 information.setNumb_m(object.optInt("comment_counts",1));
                                 String rootPath = "http://10.0.2.2/project/Uploads/";
                                 information.setImg(rootPath+object.getString("cooking_img"));
+                                information.setIcon_head(rootPath+object.getString("user_icon_head_small"));
                                 list.add(information);
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-                        if (list.size() != 0) {
+                        if (list.size()!= 0) {
                             //发送信息设置ListView
                             handler.sendEmptyMessage(0);
                         } else {
