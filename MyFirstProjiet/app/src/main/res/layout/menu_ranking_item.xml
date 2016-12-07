@@ -3,14 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    android:weightSum="1">
 
     <ImageView
         android:id="@+id/menu_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:src="@mipmap/icon_1bg"/>
+        android:src="@mipmap/bacon_img"
+        android:layout_weight="0.06" />
     <TextView
         android:id="@+id/menu_name"
         android:layout_width="wrap_content"
@@ -21,6 +23,7 @@
         android:textSize="14sp"
         android:textColor="#505050"/>
     <TextView
+        android:visibility="gone"
         android:id="@+id/author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
