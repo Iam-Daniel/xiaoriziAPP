@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,15 +15,13 @@ import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 
-import maniactivity.ListInformation;
+import ListItemInfor.ListInformation;
 
 /**
  * Created by Administrator on 2016/11/25.
@@ -142,10 +139,16 @@ public class ListViewAdapter extends BaseAdapter {
         } else if (style == 3 && viewHolder.author.getText().equals("author")) {
             viewHolder.author.setText(information.getAuthor());
             viewHolder.time_y_m_d.setText(information.getTime_y_m_d());
-            viewHolder.time_f_a.setText(information.getTime_f_a());
-            viewHolder.time_m_s.setText(information.getTime_m_s());
+            viewHolder.time_f_a.setVisibility(View.GONE);
+            viewHolder.time_m_s.setVisibility(View.GONE);
             viewHolder.numb_f.setText(information.getNumb_f() + "");
             viewHolder.numb_m.setText(information.getNumb_m() + "");
+            //设置菜谱成果图
+            String path = information.getImg();
+            getImage(2,path);
+            //设置用户小头像
+            path = information.getIcon_head();
+            getImage(1, path);
             setIcon();
             viewHolder.title_bottom.setText(information.getTitle_bottom());
         } else if (style == 4 && viewHolder.author.getText().equals("author")) {
@@ -224,15 +227,16 @@ public class ListViewAdapter extends BaseAdapter {
             @Override
             public void run() {
                 try {
-                    URL url = new URL(path);
-                    URLConnection connection = url.openConnection();
-                    connection.connect();
-                    InputStream inputStream = connection.getInputStream();
-                    bitmap = BitmapFactory.decodeStream(inputStream);
-                    Log.i("TAG========Bitmap", "position=>" + time + "Bitmap=>" + bitmap);
-                    Message message = new Message();
-                    message.what = t;
-                    handler.sendMessage(message);
+                    if (path!=null){
+                        URL url = new URL(path);
+                        URLConnection connection = url.openConnection();
+                        connection.connect();
+                        InputStream inputStream = connection.getInputStream();
+                        bitmap = BitmapFactory.decodeStream(inputStream);
+                        Message message = new Message();
+                        message.what = t;
+                        handler.sendMessage(message);
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

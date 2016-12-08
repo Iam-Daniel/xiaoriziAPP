@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,12 +32,13 @@ import java.util.List;
 
 import adapter.ListViewAdapter;
 import maniactivity.BaseFragment;
-import maniactivity.ListInformation;
+import ListItemInfor.ListInformation;
 import maniactivity.MenuClassFicationPageActivity;
 import maniactivity.RankingListPageActivity;
 import maniactivity.SearchLayoutActivity;
 import maniactivity.SearchPageActivity;
 import maniactivity.ShoppingActivity;
+import maniactivity.TeachCookPageActivity;
 import maniactivity.VegetableBasketPageActivity;
 
 /**
@@ -100,6 +100,7 @@ public class HomepageFragment extends BaseFragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), ShoppingActivity.class);
+                intent.putExtra("type","烘培");
                 startActivity(intent);
             }
         });
@@ -137,9 +138,12 @@ public class HomepageFragment extends BaseFragment {
         });
         //ListView点击事件
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override                                                   //Position
+            @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                ListInformation information = list.get(i);
+                Intent intent = new Intent(getActivity(), TeachCookPageActivity.class);
+                intent.putExtra("cooking_menu_id",information.getId());
+                startActivity(intent);
             }
         });
     }
@@ -231,6 +235,7 @@ public class HomepageFragment extends BaseFragment {
                                 JSONObject object = jsonArray.getJSONObject(t);
                                 listInformation = new ListInformation();
                                 listInformation.setTitle(object.getString("cooking_name"));
+                                listInformation.setId(object.getString("cooking_menu_id"));
                                 //隐藏喜欢人数，留言数和关注图标
                                 listInformation.setLike(0);
                                 listInformation.setMessage(0);

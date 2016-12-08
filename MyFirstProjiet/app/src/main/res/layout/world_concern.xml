@@ -6,6 +6,7 @@
     android:background="@android:color/white"
     android:gravity="center_horizontal">
     <ScrollView
+        android:id="@+id/scrollView"
         android:fillViewport="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -30,21 +31,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
+                    android:id="@+id/user_1"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
+                     <ImageView
+                         android:id="@+id/icon_head1"
+                         android:src="@mipmap/concern_head01"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content" />
                     <TextView
+                        android:id="@+id/name1"
+                        android:layout_marginTop="12dp"
                         android:textColor="#505050"
                         android:textSize="11sp"
                         android:drawablePadding="12dp"
                         android:gravity="center"
-                        android:drawableTop="@mipmap/concern_head01"
                         android:text="阿瓜"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <TextView
+                        android:id="@+id/title1"
                         android:textColor="#AAAAAA"
                         android:text="美食达人"
                         android:layout_marginTop="6dp"
@@ -52,87 +61,120 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/user_2"
+
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/icon_head2"
+                        android:src="@mipmap/concern_head02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
                     <TextView
+                        android:id="@+id/name2"
+                        android:layout_marginTop="12dp"
                         android:textColor="#505050"
                         android:textSize="11sp"
                         android:drawablePadding="12dp"
                         android:gravity="center"
-                        android:drawableTop="@mipmap/concern_head02"
-                        android:text="左兜兜"
+                        android:text="阿瓜"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <TextView
+                        android:id="@+id/title2"
                         android:textColor="#AAAAAA"
-                        android:text="美食主播"
+                        android:text="美食达人"
                         android:layout_marginTop="6dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/user_3"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/icon_head3"
+                        android:src="@mipmap/concern_head03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
                     <TextView
+                        android:id="@+id/name3"
+                        android:layout_marginTop="12dp"
                         android:textColor="#505050"
                         android:textSize="11sp"
                         android:drawablePadding="12dp"
                         android:gravity="center"
-                        android:drawableTop="@mipmap/concern_head03"
-                        android:text="路过"
+                        android:text="阿瓜"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <TextView
+                        android:id="@+id/title3"
                         android:textColor="#AAAAAA"
-                        android:text="美食家"
+                        android:text="美食达人"
                         android:layout_marginTop="6dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/user_4"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/icon_head4"
+                        android:src="@mipmap/concern_head04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
                     <TextView
+                        android:id="@+id/name4"
+                        android:layout_marginTop="12dp"
                         android:textColor="#505050"
                         android:textSize="11sp"
                         android:drawablePadding="12dp"
                         android:gravity="center"
-                        android:drawableTop="@mipmap/concern_head04"
-                        android:text="小胖胖"
+                        android:text="阿瓜"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <TextView
+                        android:id="@+id/title4"
                         android:textColor="#AAAAAA"
-                        android:text="活动达人"
+                        android:text="美食达人"
                         android:layout_marginTop="6dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/user_5"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/icon_head5"
+                        android:src="@mipmap/concern_head05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
                     <TextView
+                        android:id="@+id/name5"
+                        android:layout_marginTop="12dp"
                         android:textColor="#505050"
                         android:textSize="11sp"
                         android:drawablePadding="12dp"
                         android:gravity="center"
-                        android:drawableTop="@mipmap/concern_head05"
-                        android:text="大嘴儿"
+                        android:text="阿瓜"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <TextView
+                        android:id="@+id/title5"
                         android:textColor="#AAAAAA"
                         android:text="美食达人"
                         android:layout_marginTop="6dp"
@@ -140,16 +182,22 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
             </LinearLayout>
-            <View
-                android:layout_marginTop="12dp"
-                android:background="#f0f0f0"
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="6dp"/>
-            <ListView
-                android:id="@+id/listView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            </ListView>
+                android:layout_height="0dp">
+                <View
+                    android:layout_marginTop="12dp"
+                    android:background="#f0f0f0"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"/>
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </ListView>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

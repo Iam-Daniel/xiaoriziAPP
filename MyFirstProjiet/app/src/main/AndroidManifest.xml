@@ -83,7 +83,7 @@
         <activity android:name="maniactivity.MyWorksPageActivity" />
         <activity android:name="maniactivity.NumberPageActivity" />
         <activity android:name="maniactivity.NutritionMorningPageActivity" />
-        <activity android:name="maniactivity.PassByPageActivity" />
+        <activity android:name="maniactivity.UserInfoLayoutActivity" />
         <activity android:name="maniactivity.PassWorkPageActivity" />
         <activity android:name="maniactivity.RankingListPageActivity" />
         <activity
