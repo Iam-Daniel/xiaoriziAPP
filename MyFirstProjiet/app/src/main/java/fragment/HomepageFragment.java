@@ -36,6 +36,7 @@ import maniactivity.MenuClassFicationPageActivity;
 import maniactivity.RankingListPageActivity;
 import maniactivity.SearchLayoutActivity;
 import maniactivity.SearchPageActivity;
+import maniactivity.ShoppingActivity;
 import maniactivity.TeachCookPageActivity;
 import maniactivity.VegetableBasketPageActivity;
 
@@ -97,7 +98,8 @@ public class HomepageFragment extends BaseFragment {
         homepage_buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SearchLayoutActivity.class);
+                Intent intent = new Intent(getActivity(), ShoppingActivity.class);
+                intent.putExtra("type","烘培");
                 startActivity(intent);
             }
         });

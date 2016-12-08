@@ -86,6 +86,33 @@ public class WorldAround extends Fragment {
                 startActivity(intent);
             }
         });
+        img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CookingInfo cookingInfo = list2.get(0);
+                Intent intent = new Intent(getActivity(), TeachCookPageActivity.class);
+                intent.putExtra("cooking_menu_id", cookingInfo.getId());
+                startActivity(intent);
+            }
+        });
+        img2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CookingInfo cookingInfo = list2.get(1);
+                Intent intent = new Intent(getActivity(), TeachCookPageActivity.class);
+                intent.putExtra("cooking_menu_id", cookingInfo.getId());
+                startActivity(intent);
+            }
+        });
+        img3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CookingInfo cookingInfo = list2.get(2);
+                Intent intent = new Intent(getActivity(), TeachCookPageActivity.class);
+                intent.putExtra("cooking_menu_id", cookingInfo.getId());
+                startActivity(intent);
+            }
+        });
     }
 
     //请求接口返回数据 并设置顶部推荐用户
