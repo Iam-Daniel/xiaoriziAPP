@@ -16,7 +16,7 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />  <!--短信验证码权限结束-->
 
     <application
         android:allowBackup="true"
@@ -42,6 +42,12 @@
         </activity>
 
         <!--所有注册列表-->
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
 
         <activity android:name="maniactivity.HomepageActivity" />  <!--app启动页面是WelcomeActivity  3000毫秒后跳转到 HomepageActivity 页面-->
         <activity android:name="maniactivity.AddressPageActivity" />

@@ -53,6 +53,7 @@
                 android:textColorHint="#787878" />
 
             <TextView
+                android:id="@+id/send_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/line_orange"
