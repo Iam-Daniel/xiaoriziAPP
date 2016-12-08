@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,8 @@ import com.example.administrator.myfirstprojiet.R;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
@@ -63,7 +66,7 @@ public class MenuRankingAdapter extends BaseAdapter{
         MyMenuData myMenuData=list.get(position);
         viewhold.author.setText(myMenuData.getUser_name());
         viewhold.menu_name.setText(myMenuData.getCooking_name());
-//        viewhold.menu_img.setImageBitmap(getImage(myMenuData.getCooking_img()));
+//        viewhold.menu_img.setImageBitmap(getHttpBitmap("http://127.0.0.1/project/Uploads/"+myMenuData.getCooking_img()));
         return convertView;
     }
 
@@ -89,6 +92,34 @@ public class MenuRankingAdapter extends BaseAdapter{
             }
         }.start();
         return bitmap;
+    }
+
+    public static Bitmap getHttpBitmap(final String url) {
+        final Bitmap[] bitmap = {null};
+        final URL[] myFileUrl = {null};
+        new Thread(){
+            @Override
+            public void run() {
+                try {
+                    Log.i("url","url"+url);
+                    myFileUrl[0] = new URL(url);
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    HttpURLConnection conn = (HttpURLConnection) myFileUrl[0].openConnection();
+                    conn.setConnectTimeout(0);
+                    conn.setDoInput(true);
+                    conn.connect();
+                    InputStream is = conn.getInputStream();
+                    bitmap[0] = BitmapFactory.decodeStream(is);
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+        return bitmap[0];
     }
 
 }

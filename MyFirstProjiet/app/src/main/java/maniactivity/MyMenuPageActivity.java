@@ -48,12 +48,11 @@ public class MyMenuPageActivity extends BaseActivity {
 
         myMenu_listview = (ListView) findViewById(R.id.myMenu_listview);
         ArrayList<MyMenuData> list = new ArrayList<MyMenuData>();
-        getMymenuData(list);
+        getMyMenuData(list);
         myMenu_listview.setAdapter(new MyMenuAdapter(this, list));
-
     }
 
-    public void getMymenuData(ArrayList<MyMenuData> list) {
+    public void getMyMenuData(ArrayList<MyMenuData> list) {
         MyMenuData myMenuData = new MyMenuData();
         for (int i = 0; i < 20; i++) {
             list.add(myMenuData);

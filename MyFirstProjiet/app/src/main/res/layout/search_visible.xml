@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:background="#FFF"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:orientation="vertical">
 
     <!--导航栏-->
@@ -21,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
+            android:padding="3dp"
             android:src="@mipmap/arrow_left" />
 
         <EditText
@@ -39,7 +42,7 @@
             android:paddingLeft="8dp"
             android:paddingTop="6dp"
             android:textColor="#000"
-            android:textColorHint="#212121"
+            android:textColorHint="#787878"
             android:textSize="15sp" />
 
         <ImageView
@@ -133,7 +136,7 @@
         android:orientation="vertical">
 
         <ListView
-            android:id="@+id/listview"
+            android:id="@+id/listView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:dividerHeight="5dp">
@@ -144,7 +147,7 @@
     </LinearLayout>
 
 
-    <!--alertdialog弹出框-->
+    <!--alertDialog弹出框-->
     <LinearLayout
         android:id="@+id/link_linearLayout"
         android:layout_width="match_parent"

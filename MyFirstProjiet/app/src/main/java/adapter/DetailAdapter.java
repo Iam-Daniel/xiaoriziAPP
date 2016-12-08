@@ -1,14 +1,11 @@
 package adapter;
 
 import android.content.Context;
-import android.os.Handler;
-import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
-import android.widget.TextView;
 
 import com.example.administrator.myfirstprojiet.R;
 
@@ -19,8 +16,11 @@ import listclass.ShoppingCartsData;
 
 /**
  * Created by Administrator on 2016/11/29.
+ * <p/>
+ * 这个类是写购物车listView的Adapter，页面是shopping_cart_page,好像不是的....
  */
-public class DetailAdapter extends BaseAdapter {
+/*public class DetailAdapter extends BaseAdapter {
+
     // 填充数据的list
     private ArrayList<String> list;
     ArrayList<ShoppingCartsData> shoppingCartsDatas;
@@ -31,33 +31,30 @@ public class DetailAdapter extends BaseAdapter {
     // 用来导入布局
     private LayoutInflater inflater = null;
 
-//    public DetailAdapter(ArrayList<String> list, Context context) {
+    //    public DetailAdapter(ArrayList<String> list, Context context) {
 //        this.list = list;
 //    LayoutInflater inflater = null;
 //    boolean checked;
-    public DetailAdapter(ArrayList<ShoppingCartsData> shoppingCartsDatas, Context context,boolean checked_img) {
+    public DetailAdapter(ArrayList<ShoppingCartsData> shoppingCartsDatas, Context context, boolean checked_img) {
         this.shoppingCartsDatas = shoppingCartsDatas;
         this.context = context;
         inflater = LayoutInflater.from(context);
         isSelected = new HashMap<Integer, Boolean>();
     }
 
-
-
     @Override
     public int getCount() {
-
-        return shoppingCartsDatas.size();
+        return 0;
     }
 
     @Override
     public Object getItem(int i) {
-        return shoppingCartsDatas.get(i);
+        return null;
     }
 
     @Override
     public long getItemId(int i) {
-        return i;
+        return 0;
     }
 
     @Override
@@ -73,12 +70,12 @@ public class DetailAdapter extends BaseAdapter {
             // 为view设置标签
             convertView.setTag(viewHolder);
 
-            CheckBox checked_img= (CheckBox) convertView.findViewById(R.id.checked_img);
+            CheckBox checked_img = (CheckBox) convertView.findViewById(R.id.checked_img);
             checked_img.setChecked(false);
             ShoppingCartsData shoppingCartsData = shoppingCartsDatas.get(0);
-            if (shoppingCartsData.getisCheck_Show_hidden()){
+            if (shoppingCartsData.getisCheck_Show_hidden()) {
                 checked_img.setVisibility(View.VISIBLE);
-            }else {
+            } else {
                 checked_img.setVisibility(View.GONE);
             }
         } else {
@@ -86,20 +83,6 @@ public class DetailAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         return convertView;
+
     }
-
-
-    public static class ViewHolder {
-        TextView tv;
-        public CheckBox cb;
-
-        boolean checked_img = true;
-        String shopping_cart_show;
-        String title_textView;
-        int numb_textView;
-        String content_textView;
-        Float price_textView;
-    }
-
-
-}
+}*/

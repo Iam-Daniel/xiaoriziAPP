@@ -4,6 +4,9 @@ package listclass;
  * Created by Administrator on 2016/11/29.
  */
 public class ShopListData {
+    /**
+     * 这个Data数据是有购物车页面的 shop_listview_item页面
+     */
     int shopping_cart_show_three;
     private String shopping_name;//商品名
     private String shopping_info;//商品详情

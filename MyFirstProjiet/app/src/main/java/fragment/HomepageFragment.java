@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,7 +57,7 @@ public class HomepageFragment extends BaseFragment {
     List<ListInformation> list;
     String result;
     TextView count;
-    String number_count="0";//菜谱总数
+    String number_count = "0";//菜谱总数
 
     public HomepageFragment() {
     }
@@ -148,7 +149,7 @@ public class HomepageFragment extends BaseFragment {
     }
 
     public void setCount() {
-        new Thread(){
+        new Thread() {
             @Override
             public void run() {
                 try {
@@ -176,7 +177,7 @@ public class HomepageFragment extends BaseFragment {
                         number_count = stringBuilder.toString();
                         //发送信息设置ListView
                         Message message = new Message();
-                        message.arg1 =2;
+                        message.arg1 = 2;
                         handler.sendMessage(message);
                         //接口请求失败
                     } else {
@@ -247,7 +248,7 @@ public class HomepageFragment extends BaseFragment {
                             if (list.size() != 0) {
                                 //发送信息设置ListView
                                 Message message = new Message();
-                                message.arg1 =1;
+                                message.arg1 = 1;
                                 handler.sendMessage(message);
                             }
                         } catch (JSONException e) {
@@ -268,7 +269,7 @@ public class HomepageFragment extends BaseFragment {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            if (msg.arg1==1){
+            if (msg.arg1 == 1) {
                 listViewAdapter = new ListViewAdapter(getActivity(), list, 4);
                 listView.setAdapter(listViewAdapter);
                 //限制ListView的高度
@@ -281,8 +282,8 @@ public class HomepageFragment extends BaseFragment {
                     params.height = (MeasuredHeight + DividerHeight) * list.size();
                     listView.setLayoutParams(params);
                 }
-            }else{
-                count.setText(number_count.replace("\"",""));
+            } else {
+                count.setText(number_count.replace("\"", ""));
             }
         }
     };

@@ -10,9 +10,7 @@ import com.example.administrator.myfirstprojiet.R;
 import java.util.ArrayList;
 
 import activity.BaseActivity;
-import adapter.MyMenuAdapter;
 import adapter.MyOrderAdapter;
-import listclass.MyMenuData;
 import listclass.MyOrderData;
 
 /**

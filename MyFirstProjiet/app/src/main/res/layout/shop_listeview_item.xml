@@ -35,13 +35,13 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:textSize="12sp"
                 android:id="@+id/shopping_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="(2片装) 250g 品质生鲜"
-                android:textColor="#212121" />
+                android:textColor="#212121"
+                android:textSize="12sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"

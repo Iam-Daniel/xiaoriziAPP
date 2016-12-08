@@ -75,7 +75,6 @@ public class MyCollectionOrderAdapter extends BaseAdapter {
         return convertView;
     }
 
-
     class ViewHolder {
         ImageView img;
         TextView title;
