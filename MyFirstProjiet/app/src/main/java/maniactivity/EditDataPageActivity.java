@@ -37,7 +37,7 @@ public class EditDataPageActivity extends BaseActivity {
         editDataHeadRtl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(EditDataPageActivity.this,HeadPageActivity.class);
+                startActivity(EditDataPageActivity.this,HeadPageTestActivity.class);
             }
         });
 //        头像背景

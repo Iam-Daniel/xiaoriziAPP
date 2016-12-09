@@ -1,6 +1,8 @@
 package maniactivity;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -8,6 +10,7 @@ import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -20,7 +23,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.myfirstprojiet.R;
+import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
+import com.tencent.mm.sdk.modelmsg.WXImageObject;
+import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.mm.sdk.openapi.WXAPIFactory;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -28,7 +37,8 @@ import java.util.List;
 import listclass.DataBean;
 
 public class ShoppingCartPageActivity extends Activity implements View.OnClickListener {
-
+//    IWXAPI api;
+//    String APP_ID = "wx92055528e224f610";
     private static final int INITIALIZE = 0;
 
     private ListView mListView;// �
@@ -64,6 +74,8 @@ public class ShoppingCartPageActivity extends Activity implements View.OnClickLi
         initView();
         initListener();
         loadData();
+        //微信回调
+//        regToWx();
     }
 
     private void initView() {
@@ -439,6 +451,9 @@ public class ShoppingCartPageActivity extends Activity implements View.OnClickLi
             case R.id.back:
                 onBackPressed();
                 break;
+//            case R.id.tv_cart_move_favorite:
+//                wxShare();
+//                break;
             default:
                 break;
         }
@@ -473,4 +488,34 @@ public class ShoppingCartPageActivity extends Activity implements View.OnClickLi
             mCheckAll.setChecked(false);
         }
     }
+
+    //微信分享图片
+//    public void wxShare(){
+//        Bitmap bitmap= BitmapFactory.decodeResource(getResources(),R.mipmap.shopping_cart_show);
+//
+//        //初始化WXImageObject和WXMediamessage对象
+//        WXImageObject imageObject=new WXImageObject(bitmap);
+//        WXMediaMessage msg=new WXMediaMessage();
+//        msg.mediaObject=imageObject;
+//        // 设置缩略图
+//        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+//        msg.thumbData = baos.toByteArray();
+
+//        Bitmap ibitmap=Bitmap.createScaledBitmap(bitmap,120,120,true);
+//        bitmap.recycle();
+//        msg.thumbData = Util.bmpToByteArray(ibitmap, true);
+
+//        SendMessageToWX.Req req = new SendMessageToWX.Req();
+//        req.transaction = buildTransaction("img");
+//        req.message = msg;
+//        req.scene = SendMessageToWX.Req.WXSceneTimeline;//判断是否发送到朋友圈
+//        api.sendReq(req);
+//    }
+//
+//    public void regToWx(){
+//        api= WXAPIFactory.createWXAPI(this,APP_ID,true);
+//        api.registerApp("wx92055528e224f610");
+//    }
+
 }

@@ -84,7 +84,7 @@ public class LogUpPageActivity extends BaseActivity {
 
     public void register() {
         SMSSDK.initSDK(this, "f2acd9ee1622", "72c569594fa96816dcb1bfe529dc061b");
-        SMSSDK.getVerificationCode("86", 18323706243);
+        SMSSDK.getVerificationCode("86", "18323706243");
         send_textView.setEnabled(false);
         send_textView.setBackgroundResource(R.color.rosybrown);
         //打开注册页面,必须这样写RegisterPage。（这是jar里面的）注意

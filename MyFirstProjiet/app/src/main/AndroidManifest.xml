@@ -60,7 +60,7 @@
         <activity android:name="maniactivity.FollowingPageActivity" />
         <activity android:name="maniactivity.ForgetPassWordPageActivity" />
         <activity android:name="maniactivity.HeadBackgroundPageActivity" />
-        <activity android:name="maniactivity.HeadPageActivity" />
+        <activity android:name="maniactivity.HeadPageTestActivity" />
         <activity android:name="maniactivity.HotMenuPageActivity" />
         <activity android:name="maniactivity.InformationPageActivity" />
         <activity android:name="fragment.KitchenPageFragment" />
