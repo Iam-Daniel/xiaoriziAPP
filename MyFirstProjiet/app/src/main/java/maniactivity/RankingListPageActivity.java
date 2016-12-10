@@ -115,7 +115,7 @@ public class RankingListPageActivity extends BaseActivity {
                 myMenuData.setCooking_img(jsonObject.getString("cooking_img"));
                 myMenuData.setCooking_name(jsonObject.getString("cooking_name"));
                 myMenuData.setUser_name(jsonObject.getString("user_name"));
-                myMenuData.setCooking_menu_id(jsonObject.getInt("cooking_menu_id"));
+                myMenuData.setCooking_menu_id(jsonObject.getString("cooking_menu_id"));
                 list.add(myMenuData);
             } catch (JSONException e) {
                 e.printStackTrace();

@@ -12,13 +12,13 @@ public class MyMenuData {
     String collect_counts;
     String text;
     String user_name;
-    int cooking_menu_id;
+    String cooking_menu_id;
 
-    public int getCooking_menu_id() {
+    public String getCooking_menu_id() {
         return cooking_menu_id;
     }
 
-    public void setCooking_menu_id(int cooking_menu_id) {
+    public void setCooking_menu_id(String cooking_menu_id) {
         this.cooking_menu_id = cooking_menu_id;
     }
 

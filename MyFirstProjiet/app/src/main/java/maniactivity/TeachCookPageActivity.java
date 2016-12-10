@@ -52,6 +52,7 @@ public class TeachCookPageActivity extends Activity {
         Intent intent = getIntent();
         if (intent!=null){
             cooking_menu_id = intent.getStringExtra("cooking_menu_id");
+            Log.i("cooking_menu_id","cooking_menu_id==="+cooking_menu_id);
             AskInternetData("requireCookInfo_id","cooking_menu_id="+cooking_menu_id);
         }
         itemSetOnClickListener();
